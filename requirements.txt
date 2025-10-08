@@ -1,0 +1,17 @@
+jupyter-book
+numpy
+pandas
+scipy
+matplotlib
+seaborn
+plotly
+nilearn
+scikit-learn
+jupytercards
+jupyterquiz
+statsmodels
+mlxtend
+patsy
+ipywidgets
+ISLP
+xgboost

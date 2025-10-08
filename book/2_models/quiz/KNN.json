@@ -1,0 +1,22 @@
+[{
+    "question": "Which of the following statements are true for the kNN algorithm? (Multiple answers may be correct)",
+    "type": "multiple_choice",
+    "answers": [
+        {
+            "answer": "Increasing the value of $k$ generally makes the model more flexible.",
+            "correct": false
+          },
+          {
+            "answer": "Decreasing the value of $k$ increases the model's sensitivity to noise.",
+            "correct": true
+          },
+          {
+            "answer": "A higher $k$ value results in smoother decision boundaries.",
+            "correct": true
+          },
+          {
+            "answer": "A lower $k$ value allows the model to capture more specific details of the data.",
+            "correct": true
+          }
+        ]
+      }]

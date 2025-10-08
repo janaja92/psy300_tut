@@ -1,0 +1,22 @@
+[{
+    "question": "Which of the following are approppriate for our task?",
+    "type": "multiple_choice",
+    "answers": [
+        {
+            "answer": "Supervised Learning",
+            "correct": true
+        },
+        {
+            "answer": "Unsupervied Learning",
+            "correct": false
+        },
+        {
+            "answer": "Classification Model",
+            "correct": true
+        },
+        {
+            "answer": "Regression Model",
+            "correct": false
+        }
+    ]
+}]
