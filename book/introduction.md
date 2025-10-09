@@ -12,9 +12,9 @@ kernelspec:
   name: python3
 ---
 
-# <i class="fas fa-hand-sparkles fa-fw"></i> Welcome to psy112!
+# <i class="fas fa-hand-sparkles fa-fw"></i> Welcome to ds300!
 
-This book contains the course contents for the Statistical Learning Seminar (psy112). We will explore and discuss the contents of the lecture in a practical way using Python.
+This book contains the materials for the *Statistical Methods* Course of the Data Science and Machine Learning Master's Programme ad Carl von Ossietzky Universität Oldenburg. We will explore and discuss the contents of the lecture in a practical way using Python.
 
 ## Table of contents
 
