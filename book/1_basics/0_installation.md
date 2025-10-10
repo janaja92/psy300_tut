@@ -32,16 +32,11 @@ Linux/MacOS:
 Windows (PowerShell):
 
 ```bash
-Invoke-Expression ((Invoke-WebRequest -Uri https://micro.mamba.pm/install.ps1 -UseBasicParsing).Content)
+Invoke-Expression ((Invoke-WebRequest -Uri https://micro.mamba.pm/install.ps1 -UseBasicParsing).Content); 
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned -Force
 ```
 
-Confirm all promts by typing `y` and `Enter`. Then, restart your terminal and confirm your installation by typing:
-
-```bash
-micromamba --version
-```
-
-If successful, you can start to create an environment for the seminar:
+Confirm all promts by typing `y` and `Enter`. Then, restart your PowerShell/terminal and create an environment for the seminar:
 
 ```bash
 micromamba create -n ds300 python
