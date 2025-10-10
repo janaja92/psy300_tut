@@ -39,11 +39,11 @@ Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned -Force
 Confirm all promts by typing `y` and `Enter`. Then, restart your PowerShell/terminal and create an environment for the seminar:
 
 ```bash
-micromamba create -n ds300 python
-micromamba activate ds300
+micromamba create -n psy300 python
+micromamba activate psy300
 ```
 
-The terminal prompt should now display (ds300), showing that the new environment is active. Inside this environment, you can install additional packages as needed, for example:
+The terminal prompt should now display `(psy300)`, showing that the new environment is active. Inside this environment, you can install additional packages as needed, for example:
 
 ```bash
 pip install numpy pandas matplotlib
@@ -65,16 +65,16 @@ Inside VS Code:
 2. Create a new file (e.g. `example.py`) and type:
 
    ```python
-   print("Welcome to ds300!")
+   print("Welcome to psy300!")
    ```
 3. Press the run button ▶️ at the top right.
-   When prompted, select the **ds300** environment as your Python interpreter.
+   When prompted, select the **dpsy300** environment as your Python interpreter.
 
 
 ## Jupyter Notebooks
 
 For interactive code and text (used in the exercises), install the **Jupyter** extension in VS Code.
-You can then create `.ipynb` notebooks and select your `ds300` environment as the **kernel**.
+You can then create `.ipynb` notebooks and select your `psy300` environment as the **kernel**.
 
 You can then create code cells:
 
@@ -92,20 +92,12 @@ You can write text, lists, or include equations like $a^2 + b^2 = c^2$.
 ```
 
 
-## Working with the ds300 Book (Optional)
+## Working with the Book (Optional)
 
-Download the course book from [GitHub](https://github.com/mibur1/ds300) by clicking **Code → Download ZIP**, then extract the folder.
-
-```{admonition} File management
-:class: caution
-
-Keep your files organised — avoid working directly from your Downloads folder.
-```
-
-Open the extracted folder in VS Code, then install the required packages:
+Clone/download the course book from [GitHub](https://github.com/mibur1/psy300) and install the required packages:
 
 ```bash
-cd path/to/ds300
+cd path/to/psy300
 pip install -r requirements.txt
 ```
 

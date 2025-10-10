@@ -30,7 +30,7 @@ def show_plotly(fig, include_js='cdn'):
     return HTML(pio.to_html(fig, full_html=False, include_plotlyjs=include_js))
 ```
 
-One of the the most important concepts you learned about in the [psy111 seminar](https://mibur1.github.io/psy111) were (linear) regression models. Let's quickly recap this concept and how to implement it in Python.
+One of the the most important concepts in any multivariate statistics seminar such as [psy111](https://mibur1.github.io/psy111) are (linear) regression models. Let's quickly recap this concept and how to implement it in Python.
 
 Have a look at the following code, which creates some simulated data. Can you deduce from the code, what the underlying pattern is?
 

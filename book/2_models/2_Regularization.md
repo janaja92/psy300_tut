@@ -15,7 +15,7 @@ myst:
     lambda: 1
 ---
 
-# <i class="fa-solid fa-puzzle-piece"></i> Regularization
+# <i class="fa-solid fa-puzzle-piece"></i> Regularisation, PCR & PLS
 
 Building on subset selection, an alternative approach is to include all *p* predictors in the model but apply regularization—shrinking the **coefficient estimates toward zero** relative to the least squares estimates. This reduces model complexity without fully discarding variables. Though it introduces some bias, it often lowers variance and improves test performance. 
 
@@ -341,3 +341,13 @@ plt.show()
 ```
 
 **Now it's your turn:** Head to the [exercise section](Exercises) for Exercise 2, in which you will implement a Lasso model.
+
+
+## Principal Component Regression
+
+TODO
+
+
+## Partial Least Squares Regression
+
+TODO

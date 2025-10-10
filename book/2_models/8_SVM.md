@@ -17,7 +17,7 @@ myst:
 
 # <i class="fa-solid fa-gear"></i> Support Vector Machines
 
-After a brief excursion into generative models such as [LDA & QDA](5_LDA_QDA) or [Naïve Bayes](6_Naive_Bayes), we will now again discuss a discriminative family of models: Support Vector Machines (SVM). SVMs are powerful supervised learning models used for classification and regression tasks. When used for classification, they are called Support Vector Classifiers (SVC).
+After a brief excursion into generative models such as [LDA & QDA](5_LDA_QDA.md) or [Naïve Bayes](6_Naive_Bayes.md), we will now again discuss a discriminative family of models: Support Vector Machines (SVM). SVMs are powerful supervised learning models used for classification and regression tasks. When used for classification, they are called Support Vector Classifiers (SVC).
 
 Let's consider some simulated classification data:
 
@@ -321,7 +321,7 @@ SVCs have a few hyperparameters. Please have a look at the [documentation](https
 In `sklearn` (and usually also MATLAB and R) `C` behaves inversely to what you were shown in the lecture. Small values of C will result in a wider margin, at the cost of misclassifications (high bias, low variance). Large values of C will give you a smaller margin and fit the training data more tightly (low bias, higher variance).
 ```
 
-As always, hyperparameters should be tuned using [cross-validation](book/1_basics/3_resampling) to balance bias and variance. It often makes sense to use a [grid search](https://scikit-learn.org/stable/modules/grid_search.html) or related strategies to find the optimal solution:
+As always, hyperparameters should be tuned using [cross-validation](../1_basics/3_resampling.md) to balance bias and variance. It often makes sense to use a [grid search](https://scikit-learn.org/stable/modules/grid_search.html) or related strategies to find the optimal solution:
 
 
 ```{code-cell} ipython3
