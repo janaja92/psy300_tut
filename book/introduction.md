@@ -14,7 +14,7 @@ kernelspec:
 
 # <i class="fas fa-hand-sparkles fa-fw"></i> Welcome to psy300!
 
-This book contains the materials for the *Statistical Methods* Course of the Data Science and Machine Learning Master's Programme ad Carl von Ossietzky Universität Oldenburg. We will explore and discuss the contents of the lecture in a practical way using Python.
+This book contains the materials for the *Statistical Methods* Seminar of the Data Science and Machine Learning Master's Programme at Carl von Ossietzky Universität Oldenburg. We will explore and discuss the contents of the lecture in a practical way using Python.
 
 ## Table of contents
 
@@ -24,5 +24,6 @@ This book contains the materials for the *Statistical Methods* Course of the Dat
 ## Additional resources
 
 - https://www.statlearning.com/
+- https://mlu-explain.github.io/
 - https://animlbook.com/
 - https://geostatsguy.github.io/MachineLearningDemos_Book
