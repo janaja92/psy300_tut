@@ -12,7 +12,7 @@ kernelspec:
   name: python3
 ---
 
-# <i class="fa-brands fa-python"></i> Model Selection
+# <i class="fa-solid fa-square-check"></i> Model Selection
 
 In neurocognitive psychology, we often collect huge amounts of data — sometimes thousands of measurements from different brain regions or many behavioral scores. Having more information can, in theory, help us make better predictions, but it also brings risks: too many variables can make analyses infeasible, lead to false discoveries, or cause models to learn noise instead of real effects. 
 

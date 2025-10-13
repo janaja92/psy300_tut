@@ -12,7 +12,7 @@ kernelspec:
   name: python3
 ---
 
-# <i class="fa-solid fa-repeat"></i> Setup/Installation
+# <i class="fa-brands fa-python"></i> Setup/Installation
 
 All tutorials in this seminar can be accessed via **Google Colab** by clicking the rocket icon on the respective exercise pages (a Google account is required). Alternatively, you may choose to run the code locally on your own computer. The following sections provide a brief introduction to installing Python and using the course materials locally.
 
@@ -68,7 +68,7 @@ Inside VS Code:
    print("Welcome to psy300!")
    ```
 3. Press the run button ▶️ at the top right.
-   When prompted, select the **dpsy300** environment as your Python interpreter.
+   When prompted, select the **psy300** environment as your Python interpreter.
 
 
 ## Jupyter Notebooks
