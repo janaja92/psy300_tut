@@ -16,31 +16,32 @@ kernelspec:
 
 All tutorials in this seminar can be accessed via **Google Colab** by clicking the rocket icon on the respective exercise pages (a Google account is required). Alternatively, you may choose to run the code locally on your own computer. The following sections provide a brief introduction to installing Python and using the course materials locally.
 
-Python is an open-source programming language that can be freely downloaded and installed from its official website. In this guide, however, we will use Python through an environment manager called Micromamba. If you have used Conda or Miniconda before, Micromamba works in the same way: it allows you to install Python versions and manage project dependencies in isolated environments. The main difference is that Micromamba is faster, lighter, and free from the recent [licensing restrictions](https://www.fz-juelich.de/en/rse/the_latest/the-anaconda-is-squeezing-us).
+Python is an open-source programming language that can be freely downloaded and installed from its official website. In this guide, however, we will use Python through an environment manager called Conda. This allows you to install Python versions and manage project dependencies in isolated environments.
 
 
-## Installing Micromamba
+## Installing Conda
 
-You can install Micromamba directly from the terminal using one of the following commands:
+You can download and install Conda trough Miniforge as described in the the [documentation](https://conda-forge.org/download/).
 
-Linux/MacOS:
+**Linux/MacOS**
 
-```bash
-"${SHELL}" <(curl -L micro.mamba.pm/install.sh)
+Open a terminal in the folder where your `.sh` script is located and run the script (*hint: after typing `bash Miniforge3` you should be able to hit `Tab` to autocomplete the command*):
+
+```
+bash Miniforge3-$(uname)-$(uname -m).sh
 ```
 
-Windows (PowerShell):
+After a succesful installation, simply open a new terminal. You should now see a `(base)` in the beginning of each line, which tells you that the installation was succesful.
+
+**Windows**
+
+On Windows, simply run the `.exe` file and install everything. We also recommend you to check the **"Add Miniforge3 to my PATH environment variable"** checkbox during installation. This will enable you to use `conda` from any terminal, and not just `Miniforge Prompt`, which will be installed in any case. Once the installation is finished, depending on your choice during the installation, you can either open your standard terminal or the `Miniforge Prompt`. In any case, you should then be greeted with a `(base)` in the beginning of the line, which means the installation was succesful and you are now in the base environment.
+
+
+Once the installation is complete, open a new terminal and create a new environment for the seminar:
 
 ```bash
-Invoke-Expression ((Invoke-WebRequest -Uri https://micro.mamba.pm/install.ps1 -UseBasicParsing).Content); 
-Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned -Force
-```
-
-Confirm all promts by typing `y` and `Enter`. Then, restart your PowerShell/terminal and create an environment for the seminar:
-
-```bash
-micromamba create -n psy300 python
-micromamba activate psy300
+conda create -n psy300 python
 ```
 
 The terminal prompt should now display `(psy300)`, showing that the new environment is active. Inside this environment, you can install additional packages as needed, for example:
