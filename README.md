@@ -2,7 +2,7 @@
 <img src="logo.png" width =200 align="right" />
 </div>
 
-# Statistical Learning with Python
+# New Title
 
 ## Online usage (recommended)
 

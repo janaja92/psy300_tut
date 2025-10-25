@@ -12,14 +12,10 @@ kernelspec:
   name: python3
 ---
 
-# <i class="fas fa-hand-sparkles fa-fw"></i> Welcome to psy300!
+# <i class="fas fa-hand-sparkles fa-fw"></i> Hello!
 
-This book contains the materials for the *Statistical Methods* Seminar of the Data Science and Machine Learning Master's Programme at Carl von Ossietzky Universität Oldenburg. We will explore and discuss the contents of the lecture in a practical way using Python.
+This book contains some additional materials to prep for the psy300 exam.
 
-## Table of contents
-
-```{tableofcontents}
-```
 
 ## Additional resources
 

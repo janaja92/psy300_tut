@@ -1,6 +1,5 @@
-title: Statistical Learning with Python
-author: Micha Burkhardt, Constanze Buschmann
-logo: logo.png
+title: Statistical Learning Quizzes
+author: test jana
 copyright: "2025"
 
 # Reference: https://jupyterbook.org/en/stable/customize/config.html
@@ -19,7 +18,7 @@ latex:
 
 # Information about where the book exists on the web
 repository:
-  url: https://github.com/mibur1/psy300
+  url: https://github.com/janaja92/psy300_tut
   branch: main
 
 # Add GitHub buttons to your book
@@ -27,7 +26,7 @@ html:
   home_page_in_navbar: false
   use_issues_button: true
   use_repository_button: true
-  baseurl: https://mibur1.github.io/psy300
+  baseurl: https://mibur1.github.io/psy300 #############################
   
 sphinx:
   html_context:
