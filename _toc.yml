@@ -7,4 +7,6 @@ root: book/introduction
 parts:
 - caption: Exam Prep Questions
   chapters:
-    - file: book/1_Intro_to_supervised_learning/Repetition_lec01
+    - file: book/01_lec/01_intro_to_supervised_learning
+    - file: book/02_lec/02_model_selection_and_assessment
+
