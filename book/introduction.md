@@ -17,9 +17,13 @@ kernelspec:
 This book contains some additional materials to prep for the psy300 exam.
 
 
-## Additional resources
+## A header
 
-- https://www.statlearning.com/
-- https://mlu-explain.github.io/
-- https://animlbook.com/
-- https://geostatsguy.github.io/MachineLearningDemos_Book
+- la
+- di
+- da
+- la
+
+## Another header
+
+And a nice text
