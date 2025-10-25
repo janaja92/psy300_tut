@@ -12,7 +12,7 @@ kernelspec:
   name: python3
 ---
 
-# <i class="fas fa-hand-sparkles fa-fw"></i> Hello!
+# Hello!
 
 This book contains some additional materials to prep for the psy300 exam.
 

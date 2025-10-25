@@ -7,4 +7,4 @@ root: book/introduction
 parts:
 - caption: Statistical Learning Exam Prep Questions
   chapters:
-    - file: book/1_Intro_to_supervised_learning
+    - file: book/1_Intro_to_supervised_learning/Repetition_lec01
