@@ -4,12 +4,12 @@
     "type": "multiple_choice",
     "answers": [
       {
-        "answer": "The number of predictors",
+        "answer": "predictors",
         "correct": true,
         "feedback": "Correct! Big data often refers to 'high-dimensional' data, or p > n."
       },
       {
-        "answer": "The number of observations",
+        "answer": "observations",
         "correct": false,
         "feedback": "Incorrect. While many observations (n) is good, 'big data' specifically refers to a large number of predictors (p)."
       }
@@ -131,8 +131,8 @@
     ]
   },
   {
-    "question": "Predictors (X) are also called … (Select all that apply)",
-    "type": "many_choice",
+    "question": "Predictors (X) are also called … ",
+    "type": "multiple_choice",
     "answers": [
       {
         "answer": "Dependent variables",
