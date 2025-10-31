@@ -31,6 +31,32 @@
       }
     ]
   },
+{
+    "question": "Predictors (X) are also called … ",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Dependent variables",
+        "correct": false,
+        "feedback": "Incorrect. Dependent variables are outcomes (Y)."
+      },
+      {
+        "answer": "Targets",
+        "correct": false,
+        "feedback": "Incorrect. Targets are outcomes (Y)."
+      },
+      {
+        "answer": "Outputs",
+        "correct": false,
+        "feedback": "Incorrect. Outputs are outcomes (Y)."
+      },
+      {
+        "answer": "Features",
+        "correct": true,
+        "feedback": "Correct! This is a very common term for X in machine learning."
+      }
+    ]
+  },
   {
     "question": "Machine learning is …",
     "type": "multiple_choice",
@@ -49,6 +75,11 @@
         "answer": "A synonym of Artificial intelligence",
         "correct": false,
         "feedback": "Incorrect. AI is a much broader concept that includes non-learning-based approaches."
+      },
+      {
+        "answer": "A synonym of Deep Learning",
+        "correct": false,
+        "feedback": "Incorrect. Deep Learning is a specific, more complex subfield of Machine Learning."
       }
     ]
   },
@@ -64,12 +95,17 @@
       {
         "answer": "A subtype of dimension reduction",
         "correct": false,
-        "feedback": "Incorrect. Dimension reduction is typically unsupervised."
+        "feedback": "Incorrect. Dimension reduction is used to summarize a large number of predictors in a smaller number of components, while classification aims to predict qualitative outcomes given the predictors." 
       },
       {
-        "answer": "Used to predict quantitative outcomes",
+        "answer": "Used to predict quantitative outcomes when labeled training data does exist",
         "correct": false,
         "feedback": "Incorrect. That is called regression."
+      },
+      {
+        "answer": "Used to predict quantitative outcomes when labeled training data does not exist",
+        "correct": false,
+        "feedback": "Incorrect. Classification predicts qualitative outcomes, not quantitative."
       },
       {
         "answer": "Used to predict qualitative outcomes when labeled training data does not exist",
@@ -124,35 +160,14 @@
         "feedback": "Correct! This is a common term for Y."
       },
       {
+        "answer": "Predictors",
+        "correct": false,
+        "feedback": "Inorrect. Predictors are the inputs (X)."
+      },
+      {
         "answer": "Responses",
         "correct": true,
         "feedback": "Correct! This is a common term for Y."
-      }
-    ]
-  },
-  {
-    "question": "Predictors (X) are also called … ",
-    "type": "multiple_choice",
-    "answers": [
-      {
-        "answer": "Dependent variables",
-        "correct": false,
-        "feedback": "Incorrect. Dependent variables are outcomes (Y)."
-      },
-      {
-        "answer": "Targets",
-        "correct": false,
-        "feedback": "Incorrect. Targets are outcomes (Y)."
-      },
-      {
-        "answer": "Outputs",
-        "correct": false,
-        "feedback": "Incorrect. Outputs are outcomes (Y)."
-      },
-      {
-        "answer": "Features",
-        "correct": true,
-        "feedback": "Correct! This is a very common term for X in machine learning."
       }
     ]
   },
