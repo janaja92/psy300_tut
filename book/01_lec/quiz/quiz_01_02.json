@@ -16,7 +16,7 @@
     ]
   },
   {
-    "question": "The test MSE … XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    "question": "The test MSE …",
     "type": "multiple_choice",
     "answers": [
       {
@@ -110,7 +110,7 @@
     ]
   },
   {
-    "question": "The accuracy of Ŷ is best when … XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    "question": "The accuracy of Ŷ is best when …",
     "type": "multiple_choice",
     "answers": [
       {
@@ -188,7 +188,7 @@
     ]
   },
   {
-    "question": "The MSE is … XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    "question": "The MSE is …",
     "type": "multiple_choice",
     "answers": [
       {
@@ -197,7 +197,7 @@
         "feedback": "Correct! Specifically, MSE = E[(Y - Ŷ)^2]."
       },
       {
-        "answer": "The squared difference between the estimated function (f hat) \u0066\u0302 and the true function (f)",
+        "answer": "The squared difference between the estimated function (\u0066\u0302) and the true function (f)",
         "correct": false,
         "feedback": "Incorrect. This is just the reducible error."
       }
@@ -288,7 +288,7 @@
     ]
   },
   {
-    "question": "The irreducible error is due to … XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    "question": "The irreducible error is due to …",
     "type": "multiple_choice",
     "answers": [
       {
