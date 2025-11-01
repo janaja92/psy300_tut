@@ -16,12 +16,12 @@
       {
         "answer": "k-fold CV",
         "correct": true,
-        "feedback": "Correct! The data is partitioned into *k* folds. These *k* folds (which serve as the validation sets) are non-overlapping."
+        "feedback": "Correct! The data is partitioned into k folds. These k folds (which serve as the validation sets) are non-overlapping."
       },
       {
         "answer": "Bootstrapping",
         "correct": false,
-        "feedback": "Incorrect. Bootstrapping samples *with replacement*, meaning the resulting bootstrap datasets are highly likely to overlap and contain duplicate observations."
+        "feedback": "Incorrect. Bootstrapping samples with replacement, meaning the resulting bootstrap datasets are highly likely to overlap and contain duplicate observations."
       }
     ]
   },
@@ -32,12 +32,12 @@
       {
         "answer": "correct",
         "correct": false,
-        "feedback": "Incorrect. This is a primary *disadvantage*. Splitting the data (e.g., 50/50) significantly *reduces* the number of observations (N) available for training the model."
+        "feedback": "Incorrect. This is a primary *disadvantage*. Splitting the data (e.g., 50/50) significantly reduces the number of observations (N) available for training the model."
       },
       {
         "answer": "incorrect",
         "correct": true,
-        "feedback": "Correct! This statement is incorrect. A key weakness of the validation set approach is that it *reduces* N for training, which can lead to poorer model performance and an overestimate of the test error."
+        "feedback": "Correct! This statement is incorrect. A key weakness of the validation set approach is that it reduces N for training, which can lead to poorer model performance and an overestimate of the test error."
       }
     ]
   },
@@ -48,7 +48,7 @@
       {
         "answer": "0",
         "correct": false,
-        "feedback": "Incorrect. k represents the number of folds, which must be at least 2 (or *n* for LOOCV)."
+        "feedback": "Incorrect. k represents the number of folds, which must be at least 2 (or n for LOOCV)."
       },
       {
         "answer": "n",
@@ -74,12 +74,12 @@
       {
         "answer": "correct",
         "correct": true,
-        "feedback": "Correct! K-fold CV requires fitting the model *k* times (e.g., 5 or 10). LOOCV requires fitting the model *n* times (once for each observation), which is far more demanding if *n* is large."
+        "feedback": "Correct! K-fold CV requires fitting the model k times (e.g., 5 or 10). LOOCV requires fitting the model n times (once for each observation), which is far more demanding if n is large."
       },
       {
         "answer": "incorrect",
         "correct": false,
-        "feedback": "Incorrect. This statement is correct. LOOCV is the most computationally expensive form of cross-validation, as it requires *n* model fits."
+        "feedback": "Incorrect. This statement is correct. LOOCV is the most computationally expensive form of cross-validation, as it requires n model fits."
       }
     ]
   },
@@ -90,22 +90,22 @@
      {
         "answer": "leads to less variable estimates.",
         "correct": false,
-        "feedback": "Incorrect. LOOCV actually has high *variance* because the *n* training sets are so similar to each other, resulting in highly correlated MSE estimates. K-fold CV (with k < n) generally has lower variance."
+        "feedback": "Incorrect. LOOCV actually has high variance because the n training sets are so similar to each other, resulting in highly correlated MSE estimates. K-fold CV (with k < n) generally has lower variance."
       },
       {
         "answer": "is equal to the validation set approach.",
         "correct": false,
-        "feedback": "Incorrect. The validation set approach involves a single split. LOOCV involves *n* splits."
+        "feedback": "Incorrect. The validation set approach involves a single split. LOOCV involves n splits."
       },
       {
         "answer": "reduces the bias of the test MSE.",
         "correct": true,
-        "feedback": "Correct! Because LOOCV trains on *n-1* observations, the resulting models are very similar to the model trained on the full *n* observations. This means its estimate of the test MSE has very low bias."
+        "feedback": "Correct! Because LOOCV trains on n-1 observations, the resulting models are very similar to the model trained on the full n observations. This means its estimate of the test MSE has very low bias."
       },
       {
         "answer": "is like Bootstrapping but with k=n.",
         "correct": false,
-        "feedback": "Incorrect. This statement mixes concepts. LOOCV is *k-fold CV* with k=n. Bootstrapping is a separate method."
+        "feedback": "Incorrect. This statement mixes concepts. LOOCV is k-fold CV with k=n. Bootstrapping is a separate method."
       }
     ]
   },
@@ -142,12 +142,12 @@
       {
         "answer": "the training-set prediction error",
         "correct": false,
-        "feedback": "Incorrect. We already *know* the training-set error from fitting the model; we don't need a resampling method to estimate it. The goal is to estimate *test* error."
+        "feedback": "Incorrect. We already know the training-set error from fitting the model; we don't need a resampling method to estimate it. The goal is to estimate test error."
       },
       {
         "answer": "the value of the irreducible error",
         "correct": false,
-        "feedback": "Incorrect. The irreducible error (ϵ) is, by definition, random, unknowable noise. Resampling methods estimate the *reducible* error of a model."
+        "feedback": "Incorrect. The irreducible error (ϵ) is, by definition, random, unknowable noise. Resampling methods estimate the reducible error of a model."
       }
     ]
   },
@@ -158,12 +158,12 @@
       {
         "answer": "completely non-overlapping samples",
         "correct": true,
-        "feedback": "Correct! If you sample without replacement, the two samples are completely distinct. This is the basis for cross-validation."
+        "feedback": "Correct! If you sample without replacement, the two samples are completely distinct."
       },
       {
         "answer": "partially overlapping samples",
         "correct": false,
-        "feedback": "Incorrect. This describes sampling *with* replacement, which is the basis for bootstrapping."
+        "feedback": "Incorrect. This describes sampling with replacement."
       }
     ]
   },
@@ -205,17 +205,17 @@
       {
         "answer": "k",
         "correct": false,
-        "feedback": "Incorrect. This describes *k*-fold CV."
+        "feedback": "Incorrect. This describes k-fold CV."
       },
       {
         "answer": "n",
         "correct": false,
-        "feedback": "Incorrect. This describes *LOOCV* (Leave-One-Out Cross-Validation)."
+        "feedback": "Incorrect. This describes LOOCV (Leave-One-Out Cross-Validation)."
       },
       {
         "answer": "3",
         "correct": false,
-        "feedback": "Incorrect. A three-part split (train/validation/test) is a common *strategy*, but the 'validation set approach' itself refers to the initial two-part split."
+        "feedback": "Incorrect. A three-part split (train/validation/test) is a common strategy, but the 'validation set approach' itself refers to the initial two-part split."
       }
     ]
   },
@@ -226,12 +226,12 @@
       {
         "answer": "overestimate",
         "correct": true,
-        "feedback": "Correct! Because the model is trained on a *smaller* dataset, it is often less performant than a model trained on the full dataset. This causes the validation MSE to be an *overestimate* of the true test error."
+        "feedback": "Correct! Because the model is trained on a smaller dataset, it is often less performant than a model trained on the full dataset. This causes the validation MSE to be an overestimate of the true test error."
       },
       {
         "answer": "underestimate",
         "correct": false,
-        "feedback": "Incorrect. It tends to overestimate the error. An *underestimate* would typically come from using the *training* MSE."
+        "feedback": "Incorrect. It tends to overestimate the error. An *underestimate* would typically come from using the training MSE."
       }
     ]
   },
@@ -257,7 +257,7 @@
       {
         "answer": "the MSE that was estimated in the kth prediction",
         "correct": false,
-        "feedback": "Incorrect. This would ignore the results from all other *k-1* folds and be highly dependent on that single, arbitrary fold."
+        "feedback": "Incorrect. This would ignore the results from all other k-1 folds and be highly dependent on that single, arbitrary fold."
       }
     ]
   },
@@ -310,7 +310,7 @@
       {
         "answer": "less similar models and therefore less similar test MSEs for each iteration.",
         "correct": true,
-        "feedback": "Correct! Because the training folds in k-fold CV (with k < n) overlap *less* than in LOOCV, the resulting models are less correlated. This leads to a more stable (lower variance) estimate of the test MSE."
+        "feedback": "Correct! Because the training folds in k-fold CV (with k < n) overlap less than in LOOCV, the resulting models are less correlated. This leads to a more stable (lower variance) estimate of the test MSE."
       },
       {
         "answer": "more similar models and therefore highly similar test MSEs for each iteration.",
@@ -334,12 +334,12 @@
     "type": "multiple_choice",
     "answers": [
       {
-        "answer": "bootstrapping.",
+        "answer": "bootstrapping",
         "correct": false,
         "feedback": "Incorrect. While bootstrapping is valuable for estimating the uncertainty (standard error and bias) of a parameter, it is generally not the preferred method for assessing overall model performance as it overestimates the performance of the model on new data."
       },
       {
-        "answer": "cross-validation.",
+        "answer": "cross-validation",
         "correct": true,
         "feedback": "Correct! Cross-validation (especially k-fold) is the standard and preferred method for estimating the test error (generalization performance) of a model."
       }
