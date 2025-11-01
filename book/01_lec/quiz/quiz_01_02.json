@@ -16,6 +16,32 @@
     ]
   },
   {
+    "question": "The test MSE … XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Decreases constantly with increasing flexibility",
+        "correct": false,
+        "feedback": "Incorrect. This describes the training MSE. The test MSE will eventually increase due to overfitting."
+      },
+      {
+        "answer": "Decreases up to a certain point with increasing flexibility, and from there on begins to increase again",
+        "correct": true,
+        "feedback": "Correct! This U-shape is characteristic of the bias-variance trade-off. The MSE decreases as the model's flexibility (e.g., complexity) moves from high bias to an optimal point, then increases as it starts to overfit (high variance)."
+      },
+      {
+        "answer": "Increases up to a certain point with increasing flexibility, and from there on begins to decrease again",
+        "correct": false,
+        "feedback": "Incorrect. This is the opposite of the typical U-shaped curve."
+      },
+      {
+        "answer": "Increases constantly with increasing flexibility",
+        "correct": false,
+        "feedback": "Incorrect. Initially, a more flexible model will perform *better* on the test set, up to a point."
+      }
+    ]
+  },
+  {
     "question": "The bias refers to …",
     "type": "multiple_choice",
     "answers": [
@@ -84,7 +110,7 @@
     ]
   },
   {
-    "question": "The accuracy of \\hat{Y} is best when …",
+    "question": "The accuracy of Ŷ is best when … XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
     "type": "multiple_choice",
     "answers": [
       {
@@ -162,16 +188,16 @@
     ]
   },
   {
-    "question": "The MSE is …",
+    "question": "The MSE is … XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
     "type": "multiple_choice",
     "answers": [
       {
-        "answer": "The expected value of the squared difference between true value (Y) and estimated value (\\hat{Y})",
+        "answer": "The expected value of the squared difference between true value (Y) and estimated value (Ŷ)",
         "correct": true,
-        "feedback": "Correct! Specifically, $MSE = E[(Y - \\hat{Y})^2]$."
+        "feedback": "Correct! Specifically, MSE = E[(Y - Ŷ)^2]."
       },
       {
-        "answer": "The squared difference between the estimated function (\\hat{f}) and the true function (f)",
+        "answer": "The squared difference between the estimated function (f hat) \u0066\u0302 and the true function (f)",
         "correct": false,
         "feedback": "Incorrect. This is just the reducible error."
       }
@@ -200,32 +226,6 @@
         "answer": "Increases more and more with increasing flexibility",
         "correct": false,
         "feedback": "Incorrect. A more flexible (complex) model will *always* fit the training data better, so the training MSE will decrease."
-      }
-    ]
-  },
-  {
-    "question": "The test MSE …",
-    "type": "multiple_choice",
-    "answers": [
-      {
-        "answer": "Decreases constantly with increasing flexibility",
-        "correct": false,
-        "feedback": "Incorrect. This describes the training MSE. The test MSE will eventually increase due to overfitting."
-      },
-      {
-        "answer": "Decreases up to a certain point with increasing flexibility, and from there on begins to increase again",
-        "correct": true,
-        "feedback": "Correct! This U-shape is characteristic of the bias-variance trade-off. The MSE decreases as the model's flexibility (e.g., complexity) moves from high bias to an optimal point, then increases as it starts to overfit (high variance)."
-      },
-      {
-        "answer": "Increases up to a certain point with increasing flexibility, and from there on begins to decrease again",
-        "correct": false,
-        "feedback": "Incorrect. This is the opposite of the typical U-shaped curve."
-      },
-      {
-        "answer": "Increases constantly with increasing flexibility",
-        "correct": false,
-        "feedback": "Incorrect. Initially, a more flexible model will perform *better* on the test set, up to a point."
       }
     ]
   },
@@ -288,13 +288,13 @@
     ]
   },
   {
-    "question": "The irreducible error is due to …",
+    "question": "The irreducible error is due to … XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
     "type": "multiple_choice",
     "answers": [
       {
         "answer": "The measurement error and the unmeasured variables",
         "correct": true,
-        "feedback": "Correct! This is the inherent noise and complexity in a system (often denoted as epsilon, $\\epsilon$) that no model can capture."
+        "feedback": "Correct! This is the inherent noise and complexity in a system (often denoted as epsilon, ϵ) that no model can capture."
       },
       {
         "answer": "The bias and the variance",
