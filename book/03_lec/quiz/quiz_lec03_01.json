@@ -1,46 +1,458 @@
 [
-    {
-    "question": "This is my first question",
-    "type": "multiple_choice",
-    "answers": [
-        {
-            "answer": "A",
-            "correct": false,
-            "feedback": "Incorrect. Try again."
-        },
-        {
-            "answer": "B - correct",
-            "correct": true,
-            "feedback": "Correct, good job!"
-        },
-        {
-            "answer": "C",
-            "correct": false,
-            "feedback": "Incorrect. Try again."
-        },
-        {
-            "answer": "D",
-            "correct": false,
-            "feedback": "Incorrect. Try again."
-        }
-    ]
-},
-{
-    "question": "This is my SECOND question",
+  {
+    "question": "The number of fitted models is the highest in ...",
     "type": "multiple_choice",
     "answers": [
       {
-        "answer": "First choice for Q2",
-        "correct": true,
-        "feedback": "Correct!"
+        "answer": "Forward stepwise selection",
+        "correct": false,
+        "feedback": "Incorrect. Forward stepwise selection with p predictors fits 1 + p(p+1)/2 models, which is far fewer than best subset selection."
       },
       {
-        "answer": "Second choice for Q2",
+        "answer": "Best subset selection",
+        "correct": true,
+        "feedback": "Correct! Best subset selection must fit all 2^p possible models, which is computationally far more expensive than the stepwise alternatives."
+      },
+      {
+        "answer": "Backward stepwise selection",
         "correct": false,
-        "feedback": "Incorrect."
+        "feedback": "Incorrect. Backward stepwise selection with p predictors fits 1 + p(p+1)/2 models, which is far fewer than best subset selection."
+      },
+      {
+        "answer": "It is the same for all approaches",
+        "correct": false,
+        "feedback": "Incorrect. Best subset selection is significantly more computationally demanding than the stepwise methods."
+      }
+    ]
+  },
+    {
+    "question": "Identifying linear combinations in an unsupervised way means ...",
+    "type": "many_choice",
+    "answers": [
+      {
+        "answer": "that the outcome Y is also used to help determine the principal component.",
+        "correct": false,
+        "feedback": "Incorrect. This is the definition of a *supervised* method (like PLS). Unsupervised methods explicitly *do not* use Y."
+      },
+      {
+        "answer": "it is guaranteed that the components that best explain the predictors also are the optimal components to use for predicting the outcome.",
+        "correct": false,
+        "feedback": "Incorrect. This is a common *pitfall* of unsupervised methods. There is *no* guarantee that the components explaining the most variance (in X) are the best ones for predicting Y."
+      },
+      {
+        "answer": "using a method like PCA",
+        "correct": true,
+        "feedback": "Correct! PCA (Principal Components Analysis) is the classic example of an unsupervised dimension reduction technique, as it only analyzes the X matrix."
+      },
+      {
+        "answer": "identifying the components without making use of the outcome Y",
+        "correct": true,
+        "feedback": "Correct! This is the definition of an unsupervised approach. It finds patterns (the components) using only the predictor variables."
+      }
+    ]
+  },
+  {
+    "question": "Regularization is an approach where multiple predictors are summarized in one variable.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "correct",
+        "correct": false,
+        "feedback": "Incorrect. This statement describes dimension reduction (like PCA or PLS). Regularization keeps the predictors but shrinks their coefficients."
+      },
+      {
+        "answer": "incorrect",
+        "correct": true,
+        "feedback": "Correct. This statement is incorrect. It describes dimension reduction. Regularization (like Ridge or Lasso) fits a model with all predictors but penalizes large coefficients to reduce variance."
+      }
+    ]
+  },
+  {
+    "question": "The number of fitted models in forward stepwise selection for p=4 is ...",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "4",
+        "correct": false,
+        "feedback": "Incorrect. The formula for forward stepwise selection is 1 + p(p+1)/2."
+      },
+      {
+        "answer": "5",
+        "correct": false,
+        "feedback": "Incorrect. The formula for forward stepwise selection is 1 + p(p+1)/2."
+      },
+      {
+        "answer": "10",
+        "correct": false,
+        "feedback": "Incorrect. The formula for forward stepwise selection is 1 + p(p+1)/2."
+      },
+      {
+        "answer": "11",
+        "correct": true,
+        "feedback": "Correct. It fits: 1 null model (k=0), 4 models for k=1, 3 models for k=2, 2 models for k=3, and 1 model for k=4. Total = 1 + 4 + 3 + 2 + 1 = 11 models."
+      },
+      {
+        "answer": "16",
+        "correct": false,
+        "feedback": "Incorrect. This is 2^p, which is related to best subset selection (1 + 4 + 6 + 4 + 1 = 16 models."
+      },
+      {
+        "answer": "17",
+        "correct": false,
+        "feedback": "Incorrect. The formula for forward stepwise selection is 1 + p(p+1)/2."
+      }
+    ]
+  },
+  {
+    "question": "In backward stepwise selection we might miss the best model.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "correct",
+        "correct": true,
+        "feedback": "Correct! Because it is a 'greedy' algorithm (it only makes the best choice at each step without looking into the future), it is not guaranteed to find the single best model of all 2^p possibilities."
+      },
+      {
+        "answer": "incorrect",
+        "correct": false,
+        "feedback": "Incorrect. This statement is correct. Only best subset selection is guaranteed to find the best model as it tests all possibilities."
+      }
+    ]
+  },
+  {
+    "question": "'The larger, the better the fit' is true for ... (Select all that apply)",
+    "type": "many_choice",
+    "answers": [
+      {
+        "answer": "Cp",
+        "correct": false,
+        "feedback": "Incorrect. For Mallow's Cp, a smaller value is better."
+      },
+      {
+        "answer": "AIC",
+        "correct": false,
+        "feedback": "Incorrect. For AIC (Akaike Information Criterion), a smaller value indicates a better fit."
+      },
+      {
+        "answer": "BIC",
+        "correct": false,
+        "feedback": "Incorrect. For BIC (Bayesian Information Criterion), a smaller value indicates a better fit."
+      },
+      {
+        "answer": "Adjusted R^2",
+        "correct": true,
+        "feedback": "Correct! Like R^2, a higher Adjusted R^2 is better."
+      }
+    ]
+  },
+  {
+    "question": "Advantages of linear models are ... (Select all that apply)",
+    "type": "many_choice",
+    "answers": [
+      {
+        "answer": "interpretability",
+        "correct": true,
+        "feedback": "Correct! Linear models are highly interpretable. The coefficient of each predictor gives a clear estimate of its relationship with the outcome."
+      },
+      {
+        "answer": "low variance",
+        "correct": false,
+        "feedback": "Incorrect. While simple linear models (e.g., p=1) have low variance, models with many predictors (p) can have very high variance, leading to overfitting. Regularization is used to reduce this variance."
+      },
+      {
+        "answer": "potentially good performance if p is large",
+        "correct": true,
+        "feedback": "Correct! Especially when combined with methods like regularization or dimension reduction, linear models can perform very well in high-dimensional (large p) settings."
+      },
+      {
+        "answer": "OLS can be used for fitting",
+        "correct": false,
+        "feedback": "Incorrect. This is a potential disadvantage. OLS (Ordinary Least Squares) cannot be used when p > n (more predictors than observations)."
+      }
+    ]
+  },
+  {
+    "question": "Methods used to deal with a large number of features in linear models are ... (Select all that apply)",
+    "type": "many_choice",
+    "answers": [
+      {
+        "answer": "Subset selection methods",
+        "correct": true,
+        "feedback": "Correct! Methods like forward stepwise or best subset selection explicitly select a subset of features."
+      },
+      {
+        "answer": "Dimension reduction",
+        "correct": true,
+        "feedback": "Correct! Methods like PCA and PLS reduce the p predictors down to a smaller set of M components, which are then used in the model."
+      },
+      {
+        "answer": "Regularization",
+        "correct": true,
+        "feedback": "Correct! Methods like Ridge and Lasso are designed to handle high-dimensional data by shrinking coefficients, which reduces variance."
+      },
+      {
+        "answer": "Clustering",
+        "correct": false,
+        "feedback": "Incorrect. Clustering is an unsupervised method used to find groups in observations, not to manage predictors in a supervised model."
+      }
+    ]
+  },
+  {
+    "question": "The BIC is ... than Cp.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "more strict",
+        "correct": true,
+        "feedback": "Correct! BIC's penalty is generally larger than Cp's penalty, especially when n is large. This means BIC tends to select models with fewer predictors."
+      },
+      {
+        "answer": "less strict",
+        "correct": false,
+        "feedback": "Incorrect. BIC's penalty is stronger, meaning it is more strict and will favor simpler models compared to Cp."
+      }
+    ]
+  },
+  {
+    "question": "Which methods can deal with big data by means of removing unnecessary predictors? (Select all that apply)",
+    "type": "many_choice",
+    "answers": [
+      {
+        "answer": "Best subset selection",
+        "correct": true,
+        "feedback": "Correct! The purpose of subset selection is to identify and remove predictors that are not useful."
+      },
+      {
+        "answer": "Dimension reduction",
+        "correct": false,
+        "feedback": "Incorrect. Dimension reduction (like PCA) doesn't remove predictors. It combines them into new components. The original predictors are all still used."
+      },
+      {
+        "answer": "Regularization",
+        "correct": true,
+        "feedback": "Correct! Specifically, Lasso regression performs feature selection by shrinking the coefficients of unnecessary predictors all the way to zero. However, Ridge regression does not do this."
+      },
+      {
+        "answer": "Forward and Backward stepwise selection",
+        "correct": true,
+        "feedback": "Correct! These are subset selection methods, and their explicit goal is to find a model that does not contain unnecessary predictors."
+      }
+    ]
+  },
+  {
+    "question": "Downsides of ... are that these are computationally heavy and can lead to overfitting.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Best subset selection algorithms",
+        "correct": true,
+        "feedback": "Correct! Best subset selection is computationally heavy (2^p models) and can lead to overfitting because it searches such a large space that it may find a model that fits the training set noise too well (high variance)."
+      },
+      {
+        "answer": "Forward stepwise selection algorithms",
+        "correct": false,
+        "feedback": "Incorrect. Forward stepwise is designed to be less computationally heavy than best subset selection. While it can still overfit, best subset selection is more prone to it."
+      }
+    ]
+  },
+  {
+    "question": "The RSS or R^2 are the indices you look at when you want to choose ...",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "the best model of the subset of possible models, which contain exactly k predictors.",
+        "correct": true,
+        "feedback": "Correct! For a fixed number of predictors (k), RSS and R^2 are valid for choosing the best model, as the penalty for complexity is not needed (since complexity is fixed)."
+      },
+      {
+        "answer": "the final best model of the whole set of models (spanning the null model, the full mode, and everything in between).",
+        "correct": false,
+        "feedback": "Incorrect. RSS and R^2 are not valid for choosing the final model, because they always improve as k increases. You must use a penalized metric (like Cp, AIC, BIC, Adj. R^2) or cross-validation."
+      }
+    ]
+  },
+  {
+    "question": "In ... you start with the full model and fit the null model last.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "forward stepwise selection",
+        "correct": false,
+        "feedback": "Incorrect. Forward stepwise selection starts with the null model and builds up to a larger model."
+      },
+      {
+        "answer": "backward stepwise selection",
+        "correct": true,
+        "feedback": "Correct! Backward stepwise selection starts with the full model (all predictors) and removes the least useful predictor at each step, ending at the null model."
+      }
+    ]
+  },
+  {
+    "question": "When the number of predictors is very large (larger than the number of observations), you should choose ...",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "backward stepwise selection",
+        "correct": false,
+        "feedback": "Incorrect. This method must start with the full model (all p predictors). When p>n, this initial model cannot be fit, so the algorithm fails immediately."
+      },
+      {
+        "answer": "forward stepwise selection",
+        "correct": true,
+        "feedback": "Correct. This method starts with the null model (k=0) and builds a path by adding one predictor at a time. It successfully finds models up to size k=n−1 before it must stop, providing a useful sequence to choose from."
+      },
+      {
+        "answer": "best subset selection",
+        "correct": false,
+        "feedback": "Incorrect. This method's algorithm requires fitting models for every possible size k (from 0 to p). Since it's impossible to fit models where k≥n, the entire procedure fails."
+      },
+      {
+        "answer": "as a matter of principle never a linear model",
+        "correct": false,
+        "feedback": "Incorrect. Linear models are very common for p>n problems, but they require special techniques like regularization or subset selection."
+      }
+    ]
+  },
+  {
+    "question": "Besides cross-validation, we can use these indices to select the optimal model: (Select all that apply)",
+    "type": "many_choice",
+    "answers": [
+      {
+        "answer": "Cp",
+        "correct": true,
+        "feedback": "Correct! Mallow's Cp is a penalized metric used to select the optimal model."
+      },
+      {
+        "answer": "AIC",
+        "correct": true,
+        "feedback": "Correct! AIC is a penalized metric used to select the optimal model."
+      },
+      {
+        "answer": "BIC",
+        "correct": true,
+        "feedback": "Correct! BIC is a penalized metric used to select the optimal model."
+      },
+      {
+        "answer": "Adjusted R^2",
+        "correct": true,
+        "feedback": "Correct! Adjusted R^2 is a penalized metric used to select the optimal model."
+      },
+      {
+        "answer": "R^2",
+        "correct": false,
+        "feedback": "Incorrect. R^2 cannot be used because it always increases with more predictors, so it would always select the full model."
+      },
+      {
+        "answer": "RSS",
+        "correct": false,
+        "feedback": "Incorrect. RSS (Residual Sum of Squares) cannot be used because it always decreases with more predictors, so it would always select the full model."
+      }
+    ]
+  },
+  {
+    "question": "Adding useless predictors to an already good model will cause Mallow's Cp to get …",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "larger",
+        "correct": true,
+        "feedback": "Correct! When a predictor is useless, it doesn't reduce the RSS (Residual Sum of Squares) by much, but it does increase the penalty term. This makes the overall Cp value increase."
+      },
+      {
+        "answer": "smaller",
+        "correct": false,
+        "feedback": "Incorrect. Cp only gets smaller if a new predictor is useful (i.e., it reduces the RSS by more than the penalty it adds)."
+      }
+    ]
+  },
+  {
+    "question": "Compared to the indirect approaches, which estimate the test error by adjusting the training error, cross-validation ...",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "is more accurate as it provides a more direct estimate of the test error",
+        "correct": true,
+        "feedback": "Correct! Cross-validation directly estimates test error by fitting the model on a subset and testing it on an unseen subset. This is generally preferred over indirect, formula-based adjustments like Cp or AIC."
+      },
+      {
+        "answer": "is computationally less demanding",
+        "correct": false,
+        "feedback": "Incorrect. Cross-validation is more computationally demanding. It requires fitting the model k times (for k-fold CV), whereas indirect methods (Cp, AIC) only require fitting the model once."
+      }
+    ]
+  },
+  {
+    "question": "R^2 and adjusted R^2 deviate from each other more strongly, the ...",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "more complex the model in question.",
+        "correct": true,
+        "feedback": "Correct! Adjusted R^2's penalty is a function of d (number of predictors included). As d gets larger, the penalty becomes larger, and the gap between the overly optimistic R^2 and the penalized Adjusted R^2 grows."
+      },
+      {
+        "answer": "less complex the model in question.",
+        "correct": false,
+        "feedback": "Incorrect. For a simple model (small d), the penalty is small, and R^2 and Adjusted R^2 will have very similar values."
+      }
+    ]
+  },
+ {
+    "question": "Dimension reduction is an approach to ... (Select all wordings that apply)",
+    "type": "many_choice",
+    "answers": [
+      {
+        "answer": "identify a subset of predictors that are truly related to the outcome",
+        "correct": false,
+        "feedback": "Incorrect. This describes subset selection."
+      },
+      {
+        "answer": "improve the model fit by including all predictors, yet shrinking their coefficient estimates toward 0",
+        "correct": false,
+        "feedback": "Incorrect. This describes regularization (like Ridge or Lasso)."
+      },
+      {
+        "answer": "capture the joint variation of correlated predictors in a small number of linear combinations",
+        "correct": true,
+        "feedback": "Correct! This is the primary goal of PCA (Principal Components Analysis), a type of dimension reduction. It finds components that explain the most variance."
+      },
+      {
+        "answer": "replace a large number of predictors with a smaller number of components, which combine the original predictors, and then use those components to fit a linear regression model",
+        "correct": true,
+        "feedback": "Correct! This is the definition of dimension reduction methods like PCR (Principal Components Regression) and PLS (Partial Least Squares)."
+      }
+    ]
+  },
+  {
+    "question": "In ..., the linear combinations are identified in a supervised way.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "PCR",
+        "correct": false,
+        "feedback": "Incorrect. In PCR (Principal Components Regression), the components are found using PCA, which is unsupervised (it only looks at the X variables, not Y)."
+      },
+      {
+        "answer": "PLS",
+        "correct": true,
+        "feedback": "Correct! In PLS (Partial Least Squares), the components are specifically designed to not only explain the variance in X, but also to be related to the outcome Y. This makes it a supervised method."
+      }
+    ]
+  },
+  {
+    "question": "The cross-validated prediction error is the index you look at when you want to choose ...",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "the best model of the subset of possible models, which contain exactly k predictors.",
+        "correct": false,
+        "feedback": "Incorrect. For a fixed k, you can just use RSS or R^2, which is computationally cheaper. Cross-validation is used to compare models across different values of k."
+      },
+      {
+        "answer": "the final best model of the whole set of models (spanning the null model, the full mode, and everything in between).",
+        "correct": true,
+        "feedback": "Correct! Cross-validation is a direct estimate of test error. We use it to find the 'sweet spot' (e.g., the optimal number of predictors) that has the lowest estimated test error, balancing bias and variance."
       }
     ]
   }
-
-
 ]
