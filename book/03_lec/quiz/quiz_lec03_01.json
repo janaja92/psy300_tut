@@ -26,23 +26,23 @@
     ]
   },
     {
-    "question": "Identifying linear combinations in an unsupervised way means ...",
+    "question": "Identifying linear combinations in an unsupervised way means ... (Select all that apply)",
     "type": "many_choice",
     "answers": [
       {
-        "answer": "that the outcome Y is also used to help determine the principal component.",
+        "answer": "that the outcome Y is also used to help determine the principal component",
         "correct": false,
-        "feedback": "Incorrect. This is the definition of a *supervised* method (like PLS). Unsupervised methods explicitly *do not* use Y."
+        "feedback": "Incorrect. This is the definition of a supervised method (like PLS). Unsupervised methods explicitly do not use Y."
       },
       {
-        "answer": "it is guaranteed that the components that best explain the predictors also are the optimal components to use for predicting the outcome.",
+        "answer": "it is guaranteed that the components that best explain the predictors also are the optimal components to use for predicting the outcome",
         "correct": false,
-        "feedback": "Incorrect. This is a common *pitfall* of unsupervised methods. There is *no* guarantee that the components explaining the most variance (in X) are the best ones for predicting Y."
+        "feedback": "Incorrect. This is a common pitfall of unsupervised methods. There is no guarantee that the components explaining the most variance (in X) are the best ones for predicting Y."
       },
       {
         "answer": "using a method like PCA",
         "correct": true,
-        "feedback": "Correct! PCA (Principal Components Analysis) is the classic example of an unsupervised dimension reduction technique, as it only analyzes the X matrix."
+        "feedback": "Correct! PCA (Principal Components Analysis) is the classic example of an unsupervised dimension reduction technique."
       },
       {
         "answer": "identifying the components without making use of the outcome Y",
@@ -58,12 +58,12 @@
       {
         "answer": "correct",
         "correct": false,
-        "feedback": "Incorrect. This statement describes dimension reduction (like PCA or PLS). Regularization keeps the predictors but shrinks their coefficients."
+        "feedback": "Incorrect. This statement describes dimension reduction. Regularization keeps the predictors but shrinks their coefficients."
       },
       {
         "answer": "incorrect",
         "correct": true,
-        "feedback": "Correct. This statement is incorrect. It describes dimension reduction. Regularization (like Ridge or Lasso) fits a model with all predictors but penalizes large coefficients to reduce variance."
+        "feedback": "Correct. This statement describes dimension reduction. Regularization fits a model with all predictors but penalizes large coefficients to reduce variance."
       }
     ]
   },
@@ -115,7 +115,7 @@
       {
         "answer": "incorrect",
         "correct": false,
-        "feedback": "Incorrect. This statement is correct. Only best subset selection is guaranteed to find the best model as it tests all possibilities."
+        "feedback": "Incorrect. This statement is true. Only best subset selection is guaranteed to find the best model as it tests all possibilities."
       }
     ]
   },
@@ -126,7 +126,7 @@
       {
         "answer": "Cp",
         "correct": false,
-        "feedback": "Incorrect. For Mallow's Cp, a smaller value is better."
+        "feedback": "Incorrect. For Mallow's Cp, a smaller value indicates a better fit."
       },
       {
         "answer": "AIC",
@@ -157,7 +157,7 @@
       {
         "answer": "low variance",
         "correct": false,
-        "feedback": "Incorrect. While simple linear models (e.g., p=1) have low variance, models with many predictors (p) can have very high variance, leading to overfitting. Regularization is used to reduce this variance."
+        "feedback": "Incorrect. While simple linear models (e.g., with only one predictor) have low variance, models with many predictors can have very high variance, leading to overfitting. Regularization is used to reduce this variance."
       },
       {
         "answer": "potentially good performance if p is large",
@@ -214,32 +214,6 @@
     ]
   },
   {
-    "question": "Which methods can deal with big data by means of removing unnecessary predictors? (Select all that apply)",
-    "type": "many_choice",
-    "answers": [
-      {
-        "answer": "Best subset selection",
-        "correct": true,
-        "feedback": "Correct! The purpose of subset selection is to identify and remove predictors that are not useful."
-      },
-      {
-        "answer": "Dimension reduction",
-        "correct": false,
-        "feedback": "Incorrect. Dimension reduction (like PCA) doesn't remove predictors. It combines them into new components. The original predictors are all still used."
-      },
-      {
-        "answer": "Regularization",
-        "correct": true,
-        "feedback": "Correct! Specifically, Lasso regression performs feature selection by shrinking the coefficients of unnecessary predictors all the way to zero. However, Ridge regression does not do this."
-      },
-      {
-        "answer": "Forward and Backward stepwise selection",
-        "correct": true,
-        "feedback": "Correct! These are subset selection methods, and their explicit goal is to find a model that does not contain unnecessary predictors."
-      }
-    ]
-  },
-  {
     "question": "Downsides of ... are that these are computationally heavy and can lead to overfitting.",
     "type": "multiple_choice",
     "answers": [
@@ -272,7 +246,7 @@
     ]
   },
   {
-    "question": "In ... you start with the full model and fit the null model last.",
+    "question": "In ..., you start with the full model and fit the null model last.",
     "type": "multiple_choice",
     "answers": [
       {
@@ -314,7 +288,7 @@
     ]
   },
   {
-    "question": "Besides cross-validation, we can use these indices to select the optimal model: (Select all that apply)",
+    "question": "Besides cross-validation, we can use these indices to select the optimal final model: (Select all that apply)",
     "type": "many_choice",
     "answers": [
       {
@@ -388,12 +362,12 @@
       {
         "answer": "more complex the model in question.",
         "correct": true,
-        "feedback": "Correct! Adjusted R^2's penalty is a function of d (number of predictors included). As d gets larger, the penalty becomes larger, and the gap between the overly optimistic R^2 and the penalized Adjusted R^2 grows."
+        "feedback": "Correct! Adjusted R^2's penalty is a function of d (number of predictors included). As d gets larger, the penalty becomes larger, and the gap between the overly optimistic R^2 and the penalized adjusted R^2 grows."
       },
       {
         "answer": "less complex the model in question.",
         "correct": false,
-        "feedback": "Incorrect. For a simple model (small d), the penalty is small, and R^2 and Adjusted R^2 will have very similar values."
+        "feedback": "Incorrect. For a simple model (small d), the penalty is small, and R^2 and adjusted R^2 will have very similar values."
       }
     ]
   },
@@ -452,6 +426,32 @@
         "answer": "the final best model of the whole set of models (spanning the null model, the full mode, and everything in between).",
         "correct": true,
         "feedback": "Correct! Cross-validation is a direct estimate of test error. We use it to find the 'sweet spot' (e.g., the optimal number of predictors) that has the lowest estimated test error, balancing bias and variance."
+      }
+    ]
+  },
+   {
+    "question": "Which methods can deal with big data by means of removing unnecessary predictors? (Select all that apply)",
+    "type": "many_choice",
+    "answers": [
+      {
+        "answer": "Best subset selection",
+        "correct": true,
+        "feedback": "Correct! The purpose of subset selection is to identify and remove predictors that are not useful."
+      },
+      {
+        "answer": "Dimension reduction",
+        "correct": false,
+        "feedback": "Incorrect. Dimension reduction (like PCA) doesn't remove predictors. It combines them into new components. The original predictors are all still used."
+      },
+      {
+        "answer": "Regularization",
+        "correct": true,
+        "feedback": "Correct! Specifically, Lasso regression performs feature selection by shrinking the coefficients of unnecessary predictors all the way to zero. However, Ridge regression does not do this."
+      },
+      {
+        "answer": "Forward and Backward stepwise selection",
+        "correct": true,
+        "feedback": "Correct! These are subset selection methods, and their explicit goal is to find a model that does not contain unnecessary predictors."
       }
     ]
   }
