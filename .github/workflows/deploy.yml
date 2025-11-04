@@ -30,6 +30,11 @@ jobs:
         run: |
           pip install -r requirements.txt
 
+      - name: List files in root # debugging
+        run: |
+          echo "Listing files in current directory:"
+          ls -la
+
       - name: Build the book
         run: |
           jupyter-book build .
