@@ -16,7 +16,7 @@ kernelspec:
 
 ## Welcome! 👋
 
-This resource is designed to help you review and consolidate the key concepts, and terminology covered in the Statistical Learning lecture of the psy300 module.
+This resource is designed to help you review and consolidate the key concepts and terminology covered in the Statistical Learning lecture of the psy300 module.
 
 ## How to Use This Page 💡
 
