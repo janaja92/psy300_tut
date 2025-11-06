@@ -4,12 +4,12 @@
     "type": "multiple_choice",
     "answers": [
       {
-        "answer": "Training data",
+        "answer": "training data",
         "correct": false,
-        "feedback": "Incorrect. Training data is used to *fit* the model. Using it to assess generalization performance would lead to an overly optimistic result."
+        "feedback": "Incorrect. Training data is used to fit the model. Using it to assess generalization performance would lead to an overly optimistic result."
       },
       {
-        "answer": "Test data",
+        "answer": "test data",
         "correct": true,
         "feedback": "Correct! Test data is unseen data that mimics new, real-world data, which is how we assess a model's ability to generalize."
       }
@@ -20,24 +20,24 @@
     "type": "multiple_choice",
     "answers": [
       {
-        "answer": "Decreases constantly with increasing flexibility",
+        "answer": "decreases constantly with increasing flexibility",
         "correct": false,
         "feedback": "Incorrect. This describes the training MSE. The test MSE will eventually increase due to overfitting."
       },
       {
-        "answer": "Decreases up to a certain point with increasing flexibility, and from there on begins to increase again",
+        "answer": "decreases up to a certain point with increasing flexibility, and from there on begins to increase again",
         "correct": true,
         "feedback": "Correct! This U-shape is characteristic of the bias-variance trade-off. The MSE decreases as the model's flexibility (e.g., complexity) moves from high bias to an optimal point, then increases as it starts to overfit (high variance)."
       },
       {
-        "answer": "Increases up to a certain point with increasing flexibility, and from there on begins to decrease again",
+        "answer": "increases up to a certain point with increasing flexibility, and from there on begins to decrease again",
         "correct": false,
         "feedback": "Incorrect. This is the opposite of the typical U-shaped curve."
       },
       {
-        "answer": "Increases constantly with increasing flexibility",
+        "answer": "increases constantly with increasing flexibility",
         "correct": false,
-        "feedback": "Incorrect. Initially, a more flexible model will perform *better* on the test set, up to a point."
+        "feedback": "Incorrect. Initially, a more flexible model will perform better on the test set, up to a point."
       }
     ]
   },
@@ -46,24 +46,24 @@
     "type": "multiple_choice",
     "answers": [
       {
-        "answer": "How much the model would change when using a different data set for training",
+        "answer": "how much the model would change when using a different data set for training",
         "correct": false,
-        "feedback": "Incorrect. This is the definition of *variance*."
+        "feedback": "Incorrect. This is the definition of variance."
       },
       {
-        "answer": "The error introduced by oversimplifying relationships between variables",
+        "answer": "the error introduced by oversimplifying relationships between variables",
         "correct": true,
         "feedback": "Correct! High bias means our model's assumptions are too simple (e.g., assuming a linear relationship when it's quadratic) and it fails to capture the true underlying pattern."
       },
       {
-        "answer": "The error introduced by overcomplicating relationships between variables",
+        "answer": "the error introduced by overcomplicating relationships between variables",
         "correct": false,
-        "feedback": "Incorrect. This would lead to low bias but high *variance* (overfitting)."
+        "feedback": "Incorrect. This would lead to low bias but high variance (overfitting)."
       },
       {
-        "answer": "The number of predictors being used",
+        "answer": "the number of predictors being used",
         "correct": false,
-        "feedback": "Incorrect. The number of predictors can *influence* bias and variance, but it is not the definition of bias."
+        "feedback": "Incorrect. The number of predictors can influence bias and variance, but it is not the definition of bias."
       }
     ]
   },
@@ -72,22 +72,22 @@
     "type": "multiple_choice",
     "answers": [
       {
-        "answer": "The variance increases and the bias decreases",
+        "answer": "the bias decreases and the variance increases",
         "correct": true,
         "feedback": "Correct! This is the fundamental bias-variance trade-off. A more complex (flexible) model can fit the data better (lower bias) but becomes more sensitive to the specific training data (higher variance)."
       },
       {
-        "answer": "The bias increases and the variance decreases",
+        "answer": "the bias increases and the variance decreases",
         "correct": false,
-        "feedback": "Incorrect. This describes what happens as complexity *decreases* (i.e., the model becomes simpler)."
+        "feedback": "Incorrect. This describes what happens as complexity decreases (i.e., the model becomes simpler)."
       },
       {
-        "answer": "Both the variance and the bias decrease",
+        "answer": "both the variance and the bias decrease",
         "correct": false,
         "feedback": "Incorrect. They trade off against each other; they don't typically move in the same direction."
       },
       {
-        "answer": "Both the variance and the bias increase",
+        "answer": "both the variance and the bias increase",
         "correct": false,
         "feedback": "Incorrect. This is not the standard trade-off."
       }
@@ -98,12 +98,12 @@
     "type": "multiple_choice",
     "answers": [
       {
-        "answer": "In real-world classification/regression endeavors",
+        "answer": "in real-world classification/regression endeavors",
         "correct": false,
         "feedback": "Incorrect. In the real world, the true underlying function (f) that relates predictors to an outcome is almost never known. That's why we try to estimate it with a model."
       },
       {
-        "answer": "Only when we simulated the data ourselves",
+        "answer": "only when we simulated the data ourselves",
         "correct": true,
         "feedback": "Correct! Only in a simulation, where we define the rules (the 'f') and then generate data from it, do we actually know the true function."
       }
@@ -114,22 +114,22 @@
     "type": "multiple_choice",
     "answers": [
       {
-        "answer": "The reducible and the irreducible error are minimal",
+        "answer": "the reducible and the irreducible error are minimal",
         "correct": true,
         "feedback": "Correct! We want to minimize our model's error (reducible error) and hope for low inherent noise in the system (irreducible error)."
       },
       {
-        "answer": "The reducible error is minimal and the irreducible error is maximal",
+        "answer": "the reducible error is minimal and the irreducible error is maximal",
         "correct": false,
         "feedback": "Incorrect. A maximal irreducible error means the data is extremely noisy and no model, no matter how good, can predict it well."
       },
       {
-        "answer": "The irreducible error is minimal and the reducible error is maximal",
+        "answer": "the irreducible error is minimal and the reducible error is maximal",
         "correct": false,
         "feedback": "Incorrect. A maximal reducible error means our model is very poor, even if the data itself is clean."
       },
       {
-        "answer": "The reducible and irreducible error are the same",
+        "answer": "the reducible and irreducible error are the same",
         "correct": false,
         "feedback": "Incorrect. There is no particular reason why these two values being equal would be optimal."
       }
@@ -147,17 +147,17 @@
       {
         "answer": "The bias and the measurement error",
         "correct": false,
-        "feedback": "Incorrect. Measurement error contributes to the *irreducible* error."
+        "feedback": "Incorrect. Measurement error contributes to the irreducible error."
       },
       {
         "answer": "The variance and the measurement error",
         "correct": false,
-        "feedback": "Incorrect. Measurement error contributes to the *irreducible* error."
+        "feedback": "Incorrect. Measurement error contributes to the irreducible error."
       },
       {
         "answer": "The unmeasured variables and the measurement error",
         "correct": false,
-        "feedback": "Incorrect. These factors contribute to the *irreducible* error, which our model cannot overcome."
+        "feedback": "Incorrect. These factors contribute to the irreducible error, which our model cannot overcome."
       }
     ]
   },
@@ -166,24 +166,24 @@
     "type": "multiple_choice",
     "answers": [
       {
-        "answer": "The mean squared error (MSE) in unseen test data",
+        "answer": "the mean squared error (MSE) in unseen test data",
         "correct": true,
-        "feedback": "Correct! For regression, MSE is a standard metric, and it *must* be evaluated on unseen test data to assess generalization."
+        "feedback": "Correct! For regression, MSE is a standard metric, and it must be evaluated on unseen test data to assess generalization."
       },
       {
-        "answer": "The mean squared error (MSE) in the training data",
+        "answer": "the mean squared error (MSE) in the training data",
         "correct": false,
         "feedback": "Incorrect. The training MSE only tells us how well the model fits the data it learned from, not how well it generalizes. It's often misleadingly low."
       },
       {
-        "answer": "The classification error rate",
+        "answer": "the classification error rate",
         "correct": false,
-        "feedback": "Incorrect. The classification error rate is used for *classification* problems, not regression."
+        "feedback": "Incorrect. The classification error rate is used for classification problems, not regression."
       },
       {
-        "answer": "The Gini index or the cross-entropy",
+        "answer": "the Gini index or the cross-entropy",
         "correct": false,
-        "feedback": "Incorrect. These are metrics used in *classification* (often for splitting nodes in decision trees)."
+        "feedback": "Incorrect. These are metrics used in classification (often for splitting nodes in decision trees)."
       }
     ]
   },
@@ -192,12 +192,12 @@
     "type": "multiple_choice",
     "answers": [
       {
-        "answer": "The expected value of the squared difference between true value (Y) and estimated value (Ŷ)",
+        "answer": "the expected value of the squared difference between true value (Y) and estimated value (Ŷ)",
         "correct": true,
         "feedback": "Correct! Specifically, MSE = E[(Y - Ŷ)^2]."
       },
       {
-        "answer": "The squared difference between the estimated function (\u0066\u0302) and the true function (f)",
+        "answer": "the squared difference between the estimated function (\u0066\u0302) and the true function (f)",
         "correct": false,
         "feedback": "Incorrect. This is just the reducible error."
       }
@@ -208,24 +208,24 @@
     "type": "multiple_choice",
     "answers": [
       {
-        "answer": "Decreases more and more with increasing flexibility",
+        "answer": "decreases more and more with increasing flexibility",
         "correct": true,
         "feedback": "Correct! A more flexible model can more closely fit the training data, including its noise, thus continuously driving down the training MSE."
       },
       {
-        "answer": "Decreases up to a certain point with increasing flexibility, and from there on begins to increase again",
+        "answer": "decreases up to a certain point with increasing flexibility, and from there on begins to increase again",
         "correct": false,
-        "feedback": "Incorrect. This describes the behavior of the *test* MSE."
+        "feedback": "Incorrect. This describes the behavior of the test MSE."
       },
       {
-        "answer": "Increases up to a certain point with increasing flexibility, and from there on begins to decrease again",
+        "answer": "increases up to a certain point with increasing flexibility, and from there on begins to decrease again",
         "correct": false,
         "feedback": "Incorrect. This is not the typical behavior of training MSE."
       },
       {
-        "answer": "Increases more and more with increasing flexibility",
+        "answer": "increases more and more with increasing flexibility",
         "correct": false,
-        "feedback": "Incorrect. A more flexible (complex) model will *always* fit the training data better, so the training MSE will decrease."
+        "feedback": "Incorrect. A more flexible (complex) model will always fit the training data better, so the training MSE will decrease."
       }
     ]
   },
@@ -252,7 +252,7 @@
       {
         "answer": "Correct",
         "correct": false,
-        "feedback": "Incorrect. This is only true up to a certain point. After that, increasing complexity leads to overfitting and a *larger* test MSE."
+        "feedback": "Incorrect. This is only true up to a certain point. After that, increasing complexity leads to overfitting and a larger test MSE."
       },
       {
         "answer": "Incorrect",
@@ -278,12 +278,12 @@
       {
         "answer": "It is great at assessing the prediction accuracy of new unseen data, but unnecessarily computationally heavy",
         "correct": false,
-        "feedback": "Incorrect. Overfitting implies *bad* accuracy on new data."
+        "feedback": "Incorrect. Overfitting implies bad accuracy on new data."
       },
       {
         "answer": "It is bad at assessing the prediction accuracy of the training data",
         "correct": false,
-        "feedback": "Incorrect. An overfit model has an *excellent* (but misleadingly low) MSE on its training data."
+        "feedback": "Incorrect. An overfit model has an excellent (but misleadingly low) MSE on its training data."
       }
     ]
   },
@@ -292,22 +292,22 @@
     "type": "multiple_choice",
     "answers": [
       {
-        "answer": "The measurement error and the unmeasured variables",
+        "answer": "the measurement error and the unmeasured variables",
         "correct": true,
         "feedback": "Correct! This is the inherent noise and complexity in a system (often denoted as epsilon, ϵ) that no model can capture."
       },
       {
-        "answer": "The bias and the variance",
+        "answer": "the bias and the variance",
         "correct": false,
-        "feedback": "Incorrect. Bias and variance make up the *reducible* error."
+        "feedback": "Incorrect. Bias and variance make up the reducible error."
       },
       {
-        "answer": "The variance and the measurement error",
+        "answer": "the variance and the measurement error",
         "correct": false,
         "feedback": "Incorrect. Variance is part of the reducible error."
       },
       {
-        "answer": "The bias and the measurement error",
+        "answer": "the bias and the measurement error",
         "correct": false,
         "feedback": "Incorrect. Bias is part of the reducible error."
       }
@@ -318,22 +318,22 @@
     "type": "multiple_choice",
     "answers": [
       {
-        "answer": "How much the model would change when using a different data set for training",
+        "answer": "how much the model would change when using a different data set for training",
         "correct": true,
         "feedback": "Correct! High variance means the model is unstable and its parameters would change significantly if trained on a different subset of the data."
       },
       {
-        "answer": "The error introduced by oversimplifying relationships between variables",
+        "answer": "the error introduced by oversimplifying relationships between variables",
         "correct": false,
-        "feedback": "Incorrect. This is the definition of *bias*."
+        "feedback": "Incorrect. This is the definition of bias."
       },
       {
-        "answer": "How much the model would change when using a different data set for testing",
+        "answer": "how much the model would change when using a different data set for testing",
         "correct": false,
-        "feedback": "Incorrect. Variance relates to changes in the *training* data, not the testing data."
+        "feedback": "Incorrect. Variance relates to changes in the training data, not the testing data."
       },
       {
-        "answer": "The bias",
+        "answer": "the bias",
         "correct": false,
         "feedback": "Incorrect. This is the other component of the reducible error."
       }
@@ -344,22 +344,22 @@
     "type": "multiple_choice",
     "answers": [
       {
-        "answer": "Both the variance and the (squared) bias are low",
+        "answer": "both the variance and the (squared) bias are low",
         "correct": true,
         "feedback": "Correct! The 'sweet spot' is where the sum of squared bias and variance (which make up the test MSE) is at its minimum."
       },
       {
-        "answer": "The variance is minimal",
+        "answer": "the variance is minimal",
         "correct": false,
         "feedback": "Incorrect. Minimal variance usually implies a very simple model, which would have high bias."
       },
       {
-        "answer": "The bias is minimal",
+        "answer": "the bias is minimal",
         "correct": false,
         "feedback": "Incorrect. Minimal bias usually implies a very complex model, which would have high variance (overfitting)."
       },
       {
-        "answer": "The training MSE is lowest",
+        "answer": "the training MSE is lowest",
         "correct": false,
         "feedback": "Incorrect. The lowest training MSE almost always corresponds to the most complex, overfit model (minimal bias, maximal variance), which is not optimal."
       }
@@ -370,12 +370,12 @@
     "type": "multiple_choice",
     "answers": [
       {
-        "answer": "The model suffers from high bias (underfitting).",
+        "answer": "the model suffers from high bias (underfitting).",
         "correct": false,
-        "feedback": "Incorrect. A high-bias (underfit) model would perform poorly on *both* the training and test sets."
+        "feedback": "Incorrect. A high-bias (underfit) model would perform poorly on both the training and test sets."
       },
       {
-        "answer": "The model suffers from high variance (overfitting).",
+        "answer": "the model suffers from high variance (overfitting).",
         "correct": true,
         "feedback": "Correct! This large gap between training performance (low error) and test performance (high error) is the classic sign of overfitting (high variance)."
       }

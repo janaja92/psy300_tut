@@ -20,12 +20,12 @@
     "type": "multiple_choice",
     "answers": [
       {
-        "answer": "Specified by us when creating the algorithm",
+        "answer": "specified by us when creating the algorithm",
         "correct": false,
         "feedback": "Incorrect. This describes a traditional rules-based program."
       },
       {
-        "answer": "Learned by the algorithm in iterations",
+        "answer": "learned by the algorithm in iterations",
         "correct": true,
         "feedback": "Correct! The algorithm learns the mapping (the 'rules') from the training data."
       }
@@ -62,22 +62,22 @@
     "type": "multiple_choice",
     "answers": [
       {
-        "answer": "A subfield of Artificial intelligence",
+        "answer": "a subfield of Artificial intelligence",
         "correct": true,
         "feedback": "Correct! AI is the broad field, and ML is a subfield of AI."
       },
       {
-        "answer": "A subfield of Deep Learning",
+        "answer": "a subfield of Deep Learning",
         "correct": false,
         "feedback": "Incorrect. It's the other way around: Deep Learning is a subfield of Machine Learning."
       },
       {
-        "answer": "A synonym of Artificial intelligence",
+        "answer": "a synonym of Artificial intelligence",
         "correct": false,
         "feedback": "Incorrect. AI is a much broader concept that includes non-learning-based approaches."
       },
       {
-        "answer": "A synonym of Deep Learning",
+        "answer": "a synonym of Deep Learning",
         "correct": false,
         "feedback": "Incorrect. Deep Learning is a specific, more complex subfield of Machine Learning."
       }
@@ -88,32 +88,32 @@
     "type": "multiple_choice",
     "answers": [
       {
-        "answer": "A type of unsupervised learning",
+        "answer": "a type of unsupervised learning",
         "correct": false,
         "feedback": "Incorrect. Classification requires labeled data, so it is supervised."
       },
       {
-        "answer": "A subtype of dimension reduction",
+        "answer": "a subtype of dimension reduction",
         "correct": false,
         "feedback": "Incorrect. Dimension reduction is used to summarize a large number of predictors in a smaller number of components, while classification aims to predict qualitative outcomes given the predictors." 
       },
       {
-        "answer": "Used to predict quantitative outcomes when labeled training data does exist",
+        "answer": "used to predict quantitative outcomes when labeled training data does exist",
         "correct": false,
         "feedback": "Incorrect. That is called regression."
       },
       {
-        "answer": "Used to predict quantitative outcomes when labeled training data does not exist",
+        "answer": "used to predict quantitative outcomes when labeled training data does not exist",
         "correct": false,
-        "feedback": "Incorrect. Classification predicts qualitative outcomes, not quantitative."
+        "feedback": "Incorrect. Classification predicts qualitative outcomes, not quantitative. Additionally, classification requires labeled data."
       },
       {
-        "answer": "Used to predict qualitative outcomes when labeled training data does not exist",
+        "answer": "used to predict qualitative outcomes when labeled training data does not exist",
         "correct": false,
         "feedback": "Incorrect. This describes clustering (unsupervised). Classification needs labeled data."
       },
       {
-        "answer": "Used to predict qualitative outcomes when labeled training data does exist",
+        "answer": "used to predict qualitative outcomes when labeled training data does exist",
         "correct": true,
         "feedback": "Correct! This is the definition of classification."
       }
@@ -124,12 +124,12 @@
     "type": "multiple_choice",
     "answers": [
       {
-        "answer": "Unlabeled data to an algorithm",
+        "answer": "unlabeled data to an algorithm",
         "correct": true,
         "feedback": "Correct! Unsupervised learning finds patterns in data without a predefined outcome label."
       },
       {
-        "answer": "Labeled data to an algorithm",
+        "answer": "labeled data to an algorithm",
         "correct": false,
         "feedback": "Incorrect. This is the definition of supervised learning."
       }
@@ -162,7 +162,7 @@
       {
         "answer": "Predictors",
         "correct": false,
-        "feedback": "Inorrect. Predictors are the inputs (X)."
+        "feedback": "Incorrect. Predictors are the inputs (X)."
       },
       {
         "answer": "Responses",
@@ -176,22 +176,22 @@
     "type": "many_choice",
     "answers": [
       {
-        "answer": "Both the predictors and the outcome are quantitative",
+        "answer": "both the predictors and the outcome are quantitative",
         "correct": false,
         "feedback": "Incorrect. This describes regression."
       },
       {
-        "answer": "Both the predictors and the outcome are qualitative",
+        "answer": "both the predictors and the outcome are qualitative",
         "correct": true,
         "feedback": "Correct! This is possible (e.g., Naive Bayes with categorical features)."
       },
       {
-        "answer": "The predictors are quantitative, and the outcome is qualitative",
+        "answer": "the predictors are quantitative, and the outcome is qualitative",
         "correct": true,
         "feedback": "Correct! This is the most common classification setup (e.g., Logistic Regression)."
       },
       {
-        "answer": "The predictors are qualitative, and the outcome is quantitative",
+        "answer": "the predictors are qualitative, and the outcome is quantitative",
         "correct": false,
         "feedback": "Incorrect. A quantitative outcome defines a regression problem."
       }
