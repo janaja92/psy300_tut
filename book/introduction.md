@@ -18,7 +18,7 @@ kernelspec:
 
 This resource is designed to help you review and consolidate the key concepts, and terminology covered in the Statistical Learning lecture of the psy300 module.
 
-## How to Use This Page
+## How to Use This Page 💡
 
 This page is a tool to reinforce your understanding and highlight areas where further study may be required.
 
@@ -27,7 +27,7 @@ This page is a tool to reinforce your understanding and highlight areas where fu
 
 ❗ Important Note: These questions represent a selection of material for study guidance and do not necessarily cover the entirety of the lecture content. This page should be used for learning and revision purposes alone and not as a substitute for the primary course materials (lecture slides, textbook readings, seminar contents, etc.). Always refer to the full module materials for comprehensive preparation.
 
-## Credits 
+## Credits 🌟
 
 This book was forked from Micha Burkhardt's Jupyter book. While the structure and format are based on his work, the content has been replaced with repetition quizzez for the corresponding lecture. 
 Some of the the repetition questions included here were inspired by or adapted from materials created by Tim Dreßler. 
