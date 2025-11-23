@@ -29,6 +29,6 @@ This page is a tool to reinforce your understanding and highlight areas where fu
 
 ## Credits 🌟
 
-This book was forked from Micha Burkhardt's Jupyter book. While the structure and format are based on his work, the content has been replaced with repetition quizzez for the corresponding lecture. 
-Some of the the repetition questions included here were inspired by or adapted from materials created by Tim Dreßler. 
+This book was forked from [Micha Burkhardt](https://github.com/mibur1)'s [Jupyter book](https://github.com/mibur1/psy300). While the structure and format are based on his work, the content has been replaced with repetition quizzez for the corresponding lecture. 
+Some of the the repetition questions included here were inspired by or adapted from materials created by [Tim Dreßler](https://github.com/timdressler). 
 Many thanks to both of them for their contributions and inspiration!
