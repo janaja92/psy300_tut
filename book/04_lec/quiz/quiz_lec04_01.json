@@ -1,27 +1,460 @@
 [
   {
-    "question": "Question",
+    "question": "LASSO regression uses the … (Select all that apply)",
+    "type": "many_choice",
+    "answers": [
+      {
+        "answer": "L1 norm",
+        "correct": true,
+        "feedback": "Correct. The Lasso coefficients minimize the RSS plus the penalty defined by the L1 norm."
+      },
+      {
+        "answer": "L2 norm",
+        "correct": false,
+        "feedback": "Incorrect. The L2 norm is used in Ridge regression."
+      },
+      {
+        "answer": "L0 norm",
+        "correct": false,
+        "feedback": "Incorrect."
+      },
+      {
+        "answer": "L3 norm",
+        "correct": false,
+        "feedback": "Incorrect."
+      },
+      {
+        "answer": "Euclidean norm",
+        "correct": false,
+        "feedback": "Incorrect. The Euclidean norm is another name for the L2 norm, which is used in Ridge regression."
+      },
+      {
+        "answer": "Manhattan distance",
+        "correct": true,
+        "feedback": "Correct. LASSO uses what is known as the Manhattan distance or Taxicab norm."
+      }
+    ]
+  },
+  {
+    "question": "The hyperparameter in Ridge regression is called …",
     "type": "multiple_choice",
     "answers": [
       {
-        "answer": "a",
-        "correct": false,
-        "feedback": "feedback"
-      },
-      {
-        "answer": "b",
+        "answer": "lambda",
         "correct": true,
-        "feedback": "feedback"
+        "feedback": "Correct! In the theoretical formulation of Ridge regression, the tuning parameter is denoted by λ (lambda)."
       },
       {
-        "answer": "c",
+        "answer": "alpha",
         "correct": false,
-        "feedback": "feedback"
+        "feedback": "Incorrect. While some software libraries (like scikit-learn) use alpha, the theoretical formulation in this course uses lambda."
+      },
+      {
+        "answer": "beta",
+        "correct": false,
+        "feedback": "Incorrect. Beta (β) refers to the regression coefficients themselves, not the hyperparameter."
+      },
+      {
+        "answer": "k",
+        "correct": false,
+        "feedback": "Incorrect. k is typically used to denote the number of neighbors in KNN or the number of predictors in subset selection."
+      },
+      {
+        "answer": "C",
+        "correct": false,
+        "feedback": "Incorrect. C is often used to denote a tuning parameter for Support Vector Machines, not Ridge regression."
       },
       {
         "answer": "d",
         "correct": false,
-        "feedback": "feedback"
+        "feedback": "Incorrect. d often refers to dimensions or tree depth (number of splits in each tree), not the Ridge hyperparameter."
+      }
+    ]
+  },
+  {
+    "question": "Which regression performs feature selection?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "LASSO",
+        "correct": true,
+        "feedback": "Correct. The LASSO performs variable selection by forcing some coefficient estimates to be exactly equal to zero."
+      },
+      {
+        "answer": "Ridge",
+        "correct": false,
+        "feedback": "Incorrect. Ridge regression includes all p predictors in the final model and shrinks them towards zero, but not exactly to zero."
+      }
+    ]
+  },
+  {
+    "question": "The L1 norm is described as …",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "the sum of the absolute slope coefficients",
+        "correct": true,
+        "feedback": "Correct. The L1 norm is defined as the sum of the absolute values of the coefficients: ||β||₁ = ∑|βⱼ|."
+      },
+      {
+        "answer": "the square root of the sum of squared slope coefficients",
+        "correct": false,
+        "feedback": "Incorrect. This describes the L2 norm (Euclidean norm) used in Ridge regression."
+      },
+      {
+        "answer": "the sum of the absolute intercept and slope coefficients",
+        "correct": false,
+        "feedback": "Incorrect. The penalty is applied to the slope coefficients, but typically the intercept (β₀) is left unpenalized."
+      },
+      {
+        "answer": "the square root of the sum of squared intercept and slope coefficients",
+        "correct": false,
+        "feedback": "Incorrect. The intercept is usually not included in the penalty term."
+      }
+    ]
+  },
+  {
+    "question": "The hyperparameter is selected via …",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "cross-validation",
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "answer": "bootstrapping",
+        "correct": false,
+        "feedback": "Incorrect. While bootstrapping is a resampling method, cross-validation is the standard method described for selecting the tuning parameter."
+      },
+      {
+        "answer": "gradient descent",
+        "correct": false,
+        "feedback": "Incorrect. Gradient descent is an optimization algorithm for finding the minimum of a function, not specifically for selecting the hyperparameter."
+      },
+      {
+        "answer": "OLS",
+        "correct": false,
+        "feedback": "Incorrect. OLS is the method for fitting linear models without regularization."
+      }
+    ]
+  },
+  {
+    "question": "LASSO regression estimates the regression coefficients by finding values that minimize …",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "the RSS",
+        "correct": false,
+        "feedback": "Incorrect. Minimizing just the RSS is the definition of OLS."
+      },
+      {
+        "answer": "the RSS plus the Penalty term",
+        "correct": true,
+        "feedback": "Correct. Lasso minimizes the quantity containing RSS plus a penalty term."
+      },
+      {
+        "answer": "the Penalty term",
+        "correct": false,
+        "feedback": "Incorrect. We must also consider the data fit (RSS). Minimizing only the penalty would simply set all coefficients to zero."
+      },
+      {
+        "answer": "the RSS times the Penalty term",
+        "correct": false,
+        "feedback": "Incorrect. The penalty term is added to the RSS, not multiplied by it."
+      }
+    ]
+  },
+  {
+    "question": "The larger Lambda, the …",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "larger the budget s",
+        "correct": false,
+        "feedback": "Incorrect. A larger lambda means a stricter penalty, which corresponds to a smaller constraint budget s."
+      },
+      {
+        "answer": "smaller the budget s",
+        "correct": true,
+        "feedback": "Correct. Increasing lambda increases the penalty, which is equivalent to decreasing the available budget s for the coefficients."
+      }
+    ]
+  },
+  {
+    "question": "For a linear model with 3 features (coefficients estimated: 3, 4, and -5), the Manhattan distance is …",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "12",
+        "correct": true,
+        "feedback": "Correct. The Manhattan distance (L1 norm) is the sum of absolute values: |3| + |4| + |-5|."
+      },
+      {
+        "answer": "ca. 7",
+        "correct": false,
+        "feedback": "Incorrect. This approximates the Euclidean (L2) norm: sqrt(3² + 4² + (-5)²) ≈ 7.07."
+      },
+      {
+        "answer": "50",
+        "correct": false,
+        "feedback": "Incorrect. This is the sum of squared coefficients (3² + 4² + (-5)² = 50), not the Manhattan distance."
+      },
+      {
+        "answer": "2",
+        "correct": false,
+        "feedback": "Incorrect. Remember to take the absolute value of negative coefficients before summing."
+      }
+    ]
+  },
+  {
+    "question": "The largest amount of coefficient estimates is generated by ...",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "OLS",
+        "correct": false,
+        "feedback": "Incorrect. OLS generates only one single set of coefficient estimates."
+      },
+      {
+        "answer": "Ridge with lambda range 0.001-100, stepsize 0.001",
+        "correct": true,
+        "feedback": "Correct. Ridge generates a set of coefficients for each value of lambda. This range has the most steps (thereby approx 100,000 values)."
+      },
+      {
+        "answer": "Ridge with lambda range 0.001-10, stepsize 0.001",
+        "correct": false,
+        "feedback": "Incorrect. This range contains fewer steps (approx 10,000 values) compared to the range ending at 100."
+      },
+      {
+        "answer": "Ridge with lambda range 5000-6000, stepsize 10",
+        "correct": false,
+        "feedback": "Incorrect. This range contains only approx 100 steps."
+      },
+      {
+        "answer": "LASSO, independent of the lambda range",
+        "correct": false,
+        "feedback": "Incorrect. Like Ridge, Lasso generates one set of coefficients per lambda value. The quantity depends on how many lambda values are tested."
+      }
+    ]
+  },
+  {
+    "question": "The shrink quantity ranges between …",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "0 and 1",
+        "correct": true,
+        "feedback": "Correct. The ratio of the L2 norm of the Ridge coefficients to the OLS coefficients ranges from 0 (at lambda=infinity) to 1 (at lambda=0)."
+      },
+      {
+        "answer": "-1 and 1",
+        "correct": false,
+        "feedback": "Incorrect. Norms are non-negative, so their ratio cannot be negative."
+      },
+      {
+        "answer": "0 and infinity",
+        "correct": false,
+        "feedback": "Incorrect. The Ridge coefficients shrink towards zero relative to OLS, so the ratio generally does not exceed 1."
+      },
+      {
+        "answer": "-1 and 0",
+        "correct": false,
+        "feedback": "Incorrect. The ratio cannot be negative."
+      }
+    ]
+  },
+  {
+    "question": "When applying Regularization methods ...",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "standardization is not needed",
+        "correct": false,
+        "feedback": "Incorrect. Without standardization, the penalty term depends on the scale of the predictors."
+      },
+      {
+        "answer": "all predictors should be standardized before",
+        "correct": true,
+        "feedback": "Correct. Ridge regression coefficients can change substantially due to scaling; all predictors should be standardized first."
+      },
+      {
+        "answer": "the outcome should be standardized before",
+        "correct": false,
+        "feedback": "Incorrect. While possible, the critical requirement is standardizing the predictors."
+      },
+      {
+        "answer": "all variables should be standardized before",
+        "correct": false,
+        "feedback": "Incorrect. Specifically the predictors need to be standardized."
+      }
+    ]
+  },
+  {
+    "question": "In case of 2 features, the constraint area for LASSO regression is ...",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "a circle",
+        "correct": false,
+        "feedback": "Incorrect. A circle represents the L2 norm constraint (Ridge)."
+      },
+      {
+        "answer": "a diamond",
+        "correct": true,
+        "feedback": "Correct. The L1 norm constraint (|β1| + |β2| ≤ s) forms a diamond shape in 2D space."
+      },
+      {
+        "answer": "a hexagon",
+        "correct": false,
+        "feedback": "Incorrect."
+      },
+      {
+        "answer": "an ellipse",
+        "correct": false,
+        "feedback": "Incorrect. Ellipses relate to the RSS contours, not the L1 constraint boundary."
+      }
+    ]
+  },
+  {
+    "question": "… leads to better model interpretability.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "LASSO regression",
+        "correct": true,
+        "feedback": "Correct. Lasso yields sparse models by setting some variables to zero, improving interpretability."
+      },
+      {
+        "answer": "Ridge regression",
+        "correct": false,
+        "feedback": "Incorrect. Ridge keeps all p predictors in the final model, which is a disadvantage for interpretation."
+      }
+    ]
+  },
+  {
+    "question": "With increasing lambda, … (Select all that apply)",
+    "type": "many_choice",
+    "answers": [
+      {
+        "answer": "the flexibility of the model decreases",
+        "correct": true,
+        "feedback": "Correct. As lambda increases, the coefficients are constrained more heavily, reducing model flexibility."
+      },
+      {
+        "answer": "the flexibility of the model increases",
+        "correct": false,
+        "feedback": "Incorrect. Increasing lambda constrains the model, thereby decreasing flexibility."
+      },
+      {
+        "answer": "the amount of shrinkage increases",
+        "correct": true,
+        "feedback": "Correct. A higher lambda imposes a larger penalty, causing coefficients to shrink more towards zero."
+      },
+      {
+        "answer": "the amount of shrinkage decreases",
+        "correct": false,
+        "feedback": "Incorrect. Higher lambda leads to more shrinkage."
+      }
+    ]
+  },
+  {
+    "question": "Upsides of regularization methods are … (Select all that apply)",
+    "type": "many_choice",
+    "answers": [
+      {
+        "answer": "that they are less computationally expensive than best subset selection",
+        "correct": true,
+        "feedback": "Correct. For any given lambda, Ridge/Lasso fits only one model, whereas best subset requires fitting 2^p models."
+      },
+      {
+        "answer": "that, in contrast to subset selection methods, they use a continuous process",
+        "correct": true,
+        "feedback": "Correct. Shrinking coefficients is a continuous process, unlike the discrete selection in subset methods."
+      },
+      {
+        "answer": "that they lead to lower variance than OLS",
+        "correct": true,
+        "feedback": "Correct. The continuous shrinkage reduces the variance of the coefficient estimates compared to OLS."
+      },
+      {
+        "answer": "that they lead to lower bias than OLS",
+        "correct": false,
+        "feedback": "Incorrect. Regularization typically introduces a slight increase in bias in exchange for a large decrease in variance."
+      }
+    ]
+  },
+  {
+    "question": "The optimal regularized coefficients are given by ...",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "the first point at which an ellipse (contour) contacts the constraint region",
+        "correct": true,
+        "feedback": "Correct. The solution is found where the elliptical RSS contours first touch the constraint region (diamond for Lasso, circle for Ridge)."
+      },
+      {
+        "answer": "the exact middle of the constraint region",
+        "correct": false,
+        "feedback": "Incorrect. The middle (zero) maximizes the penalty benefit but ignores the fit (RSS)."
+      }
+    ]
+  },
+  {
+    "question": "The coefficient estimates tend to approach zero when ..",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "lambda = 0",
+        "correct": false,
+        "feedback": "Incorrect. When lambda is 0, there is no penalty, so the estimates are the OLS estimates."
+      },
+      {
+        "answer": "lambda goes towards infinity",
+        "correct": true,
+        "feedback": "Correct. As lambda approaches infinity, the penalty grows and forces the estimates towards zero."
+      },
+      {
+        "answer": "lambda = 1",
+        "correct": false,
+        "feedback": "Incorrect. Lambda=1 is just one specific point; the trend towards zero happens as lambda increases towards infinity."
+      },
+      {
+        "answer": "lambda = 0.5",
+        "correct": false,
+        "feedback": "Incorrect. This is just a specific intermediate value; the trend towards zero happens as lambda increases towards infinity."
+      }
+    ]
+  },
+  {
+    "question": "When using a dataset, which we know contains many irrelevant features, but we don't know which they are, ... will perform better.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "LASSO",
+        "correct": true,
+        "feedback": "Correct. Lasso tends to perform better when the response is a function of a small number of predictors (sparse truth) because it can set irrelevant coefficients to zero."
+      },
+      {
+        "answer": "Ridge",
+        "correct": false,
+        "feedback": "Incorrect. Ridge keeps all predictors in the model, which is less optimal if many are truly irrelevant."
+      }
+    ]
+  },
+  {
+    "question": "Elastic nets try to combine the advantages of ...",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "of the L1 norm (sparse variable selection) and the L2 norm (averaging over correlated features in case of multicollinearity)",
+        "correct": true,
+        "feedback": "Correct. Elastic nets combine the L1 penalty (Lasso/sparsity) and the L2 penalty (Ridge/handling correlation)."
+      },
+      {
+        "answer": "of the L2 norm (sparse variable selection) and the L1 norm (averaging over correlated features in case of multicollinearity)",
+        "correct": false,
+        "feedback": "Incorrect. The roles are reversed: L1 provides sparsity (variable selection), and L2 handles correlated features."
       }
     ]
   }
