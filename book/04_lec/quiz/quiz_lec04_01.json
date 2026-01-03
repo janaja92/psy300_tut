@@ -400,22 +400,22 @@
     "type": "multiple_choice",
     "answers": [
       {
-        "answer": "lambda = 0",
+        "answer": "λ = 0",
         "correct": false,
         "feedback": "Incorrect. When lambda is 0, there is no penalty, so the estimates are the OLS estimates."
       },
       {
-        "answer": "lambda approaches infinity",
+        "answer": "λ → ∞",
         "correct": true,
         "feedback": "Correct. As lambda approaches infinity, the penalty grows and forces the estimates towards zero."
       },
       {
-        "answer": "lambda = 1",
+        "answer": "λ = 1",
         "correct": false,
         "feedback": "Incorrect. Lambda=1 is just one specific point; the trend towards zero happens as lambda increases towards infinity."
       },
       {
-        "answer": "lambda = 0.5",
+        "answer": "λ = 0.5",
         "correct": false,
         "feedback": "Incorrect. This is just a specific intermediate value; the trend towards zero happens as lambda increases towards infinity."
       }
