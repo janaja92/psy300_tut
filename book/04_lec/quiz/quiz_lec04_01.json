@@ -175,17 +175,17 @@
         "feedback": "Incorrect. Minimizing just the RSS is the definition of OLS."
       },
       {
-        "answer": "the RSS plus the Penalty term",
+        "answer": "the RSS plus the penalty term",
         "correct": true,
         "feedback": "Correct. Lasso minimizes the quantity containing RSS plus a penalty term."
       },
       {
-        "answer": "the Penalty term",
+        "answer": "the penalty term",
         "correct": false,
         "feedback": "Incorrect. We must also consider the data fit (RSS). Minimizing only the penalty would simply set all coefficients to zero."
       },
       {
-        "answer": "the RSS times the Penalty term",
+        "answer": "the RSS times the penalty term",
         "correct": false,
         "feedback": "Incorrect. The penalty term is added to the RSS, not multiplied by it."
       }
@@ -269,17 +269,17 @@
         "feedback": "Incorrect. OLS generates only one single set of coefficient estimates."
       },
       {
-        "answer": "Ridge with lambda range 0.001 - 100, stepsize 0.001",
+        "answer": "Ridge regression with lambda range 0.001 - 100, stepsize 0.001",
         "correct": true,
         "feedback": "Correct. Ridge generates a set of coefficients for each value of lambda. This range has the most steps (thereby approx 100,000 values)."
       },
       {
-        "answer": "Ridge with lambda range 0.001 - 10, stepsize 0.001",
+        "answer": "Ridge regression with lambda range 0.001 - 10, stepsize 0.001",
         "correct": false,
         "feedback": "Incorrect. This range contains fewer steps (approx 10,000 values) compared to the range ending at 100."
       },
       {
-        "answer": "LASSO, independent of the lambda range",
+        "answer": "LASSO regression, independent of the lambda range",
         "correct": false,
         "feedback": "Incorrect. Like Ridge, Lasso generates one set of coefficients per lambda value. The quantity depends on how many lambda values are tested."
       }
@@ -520,12 +520,12 @@
     "type": "multiple_choice",
     "answers": [
       {
-        "answer": "LASSO",
+        "answer": "LASSO regression",
         "correct": true,
         "feedback": "Correct. Lasso tends to perform better when the response is a function of a small number of predictors (sparse truth) because it can set irrelevant coefficients to zero."
       },
       {
-        "answer": "Ridge",
+        "answer": "Ridge regression",
         "correct": false,
         "feedback": "Incorrect. Ridge keeps all predictors in the model, which is less optimal if many are truly irrelevant."
       }
