@@ -87,6 +87,32 @@
       }
     ]
   },
+        {
+    "question": "Identifying linear combinations in an unsupervised way means ... (Select all that apply)",
+    "type": "many_choice",
+    "answers": [
+      {
+        "answer": "that the outcome Y is also used to help determine the principal component",
+        "correct": false,
+        "feedback": "Incorrect. This is the definition of a supervised method (like PLS). Unsupervised methods explicitly do not use Y."
+      },
+      {
+        "answer": "it is guaranteed that the components that best explain the predictors also are the optimal components to use for predicting the outcome",
+        "correct": false,
+        "feedback": "Incorrect. This is a common pitfall of unsupervised methods. There is no guarantee that the components explaining the most variance (in X) are the best ones for predicting Y."
+      },
+      {
+        "answer": "using a method like PCA",
+        "correct": true,
+        "feedback": "Correct! PCA (Principal Components Analysis) is the classic example of an unsupervised dimension reduction technique."
+      },
+      {
+        "answer": "identifying the components without making use of the outcome Y",
+        "correct": true,
+        "feedback": "Correct! This is the definition of an unsupervised approach. It finds patterns (the components) using only the predictor variables."
+      }
+    ]
+  },
   {
     "question": "The L1 norm is described as …",
     "type": "multiple_choice",
@@ -162,6 +188,32 @@
         "answer": "the RSS times the Penalty term",
         "correct": false,
         "feedback": "Incorrect. The penalty term is added to the RSS, not multiplied by it."
+      }
+    ]
+  },
+     {
+    "question": "Dimension reduction is an approach to ... (Select all wordings that apply)",
+    "type": "many_choice",
+    "answers": [
+      {
+        "answer": "identify a subset of predictors that are truly related to the outcome",
+        "correct": false,
+        "feedback": "Incorrect. This describes subset selection."
+      },
+      {
+        "answer": "improve the model fit by including all predictors, yet shrinking their coefficient estimates toward 0",
+        "correct": false,
+        "feedback": "Incorrect. This describes regularization (like Ridge or Lasso)."
+      },
+      {
+        "answer": "capture the joint variation of correlated predictors in a small number of linear combinations",
+        "correct": true,
+        "feedback": "Correct! This is the primary goal of PCA (Principal Components Analysis), a type of dimension reduction. It finds components that explain the most variance."
+      },
+      {
+        "answer": "replace a large number of predictors with a smaller number of components, which combine the original predictors, and then use those components to fit a linear regression model",
+        "correct": true,
+        "feedback": "Correct! This is the definition of dimension reduction methods like PCR (Principal Components Regression) and PLS (Partial Least Squares)."
       }
     ]
   },
@@ -282,6 +334,48 @@
         "answer": "all variables should be standardized before",
         "correct": false,
         "feedback": "Incorrect. Specifically the predictors need to be standardized."
+      }
+    ]
+  },
+    {
+    "question": "In ..., the linear combinations are identified in a supervised way.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "PCR",
+        "correct": false,
+        "feedback": "Incorrect. In PCR (Principal Components Regression), the components are found using PCA, which is unsupervised (it only looks at the X variables, not Y)."
+      },
+      {
+        "answer": "PLS",
+        "correct": true,
+        "feedback": "Correct! In PLS (Partial Least Squares), the components are specifically designed to not only explain the variance in X, but also to be related to the outcome Y. This makes it a supervised method."
+      }
+    ]
+  },
+  {
+    "question": "The first principal component in PCR is the linear combination of variables with the …",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "largest variance",
+        "correct": true,
+        "feedback": "Correct! The first principal component is a normalized linear combination of the variables with the largest variance."
+      },
+            {
+        "answer": "smallest variance",
+        "correct": false,
+        "feedback": "Incorrect. The first component corresponds to the largest variance."
+      },
+      {
+        "answer": "highest correlation with the outcome",
+        "correct": false,
+        "feedback": "Incorrect. This describes a supervised method like PLS. PCR does not look at the correlation with the outcome for component creation."
+      },
+      {
+        "answer": "lowest correlation with the outcome",
+        "correct": false,
+        "feedback": "Incorrect. Since PCR is an unsupervised approach, it does not use the outcome variable Y to determine the components at all."
       }
     ]
   },
