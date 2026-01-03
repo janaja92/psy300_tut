@@ -490,7 +490,7 @@
     ]
   },
   {
-    "question": "The coefficient estimates tend to approach zero when ..",
+    "question": "The regularized coefficient estimates tend to approach zero when ..",
     "type": "multiple_choice",
     "answers": [
       {
