@@ -6,12 +6,12 @@
       {
         "answer": "Logistic Regression",
         "correct": true,
-        "feedback": "Correct. Logistic regression models the probabilities for classification using a linear function of the predictors in the logit scale."
+        "feedback": "Correct! Logistic regression models the probabilities for classification using a linear function of the predictors in the logit scale."
       },
       {
         "answer": "Linear Discriminant Analysis (LDA)",
         "correct": true,
-        "feedback": "Correct. LDA is a generative linear method for classification."
+        "feedback": "Correct! LDA is a generative linear method for classification."
       },
       {
         "answer": "Quadratic Discriminant Analysis (QDA)",
@@ -58,7 +58,7 @@
       {
         "answer": "Logistic Regression is generative, while LDA is discriminative.",
         "correct": false,
-        "feedback": "Incorrect. It is the opposite: Logistic regression is discriminative, and LDA is generative."
+        "feedback": "Incorrect. It is the opposite: Logistic regression is discriminative, and LDA is generative. Don't confuse discriminative and discriminant!"
       },
       {
         "answer": "Logistic Regression is discriminative, while LDA is generative.",
@@ -74,7 +74,7 @@
       {
         "answer": "The Logits (Log-Odds)",
         "correct": true,
-        "feedback": "Correct. The logit transformation linearizes the relationship: ln(Odds) = b0 + b1*X."
+        "feedback": "Correct! The logit transformation linearizes the relationship: ln(Odds) = b0 + b1*X."
       },
       {
         "answer": "The Conditional Probability function",
@@ -110,12 +110,12 @@
       {
         "answer": "100%",
         "correct": false,
-        "feedback": "Incorrect. That would be deep within a class region, not on the boundary."
+        "feedback": "Incorrect. The boundary is where the classes are equally likely."
       },
       {
       "answer": "Exactly equal to the prior probability of class A",
       "correct": false,
-      "feedback": "Incorrect. While the prior probability influences where the boundary is located, the posterior probability at the boundary itself must be exactly 0.5."
+      "feedback": "Incorrect. While the prior probability influences where the boundary is located, the posterior probability at the boundary itself must be exactly 0.5 (50%)."
       }
     ]
   },
@@ -152,7 +152,7 @@
       {
         "answer": "The boundary stays exactly in the middle of the class means.",
         "correct": false,
-        "feedback": "Incorrect. This only happens if priors are 50/50."
+        "feedback": "Incorrect. This only happens if priors are 50:50."
       },
       {
         "answer": "The boundary shifts closer to the mean of the class with the lower prior.",
@@ -235,7 +235,7 @@
       {
         "answer": "4",
         "correct": true,
-        "feedback": "Correct! You need to estimate 2 class-specific means, 1 shared variance, and 1 prior (the second prior is determined by 1 - pi_1)."
+        "feedback": "Correct! You need to estimate 2 class-specific means, 1 shared variance, and 1 prior (the second prior is determined by 1 - the first prior)."
       },
       {
         "answer": "5",
@@ -245,43 +245,43 @@
       {
       "answer": "2",
       "correct": false,
-      "feedback": "Incorrect. While a simple linear regression has 2 parameters ($\beta_0, \beta_1$), LDA requires modeling the underlying distributions (means and variance) plus the class priors."
+      "feedback": "Incorrect. While a simple linear regression has 2 parameters, LDA requires modeling the underlying distributions (means and variance) plus the class priors."
       }
     ]
   },
   {
-    "question": "When the slope coefficient (beta1) of a logistic regression is positive (above zero), which of the following is true? (Select all that apply)",
+    "question": "When the slope coefficient (β1) of a logistic regression is positive (above zero), which of the following is true? (Select all that apply)",
     "type": "many_choice",
     "answers": [
       {
-        "answer": "The probability P(Y=1|X) increases as X increases.",
+        "answer": "The probability P(Y|X) increases as X increases.",
         "correct": true,
         "feedback": "Correct. A positive slope indicates a monotonically increasing probability function."
       },
       {
-        "answer": "The expected odds are multiplied by e^beta1 for every one-unit increase in X.",
+        "answer": "The expected odds are multiplied by e^β1 for every one-unit increase in X.",
         "correct": true,
         "feedback": "Correct. This is the multiplicative effect on the odds."
       },
       {
-        "answer": "The logit increases by beta1 for every one-unit increase in X.",
+        "answer": "The logit increases by β1 for every one-unit increase in X.",
         "correct": true,
         "feedback": "Correct. On the log-odds (logit) scale, the relationship is linear."
       },
       {
-        "answer": "The probability increases linearly with X.",
+        "answer": "The probability P(Y|X) increases linearly with X.",
         "correct": false,
         "feedback": "Incorrect. The probability follows an S-curve, not a straight line."
       },
       {
-      "answer": "The expected odds increase by beta1 for every one-unit increase in X.",
+      "answer": "The expected odds increase by β1 for every one-unit increase in X.",
       "correct": false,
-      "feedback": "Incorrect. The effect on the Odds scale is multiplicative (e^beta1), not additive (beta1). Only the Logit scale is additive."
+      "feedback": "Incorrect. The effect on the Odds scale is multiplicative (e^β1), not additive (β1)."
     },
     {
-      "answer": "The logit is multiplied by beta1 for every one-unit increase in X.",
+      "answer": "The logit is multiplied by β1 for every one-unit increase in X.",
       "correct": false,
-      "feedback": "Incorrect. The logit transformation is a linear function of X, meaning beta1 is added to the logit, not multiplied by it, for each unit increase."
+      "feedback": "Incorrect. The logit transformation is a linear function of X, meaning β1 is added to the logit, not multiplied by it, for each unit increase."
     }
     ]
   },
@@ -317,35 +317,35 @@
     "type": "multiple_choice",
     "answers": [
       {
-        "answer": "The conditional probability is 0.5, the Odds are 1, and the logit is 0.",
+        "answer": "The conditional probability is 0.5, the odds are 1, and the logit is 0.",
         "correct": true,
-        "feedback": "Correct! When p=0.5, the Odds are 0.5/0.5 = 1, and the logit (natural log of 1) is 0."
+        "feedback": "Correct! When p=0.5, the odds are 0.5/0.5 = 1, and the logit (natural log of 1) is 0."
       },
       {
-        "answer": "The conditional probability is 0.5, the Odds are 0, and the logit is 1.",
+        "answer": "The conditional probability is 0.5, the odds are 0, and the logit is 1.",
         "correct": false,
-        "feedback": "Incorrect. If the Odds were 0, the probability would have to be 0."
+        "feedback": "Incorrect. If the odds were 0, the probability would have to be 0."
       },
       {
-        "answer": "The conditional probability is 1, the Odds are 0.5, and the logit is 0.",
+        "answer": "The conditional probability is 1, the odds are 0.5, and the logit is 0.",
         "correct": false,
-        "feedback": "Incorrect. A probability of 1 means the event is certain, which would result in infinite Odds."
+        "feedback": "Incorrect. A probability of 1 means the event is certain, which would result in infinite odds."
       },
       {
-        "answer": "The conditional probability is 0, the Odds are 1, and the logit is 0.5.",
+        "answer": "The conditional probability is 0, the odds are 1, and the logit is 0.5.",
         "correct": false,
-        "feedback": "Incorrect. A probability of 0 means the event never happens, resulting in Odds of 0."
+        "feedback": "Incorrect. A probability of 0 means the event is impossible, resulting in odds of 0."
       }
     ]
   },
   {
-    "question": "Whenever the intercept coefficient (beta0) of a logistic regression is below zero, the expected conditional probability of being a 'case' at X=0 is...",
+    "question": "Whenever the intercept coefficient (β0) of a logistic regression is below zero, the expected conditional probability of being a 'case' at X=0 is...",
     "type": "multiple_choice",
     "answers": [
       {
         "answer": "Below 0.5",
         "correct": true,
-        "feedback": "Correct! Since the logit is beta0 + beta1(X), if X=0 and beta0 is negative, the logit is negative. A negative logit always corresponds to a probability below 0.5."
+        "feedback": "Correct! Since the logit is β0 + β1(X), if X=0 and β0 is negative, the logit is negative. A negative logit always corresponds to a probability below 0.5."
       },
       {
         "answer": "Above 0.5",
@@ -355,7 +355,7 @@
       {
         "answer": "Exactly 0.5",
         "correct": false,
-        "feedback": "Incorrect. The probability is only 0.5 when the logit (the linear predictor) is exactly zero."
+        "feedback": "Incorrect. The probability is only 0.5 at X=0 when β0 is exactly zero."
       },
       {
         "answer": "Exactly 0",
@@ -371,7 +371,7 @@
       {
         "answer": "By calculating the inverse of the shared covariance matrix.",
         "correct": false,
-        "feedback": "Incorrect. This is part of the discriminant function for LDA when p > 1."
+        "feedback": "Incorrect. This is part of the discriminant function for LDA when p>1."
       },
       {
         "answer": "By finding the maximum likelihood of the joint distribution.",
@@ -395,22 +395,22 @@
     "type": "many_choice",
     "answers": [
       {
-        "answer": "The predictor (IV) is quantitative and the outcome (DV) is dichotomous.",
+        "answer": "The predictor is quantitative and the outcome is dichotomous.",
         "correct": true,
         "feedback": "Correct! Logistic regression is designed for binary/dichotomous outcomes."
       },
       {
-        "answer": "The predictor (IV) is quantitative and the outcome (DV) is continuous.",
+        "answer": "The predictor is quantitative and the outcome is continuous.",
         "correct": false,
         "feedback": "Incorrect. For a continuous outcome, standard Linear Regression (OLS) is typically used."
       },
       {
-        "answer": "The predictor (IV) is quantitative and the outcome (DV) is polytomous.",
+        "answer": "The predictor is quantitative and the outcome is polytomous.",
         "correct": false,
         "feedback": "Incorrect. Standard logistic regression is for binary cases. For multiple categories, you would need Multinomial Logistic Regression or LDA."
       },
       {
-        "answer": "The predictor (IV) is qualitative and the outcome (DV) is dichotomous.",
+        "answer": "The predictor is qualitative and the outcome is dichotomous.",
         "correct": false,
         "feedback": "Incorrect. While logistic regression can theoretically handle qualitative predictors via dummy coding, the standard simple model assumes a quantitative predictor."
       }
@@ -433,29 +433,29 @@
     ]
   },
   {
-    "question": "According to Bayes' Theorem, which equation correctly calculates the probability: P(Cat knocks over glass | Time since last petting)?",
+    "question": "According to Bayes' Theorem, which equation correctly calculates the probability: P(Cat knocks over glass|Time since last petting)?",
     "type": "multiple_choice",
     "answers": [
       {
-        "answer": "[P(Time since last petting | Cat knocks over glass) * P(Cat knocks over glass)] / P(Time since last petting)",
+        "answer": "$$\\frac{P(\\text{Time} | \\text{Knock Over}) P(\\text{Knock Over})}{P(\\text{Time})}$$",
         "correct": true,
-        "feedback": "Correct! This follows the standard Bayes' formula."
-      },
-      {
-        "answer": "[P(Time since last petting | Cat knocks over glass) * P(Time since last petting)] / P(Cat knocks over glass)",
+        "feedback": "Correct! This follows the standard Bayes' formula: $$P(A|B) = \\frac{P(B|A)P(A)}{P(B)}$$"
+    },
+    {
+        "answer": "$$\\frac{P(\\text{Time} | \\text{Knock Over}) P(\\text{Time})}{P(\\text{Knock Over})}$$",
         "correct": false,
-        "feedback": "Incorrect. This formula incorrectly swaps the priors."
-      },
-      {
-        "answer": "[P(Cat knocks over glass) * P(Time since last petting)] / P(Time since last petting | Cat knocks over glass)",
-        "correct": false,
-        "feedback": "Incorrect. This does not follow the correct mathematical relationship for conditional probability."
-      },
-      {
-        "answer": "[P(Time since last petting) * P(Cat knocks over glass)] / P(Time since last petting | Cat knocks over glass)",
+        "feedback": "Incorrect. This formula incorrectly swaps the prior $P(A)$ with the evidence $P(B)$."
+    },
+    {
+       "answer": "$$\\frac{P(\\text{Knock Over}) P(\\text{Time})}{P(\\text{Time} | \\text{Knock Over})}$$",
+       "correct": false,
+       "feedback": "Incorrect. The likelihood should be in the numerator, not the denominator."
+    },
+    {
+        "answer": "$$\\frac{P(\\text{Time}) P(\\text{Knock Over})}{P(\\text{Time} | \\text{Knock Over})}$$",
         "correct": false,
         "feedback": "Incorrect. This is not a valid representation of Bayes' Theorem."
-      }
+    }
     ]
   },
   {
