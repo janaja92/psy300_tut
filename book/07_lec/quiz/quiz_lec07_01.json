@@ -37,7 +37,7 @@
       {
         "answer": "The first and second slopes of the second bin",
         "correct": true,
-        "feedback": "Correct! These restrictions ensure the first and second derivatives are continuous, making the curve 'smooth'."
+        "feedback": "Correct! These restrictions ensure the the curve is 'smooth'."
       },
       {
         "answer": "The highest-order term in the second bin",
@@ -52,7 +52,7 @@
     ]
   },
   {
-    "question": "In polynomial regression, the direction of the curvature is determined by:",
+    "question": "In polynomial regression, the direction of the curvature is determined by ...",
     "type": "multiple_choice",
     "answers": [
       {
@@ -135,7 +135,7 @@
       {
         "answer": "Multinomial regression",
         "correct": false,
-        "feedback": "Incorrect. Similar to logistic regression, multinomial regression is a linear method for classification regarding the predictor variables."
+        "feedback": "Incorrect. Similar to logistic regression, multinomial regression is non-linear in parameters."
       }
     ]
   },
@@ -277,7 +277,7 @@
       {
         "answer": "The number of bins created",
         "correct": false,
-        "feedback": "Incorrect. The number of bins is equal to the number of knots + 1."
+        "feedback": "Incorrect. The number of bins is equal to the number of knots+1."
       },
       {
         "answer": "The degree of the polynomial used",
@@ -318,7 +318,7 @@
     ]
   },
   {
-    "question": "The total number of parameters estimated in a standard spline regression is equal to:",
+    "question": "The total number of parameters estimated in a standard spline regression is equal to ...",
     "type": "multiple_choice",
     "answers": [
       {
