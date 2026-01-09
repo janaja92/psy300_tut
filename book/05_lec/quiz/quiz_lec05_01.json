@@ -433,26 +433,26 @@
     ]
   },
   {
-    "question": "According to Bayes' Theorem, which equation correctly calculates the probability: P(diabetic|blood sugar level)?",
+    "question": "According to Bayes' Theorem, which equation correctly calculates the probability: P(diabetic | blood sugar level)?",
     "type": "multiple_choice",
     "answers": [
       {
-        "answer": "P(blood sugar level|diabetic) * P(diabetic) / P(blood sugar level)",
+        "answer": "P(blood sugar level | diabetic) * P(diabetic) / P(blood sugar level)",
         "correct": true,
         "feedback": "Correct! This follows the standard Bayes' formula: P(A|B) = P(B|A)*P(A) / P(B)"
     },
     {
-        "answer": "P(blood sugar level|diabetic) * P(blood sugar level) / P(diabetic)",
+        "answer": "P(blood sugar level | diabetic) * P(blood sugar level) / P(diabetic)",
         "correct": false,
         "feedback": "Incorrect. This formula incorrectly swaps the priors P(A) and P(B)."
     },
     {
-        "answer": "P(diabetic) * P(blood sugar level) / P(blood sugar level|diabetic)",
+        "answer": "P(diabetic) * P(blood sugar level) / P(blood sugar level | diabetic)",
        "correct": false,
        "feedback": "Incorrect. The formula is P(A|B) = P(B|A)*P(A) / P(B)."
     },
     {
-        "answer": "P(blood sugar level) * P(diabetic) / P(blood sugar level|diabetic)",
+        "answer": "P(blood sugar level) * P(diabetic) / P(blood sugar level | diabetic)",
         "correct": false,
         "feedback": "Incorrect. The formula is P(A|B) = P(B|A)*P(A) / P(B)."
     }
