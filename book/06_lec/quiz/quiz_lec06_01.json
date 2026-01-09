@@ -1,0 +1,166 @@
+[
+  {
+    "question": "The central assumption behind the K-Nearest Neighbors (KNN) algorithm is:",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "That similar things exist in close proximity in the feature space",
+        "correct": true,
+        "feedback": "Correct! KNN assumes that observations near each other are likely to share the same response class."
+      },
+      {
+        "answer": "That all features follow a Gaussian distribution",
+        "correct": false,
+        "feedback": "Incorrect. This is a primary assumption of LDA, not KNN."
+      },
+      {
+        "answer": "That all classes share one common covariance matrix",
+        "correct": false,
+        "feedback": "Incorrect. This refers specifically to the assumption made by LDA."
+      },
+      {
+        "answer": "That all predictors are independent within each class",
+        "correct": false,
+        "feedback": "Incorrect. This is the 'naive' assumption used in Naive Bayes classifiers."
+      }
+    ]
+  },
+  {
+    "question": "When the covariance matrices estimated in QDA are highly different, QDA will perform ... for the classification problem than LDA.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Better",
+        "correct": true,
+        "feedback": "Correct! If the class-specific covariance matrices are truly different, QDA is better at modeling the non-linear decision boundary."
+      },
+      {
+        "answer": "Worse",
+        "correct": false,
+        "feedback": "Incorrect. LDA will perform worse here because it introduces significant bias by incorrectly assuming the covariance matrix is shared across all classes."
+      }
+    ]
+  },
+  {
+    "question": "A KNN model with K=1 is ... flexible than a KNN model with K=100.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "More",
+        "correct": true,
+        "feedback": "Correct! Low values of K provide high flexibility and can model complex decision boundaries, though they are prone to overfitting."
+      },
+      {
+        "answer": "Less",
+        "correct": false,
+        "feedback": "Incorrect. Higher K values (like K=100) result in a less flexible, smoother decision boundary."
+      }
+    ]
+  },
+  {
+    "question": "Which of the following can be used to decide whether to choose LDA or QDA for a specific dataset?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Cross-Validation",
+        "correct": true,
+        "feedback": "Correct! Since the best model depends on the specific bias-variance tradeoff of your data, you should test both using cross-validation."
+      },
+      {
+        "answer": "The 'Rule of Thumb' that more complex models are always more accurate",
+        "correct": false,
+        "feedback": "Incorrect. More complex models are not always better; they can lead to high variance and overfitting."
+      }
+    ]
+  },
+  {
+    "question": "Mean Squared Error (MSE) ... be used to measure prediction accuracy in classification problems.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Cannot",
+        "correct": true,
+        "feedback": "Correct! Because the outcome is qualitative (categorical) rather than quantitative, MSE is not a suitable measure."
+      },
+      {
+        "answer": "Can",
+        "correct": false,
+        "feedback": "Incorrect. MSE is used for regression; for classification, we instead use error rates based on the proportion of misclassifications."
+      }
+    ]
+  },
+  {
+    "question": "In KNN models, a higher value for K generally results in:",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Lower variance and higher bias",
+        "correct": true,
+        "feedback": "Correct! As K increases, the model becomes less flexible, which reduces variance but potentially increases bias."
+      },
+      {
+        "answer": "Higher variance and lower bias",
+        "correct": false,
+        "feedback": "Incorrect. Higher variance and lower bias are characteristics of high-flexibility models, such as KNN with a very small K."
+      }
+    ]
+  },
+  {
+    "question": "Computationally, LDA is ... expensive than QDA.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Far less",
+        "correct": true,
+        "feedback": "Correct! LDA only estimates one covariance matrix, whereas QDA must estimate a separate matrix for each of the K classes."
+      },
+      {
+        "answer": "Far more",
+        "correct": false,
+        "feedback": "Incorrect. QDA is more expensive because the number of parameters to estimate is multiplied by the number of classes K."
+      }
+    ]
+  },
+  {
+    "question": "If K=5 in a KNN classifier, how many neighbors will the algorithm use to classify a new test observation?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "5",
+        "correct": true,
+        "feedback": "Correct! The algorithm identifies the K points in the training data closest to the new observation."
+      },
+      {
+        "answer": "25",
+        "correct": false,
+        "feedback": "Incorrect. The number of neighbors is exactly equal to the chosen integer K."
+      },
+      {
+        "answer": "15",
+        "correct": false,
+        "feedback": "Incorrect. The number of neighbors is exactly equal to the chosen integer K."
+      },
+      {
+        "answer": "10",
+        "correct": false,
+        "feedback": "Incorrect. The number of neighbors is exactly equal to the chosen integer K."
+      }
+    ]
+  },
+  {
+    "question": "True or False: KNN models can only be used for classification problems.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "False",
+        "correct": true,
+        "feedback": "Correct! KNN can also be used for regression by averaging the response values of the K nearest neighbors."
+      },
+      {
+        "answer": "True",
+        "correct": false,
+        "feedback": "Incorrect. While often used for classification, the KNN approach is applicable to regression problems as well."
+      }
+    ]
+  }
+]
