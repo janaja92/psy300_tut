@@ -433,28 +433,28 @@
     ]
   },
   {
-    "question": "According to Bayes' Theorem, which equation correctly calculates the probability: P(Cat knocks over glass|Time since last petting)?",
+    "question": "According to Bayes' Theorem, which equation correctly calculates the probability: P(diabetic|blood sugar level)?",
     "type": "multiple_choice",
     "answers": [
       {
-        "answer": "$$\\frac{P(\\text{Time} | \\text{Knock Over}) P(\\text{Knock Over})}{P(\\text{Time})}$$",
+        "answer": "P(blood sugar level|diabetic) * P(diabetic) / P(blood sugar level)",
         "correct": true,
-        "feedback": "Correct! This follows the standard Bayes' formula: $$P(A|B) = \\frac{P(B|A)P(A)}{P(B)}$$"
+        "feedback": "Correct! This follows the standard Bayes' formula: P(A|B) = P(B|A)*P(A) / P(B)"
     },
     {
-        "answer": "$$\\frac{P(\\text{Time} | \\text{Knock Over}) P(\\text{Time})}{P(\\text{Knock Over})}$$",
+        "answer": "P(blood sugar level|diabetic) * P(blood sugar level) / P(diabetic)",
         "correct": false,
-        "feedback": "Incorrect. This formula incorrectly swaps the prior $P(A)$ with the evidence $P(B)$."
+        "feedback": "Incorrect. This formula incorrectly swaps the priors P(A) and P(B)."
     },
     {
-       "answer": "$$\\frac{P(\\text{Knock Over}) P(\\text{Time})}{P(\\text{Time} | \\text{Knock Over})}$$",
+        "answer": "P(diabetic) * P(blood sugar level) / P(blood sugar level|diabetic)",
        "correct": false,
-       "feedback": "Incorrect. The likelihood should be in the numerator, not the denominator."
+       "feedback": "Incorrect. The formula is P(A|B) = P(B|A)*P(A) / P(B)."
     },
     {
-        "answer": "$$\\frac{P(\\text{Time}) P(\\text{Knock Over})}{P(\\text{Time} | \\text{Knock Over})}$$",
+        "answer": "P(blood sugar level) * P(diabetic) / P(blood sugar level|diabetic)",
         "correct": false,
-        "feedback": "Incorrect. This is not a valid representation of Bayes' Theorem."
+        "feedback": "Incorrect. The formula is P(A|B) = P(B|A)*P(A) / P(B)."
     }
     ]
   },
