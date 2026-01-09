@@ -1,0 +1,446 @@
+[
+  {
+    "question": "Which of these regression methods involves computing the fit at a target point x0 using only the nearby observations of X?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Local regression",
+        "correct": true,
+        "feedback": "Correct! Local regression fits a model at a target point using only a neighborhood of nearby data points by applying a weighting function."
+      },
+      {
+        "answer": "Polynomial regression",
+        "correct": false,
+        "feedback": "Incorrect. Polynomial regression is a global method that uses all data points to fit the curve."
+      },
+      {
+        "answer": "Logistic regression",
+        "correct": false,
+        "feedback": "Incorrect. This is a global model used for classification."
+      },
+      {
+        "answer": "Linear regression",
+        "correct": false,
+        "feedback": "Incorrect. Standard linear regression is a global fit."
+      }
+    ]
+  },
+  {
+    "question": "To achieve a smooth cubic spline regression model with only one knot, which parameters must be restricted? (Select all that apply)",
+    "type": "many_choice",
+    "answers": [
+      {
+        "answer": "The intercept of the second bin",
+        "correct": true,
+        "feedback": "Correct! Restricting the intercept ensures the function is continuous at the knot."
+      },
+      {
+        "answer": "The first and second slopes of the second bin",
+        "correct": true,
+        "feedback": "Correct! These restrictions ensure the first and second derivatives are continuous, making the curve 'smooth'."
+      },
+      {
+        "answer": "The highest-order term in the second bin",
+        "correct": false,
+        "feedback": "Incorrect. This is the free parameter that allows the spline to change shape in the new bin."
+      },
+      {
+        "answer": "The slopes and intercept of the first bin",
+        "correct": false,
+        "feedback": "Incorrect. The constraints are applied to the subsequent piece to join it to the previous one."
+      }
+    ]
+  },
+  {
+    "question": "In polynomial regression, the direction of the curvature is determined by:",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "The sign of the highest-order term",
+        "correct": true,
+        "feedback": "Correct! The sign of the highest-order coefficient determines if the curve eventually turns upward or downward."
+      },
+      {
+        "answer": "The sign of the lowest-order term",
+        "correct": false,
+        "feedback": "Incorrect. The lowest-order term is the intercept (degree 0), which only shifts the curve vertically; it does not determine curvature."
+      },
+      {
+        "answer": "Whether the highest-order term is of an odd or even degree",
+        "correct": false,
+        "feedback": "Incorrect. The degree affects the 'shape' (e.g., U-shape)."
+      },
+      {
+        "answer": "Whether the lowest-order term is of an odd or even degree",
+        "correct": false,
+        "feedback": "Incorrect. The lowest-order term is degree 0 (the intercept); its 'degree' is constant and does not influence the direction of the curvature or the bends of the model."
+      }
+    ]
+  },
+  {
+    "question": "In a stepwise function model, an estimate of 66.7 for the second slope coefficient implies:",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "The average Y in the third bin is estimated to be 66.7 units higher compared to the first bin",
+        "correct": true,
+        "feedback": "Correct! In this coding, coefficients represent the difference in the mean of a specific bin relative to the reference bin (the first bin)."
+      },
+      {
+        "answer": "The average Y in the second bin is exactly 66.7",
+        "correct": false,
+        "feedback": "Incorrect. This is wrong for two reasons: 1) the second slope refers to the third bin in this coding, and 2) a slope coefficient represents a difference from the reference bin, not an absolute value."
+      },
+      {
+        "answer": "The average Y in the third bin is 66.7 units higher than the second bin",
+        "correct": false,
+        "feedback": "Incorrect. Slope coefficients in stepwise functions are typically interpreted as differences from the first (reference) bin."
+      },
+      {
+        "answer": "The average Y in the first bin is 66.7",
+        "correct": false,
+        "feedback": "Incorrect. This is the interpretation of the intercept, not a slope coefficient."
+      }
+    ]
+  },
+  {
+    "question": "Which of these models are non-linear in variables? (Select all that apply)",
+    "type": "many_choice",
+    "answers": [
+      {
+        "answer": "Polynomial regression",
+        "correct": true,
+        "feedback": "Correct! Polynomials use powers of X (like X^2), making them non-linear in variables."
+      },
+      {
+        "answer": "Regression splines",
+        "correct": true,
+        "feedback": "Correct! Splines use piecewise transformations of X."
+      },
+      {
+        "answer": "Local regression",
+        "correct": true,
+        "feedback": "Correct! Local regression fits non-linear shapes by focusing on local neighborhoods."
+      },
+      {
+        "answer": "Linear regression",
+        "correct": false,
+        "feedback": "Incorrect. Standard linear regression is linear in both variables and parameters."
+      },
+      {
+        "answer": "Logistic regression",
+        "correct": false,
+        "feedback": "Incorrect. While it is non-linear in parameters, it is considered linear in variables."
+      },
+      {
+        "answer": "Multinomial regression",
+        "correct": false,
+        "feedback": "Incorrect. Similar to logistic regression, multinomial regression is a linear method for classification regarding the predictor variables."
+      }
+    ]
+  },
+  {
+    "question": "In spline regression, if we place 5 knots throughout the range of the predictor, how many different local splines must we fit?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "6",
+        "correct": true,
+        "feedback": "Correct! K knots divide the range of X into K+1 bins."
+      },
+      {
+        "answer": "5",
+        "correct": false,
+        "feedback": "Incorrect. Five knots create six distinct regions."
+      },
+      {
+        "answer": "4",
+        "correct": false,
+        "feedback": "Incorrect. This would be the case for only 3 knots."
+      },
+      {
+        "answer": "15",
+        "correct": false,
+        "feedback": "Incorrect. The number of pieces is determined by knots+1."
+      }
+    ]
+  },
+  {
+    "question": "A function with a polynomial degree of 3 is called ... and typically has ... bends.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Cubic; 2",
+        "correct": true,
+        "feedback": "Correct! A cubic function (X^3) can have up to two local extrema (bends)."
+      },
+      {
+        "answer": "Quadratic; 1",
+        "correct": false,
+        "feedback": "Incorrect. A quadratic function has a degree of 2 and one bend."
+      },
+      {
+        "answer": "Cubic; 3",
+        "correct": false,
+        "feedback": "Incorrect. A cubic function has at most 2 bends."
+      },
+      {
+        "answer": "Quadratic; 2",
+        "correct": false,
+        "feedback": "Incorrect. Quadratic functions only have one bend."
+      }
+    ]
+  },
+  {
+    "question": "In a quadratic polynomial model with centered predictors, how can the linear term (b1) be interpreted? (Select all that apply)",
+    "type": "many_choice",
+    "answers": [
+      {
+        "answer": "How much the function is still increasing at the average X",
+        "correct": true,
+        "feedback": "Correct! In centered models, the linear coefficient represents the slope at the mean of X."
+      },
+      {
+        "answer": "The average linear slope of Y on X across the entire quadratic equation",
+        "correct": true,
+        "feedback": "Correct! It can be viewed as the average rate of change."
+      },
+      {
+        "answer": "The expected value of Y for the average X",
+        "correct": false,
+        "feedback": "Incorrect. This is the interpretation of the intercept (b0) in a centered model."
+      },
+      {
+        "answer": "The direction of the curvature",
+        "correct": false,
+        "feedback": "Incorrect. The curvature direction is determined by the sign of the quadratic (X^2) term."
+      }
+    ]
+  },
+  {
+    "question": "What is the primary advantage of a cubic spline model compared to a high-degree global polynomial model?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Splines are more robust than polynomials",
+        "correct": true,
+        "feedback": "Correct! High-degree polynomials can be very unstable at the boundaries, whereas splines maintain local control."
+      },
+      {
+        "answer": "Splines are always more flexible than polynomials",
+        "correct": false,
+        "feedback": "Incorrect. Flexibility depends on the degree of the polynomial or the number of knots in a spline."
+      }
+    ]
+  },
+  {
+    "question": "True or False: In stepwise regression (piecewise constant functions), bins are allowed to overlap.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "False",
+        "correct": true,
+        "feedback": "Correct! Stepwise functions divide the X range into mutually exclusive, non-overlapping bins."
+      },
+      {
+        "answer": "True",
+        "correct": false,
+        "feedback": "Incorrect. If bins overlapped, a single X value could have multiple predicted Y values, which is not how these models work."
+      }
+    ]
+  },
+  {
+    "question": "Which of these models is considered parametric?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Polynomial regression",
+        "correct": true,
+        "feedback": "Correct! Polynomial regression follows a specific functional form with a fixed number of parameters."
+      },
+      {
+        "answer": "Local regression",
+        "correct": false,
+        "feedback": "Incorrect. Local regression is often described as non-parametric because the model structure is determined locally by the data rather than a global formula."
+      }
+    ]
+  },
+  {
+    "question": "In regression splines, the term 'knots' refers to:",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "The specific cut points that break the X range into distinct bins",
+        "correct": true,
+        "feedback": "Correct! Knots are the values of X where the piecewise polynomials are joined."
+      },
+      {
+        "answer": "The number of bins created",
+        "correct": false,
+        "feedback": "Incorrect. The number of bins is equal to the number of knots + 1."
+      },
+      {
+        "answer": "The degree of the polynomial used",
+        "correct": false,
+        "feedback": "Incorrect. The degree (e.g., cubic) and the knots are separate parameters of a spline."
+      },
+      {
+        "answer": "The total number of degrees of freedom used to define the model's flexibility",
+        "correct": false,
+        "feedback": "Incorrect. The degrees of freedom are a count of the estimated parameters (calculated from both the number of knots and the polynomial degree)."
+    }
+    ]
+  },
+  {
+    "question": "Which model fits a different constant (flat horizontal line) in every bin of the X range?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Stepwise functions",
+        "correct": true,
+        "feedback": "Correct! Stepwise functions produce a 'staircase' effect by fitting a constant mean within each bin."
+      },
+      {
+        "answer": "Regression splines",
+        "correct": false,
+        "feedback": "Incorrect. Splines fit polynomials (not constants) within bins."
+      },
+      {
+        "answer": "Linear regression",
+        "correct": false,
+        "feedback": "Incorrect. Linear regression fits a single global straight line."
+      },
+      {
+      "answer": "Polynomial regression",
+      "correct": false,
+      "feedback": "Incorrect. Polynomial regression fits a single global curve to the data and does not divide the predictor into discrete bins."
+    }
+    ]
+  },
+  {
+    "question": "The total number of parameters estimated in a standard spline regression is equal to:",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "The number of bins + the degree of the highest-order polynomial",
+        "correct": true,
+        "feedback": "Correct! For a cubic spline with two bins, the degrees of freedom are equal to 2 + 3 = 5."
+      },
+      {
+        "answer": "The number of bins + the number of knots",
+        "correct": false,
+        "feedback": "Incorrect. This does not account for the polynomial degree correctly."
+      },
+      {
+        "answer": "The number of knots * the highest-order polynomial",
+        "correct": false,
+        "feedback": "Incorrect. This formula is mathematically unrelated to spline degrees of freedom."
+      },
+      {
+      "answer": "The number of knots + the degree of the highest-order polynomial",
+      "correct": false,
+      "feedback": "Incorrect. This is close, but it would miss one parameter (the intercept)."
+    }
+    ]
+  },
+  {
+    "question": "True or False: Polynomial regression models can be extended to handle multiple predictors.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "True",
+        "correct": true,
+        "feedback": "Correct! You can include polynomial terms for multiple variables in a single model."
+      },
+      {
+        "answer": "False",
+        "correct": false,
+        "feedback": "Incorrect. Multi-predictor polynomial models are common in statistical learning."
+      }
+    ]
+  },
+  {
+    "question": "Piecewise constant functions can be described as piecewise polynomials of degree:",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "0",
+        "correct": true,
+        "feedback": "Correct! A constant value has no X term, which corresponds to a polynomial of degree 0."
+      },
+      {
+        "answer": "1",
+        "correct": false,
+        "feedback": "Incorrect. A degree of 1 would imply a linear slope."
+      },
+      {
+      "answer": "2",
+      "correct": false,
+      "feedback": "Incorrect. A degree of 2 would result in a piecewise quadratic model with parabolic curves in each bin."
+      },
+      {
+        "answer": "3",
+        "correct": false,
+        "feedback": "Incorrect. This would be a cubic spline."
+      }
+    ]
+  },
+  {
+    "question": "In contrast to a standard cubic polynomial, a cubic spline is considered a ...",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Local model",
+        "correct": true,
+        "feedback": "Correct! Splines fit separate polynomials to different regions of the data, joined at knots."
+      },
+      {
+        "answer": "Global model",
+        "correct": false,
+        "feedback": "Incorrect. Standard polynomials are global because they fit one polynomial to the entire interval of X."
+      }
+    ]
+  },
+  {
+    "question": "For both stepwise regression and spline regression, how does model flexibility change with the number of bins?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Flexibility increases with more bins",
+        "correct": true,
+        "feedback": "Correct! More bins (or more knots) allow the model to fit smaller, more specific local patterns in the data."
+      },
+      {
+        "answer": "Flexibility decreases with more bins",
+        "correct": false,
+        "feedback": "Incorrect. Fewer bins make the model more rigid."
+      }
+    ]
+  },
+  {
+    "question": "To perfectly hit all 36 data points in a specific graph with a single global function, a polynomial of which degree is needed?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "35th",
+        "correct": true,
+        "feedback": "Correct! A polynomial of degree n-1 is generally required to pass through n distinct points."
+      },
+      {
+        "answer": "36th",
+        "correct": false,
+        "feedback": "Incorrect. A 36th-degree polynomial would be needed for 37 points."
+      },
+      {
+      "answer": "37th",
+      "correct": false,
+      "feedback": "Incorrect. This degree would be appropriate for hitting 38 distinct data points."
+      },
+      {
+        "answer": "6th",
+        "correct": false,
+        "feedback": "Incorrect. A 6th-degree polynomial is not flexible enough for 36 points."
+      }
+    ]
+  }
+]
