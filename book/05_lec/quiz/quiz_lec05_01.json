@@ -1,0 +1,530 @@
+[
+  {
+    "question": "Which of the following methods are considered linear approaches to classification? (Select all that apply)",
+    "type": "many_choice",
+    "answers": [
+      {
+        "answer": "Logistic Regression",
+        "correct": true,
+        "feedback": "Correct. Logistic regression models the probabilities for classification using a linear function of the predictors in the logit scale."
+      },
+      {
+        "answer": "Linear Discriminant Analysis (LDA)",
+        "correct": true,
+        "feedback": "Correct. LDA is a generative linear method for classification."
+      },
+      {
+        "answer": "Support Vector Classifiers",
+        "correct": true,
+        "feedback": "Correct. SVCs use separating hyperplanes to solve classification problems."
+      },
+      {
+        "answer": "Quadratic Discriminant Analysis (QDA)",
+        "correct": false,
+        "feedback": "Incorrect. QDA is a non-linear method because it results in quadratic decision boundaries."
+      },
+      {
+        "answer": "K-Nearest Neighbors (KNN)",
+        "correct": false,
+        "feedback": "Incorrect. KNN is a non-linear, non-parametric approach."
+      }
+    ]
+  },
+  {
+    "question": "In LDA, what is the shape of the decision boundary?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Linear",
+        "correct": true,
+        "feedback": "Correct! LDA results in a linear decision boundary because it assumes a common covariance matrix for all classes."
+      },
+      {
+        "answer": "Quadratic",
+        "correct": false,
+        "feedback": "Incorrect. A quadratic boundary is a characteristic of QDA."
+      },
+      {
+        "answer": "Cubic",
+        "correct": false,
+        "feedback": "Incorrect. Linear methods like LDA do not produce cubic boundaries."
+      },
+      {
+        "answer": "Exponential",
+        "correct": false,
+        "feedback": "Incorrect. While the Gaussian density funtions used in LDA involve exponential terms, the resulting decision boundary equation is simplified to a linear function."
+      }
+    ]
+  },
+  {
+    "question": "Which statement correctly describes the difference between Logistic Regression and LDA?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Logistic Regression is generative, while LDA is discriminative.",
+        "correct": false,
+        "feedback": "Incorrect. It is the opposite: Logistic regression is discriminative, and LDA is generative."
+      },
+      {
+        "answer": "Logistic Regression is discriminative, while LDA is generative.",
+        "correct": true,
+        "feedback": "Correct! Logistic regression directly models P(Y|X), while LDA models the distribution of X in each class (generative) and uses Bayes' theorem to find the posterior."
+      }
+    ]
+  },
+  {
+    "question": "Which representations of simple logistic regression are linear in their parameters?",
+    "type": "many_choice",
+    "answers": [
+      {
+        "answer": "The Logits (Log-Odds)",
+        "correct": true,
+        "feedback": "Correct. The logit transformation linearizes the relationship: ln(Odds) = b0 + b1*X."
+      },
+      {
+        "answer": "The Conditional Probability function",
+        "correct": false,
+        "feedback": "Incorrect. The probability function is an S-shaped curve (sigmoidal) and is non-linear."
+      },
+      {
+        "answer": "The Conditional Odds",
+        "correct": false,
+        "feedback": "Incorrect. The odds representation (e^(b0 + b1*X)) is still non-linear."
+      },
+      {
+        "answer": "The predicted values of the categorical outcome Y",
+        "correct": false,
+        "feedback": "Incorrect. The outcome Y is dichotomous (e.g., 0 or 1). A linear function would predict values outside this range, which is why we use the logistic function instead."
+      }
+    ]
+  },
+  {
+    "question": "If a data point lies directly on the decision boundary between two classes, what is its posterior probability of belonging to class A?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "0%",
+        "correct": false,
+        "feedback": "Incorrect. The boundary is where the classes are equally likely."
+      },
+      {
+        "answer": "50%",
+        "correct": true,
+        "feedback": "Correct! The decision boundary is defined as the set of points where the probabilities of belonging to either class are equal."
+      },
+      {
+        "answer": "100%",
+        "correct": false,
+        "feedback": "Incorrect. That would be deep within a class region, not on the boundary."
+      },
+      {
+      "answer": "Exactly equal to the prior probability of class A",
+      "correct": false,
+      "feedback": "Incorrect. While the prior probability influences where the boundary is located, the posterior probability at the boundary itself must be exactly 0.5."
+      }
+    ]
+  },
+  {
+    "question": "In which of the following settings is the Naïve Bayes classifier particularly advantageous compared to methods that estimate joint distributions?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "When the number of observations (n) is very large relative to the number of predictors (p).",
+        "correct": false,
+        "feedback": "Incorrect. With massive data, you can effectively estimate complex joint distributions without 'naïve' assumptions."
+      },
+      {
+        "answer": "When the sample size (n) is not large enough to effectively estimate the joint distribution of the predictors.",
+        "correct": true,
+        "feedback": "Correct! Because estimating joint distributions requires huge amounts of data, Naïve Bayes is a good choice when n is small relative to p."
+      },
+      {
+        "answer": "When all predictors are known to be highly correlated.",
+        "correct": false,
+        "feedback": "Incorrect. Naïve Bayes ignores correlation between predictors, which would be problematic if they are strongly related."
+      },
+      {
+        "answer": "Only when there are exactly two categories in the outcome variable.",
+        "correct": false,
+        "feedback": "Incorrect. Like LDA, Naïve Bayes can be used for multi-class problems."
+      }
+    ]
+  },
+  {
+    "question": "What happens to the decision boundary in LDA if the prior probability of Class A is much larger than Class B?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "The boundary stays exactly in the middle of the class means.",
+        "correct": false,
+        "feedback": "Incorrect. This only happens if priors are 50/50."
+      },
+      {
+        "answer": "The boundary shifts closer to the mean of the class with the lower prior.",
+        "correct": true,
+        "feedback": "Correct! By shifting toward the class with the lower prior, the model increases the 'area' assigned to the class with the higher prior."
+      },
+      {
+        "answer": "The boundary shifts closer to the mean of the class with the larger prior.",
+        "correct": false,
+        "feedback": "Incorrect. This would result in fewer observations being classified into the more likely class."
+      },
+      {
+      "answer": "The decision boundary becomes non-linear to accommodate the larger class.",
+      "correct": false,
+      "feedback": "Incorrect. In LDA, the boundary remains linear because it still assumes both classes share the same covariance matrix."
+      }
+    ]
+  },
+  {
+    "question": "Which of the following is a core assumption of the Naïve Bayes classifier?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Features within a class are independent of each other.",
+        "correct": true,
+        "feedback": "Correct! Naïve Bayes assumes independence between predictors to simplify the estimation of the joint distribution."
+      },
+      {
+        "answer": "All classes share a common covariance matrix.",
+        "correct": false,
+        "feedback": "Incorrect. This is an assumption of LDA, not Naïve Bayes."
+      },
+      {
+        "answer": "The decision boundary must be quadratic.",
+        "correct": false,
+        "feedback": "Incorrect. Naïve Bayes can result in various boundary shapes depending on the density used."
+      },
+      {
+      "answer": "The features must follow a single multivariate normal distribution.",
+      "correct": false,
+      "feedback": "Incorrect. Naïve Bayes avoids the need for a multivariate distribution by assuming feature independence, allowing us to use separate univariate distributions instead."
+      },
+      {
+        "answer": "Predictors are highly correlated and should be averaged.",
+        "correct": false,
+        "feedback": "Incorrect. Naïve Bayes specifically assumes there is no association between predictors."
+      },
+      {
+        "answer": "Predictors must be quantitative only.",
+        "correct": false,
+        "feedback": "Incorrect. Naïve Bayes can handle both quantitative and qualitative predictors."
+      }
+    ]
+  },
+  {
+    "question": "In logistic regression, how are parameters estimated?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Analytically via Ordinary Least Squares (OLS)",
+        "correct": false,
+        "feedback": "Incorrect. Logistic regression has no closed-form analytic solution."
+      },
+      {
+        "answer": "Through an iterative process (Maximum Likelihood)",
+        "correct": true,
+        "feedback": "Correct! Because there is no analytic solution, an iterative 'trial and error' process is used to maximize the likelihood function."
+      }
+    ]
+  },
+  {
+    "question": "How many parameters must be estimated for an LDA with 2 classes and 1 feature?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "3",
+        "correct": false,
+        "feedback": "Incorrect. You are missing one of the necessary components."
+      },
+      {
+        "answer": "4",
+        "correct": true,
+        "feedback": "Correct! You need to estimate 2 class-specific means, 1 shared variance, and 1 prior (the second prior is determined by 1 - pi_1)."
+      },
+      {
+        "answer": "5",
+        "correct": false,
+        "feedback": "Incorrect. This would be more typical of QDA where variances are class-specific."
+      },
+      {
+      "answer": "2",
+      "correct": false,
+      "feedback": "Incorrect. While a simple linear regression has 2 parameters ($\beta_0, \beta_1$), LDA requires modeling the underlying distributions (means and variance) plus the class priors."
+      }
+    ]
+  },
+  {
+    "question": "When the slope coefficient (beta1) of a logistic regression is positive (above zero), which of the following is true? (Select all that apply)",
+    "type": "many_choice",
+    "answers": [
+      {
+        "answer": "The probability P(Y=1|X) increases as X increases.",
+        "correct": true,
+        "feedback": "Correct. A positive slope indicates a monotonically increasing probability function."
+      },
+      {
+        "answer": "The expected odds are multiplied by e^beta1 for every one-unit increase in X.",
+        "correct": true,
+        "feedback": "Correct. This is the multiplicative effect on the odds."
+      },
+      {
+        "answer": "The logit increases by beta1 for every one-unit increase in X.",
+        "correct": true,
+        "feedback": "Correct. On the log-odds (logit) scale, the relationship is linear."
+      },
+      {
+        "answer": "The probability increases linearly with X.",
+        "correct": false,
+        "feedback": "Incorrect. The probability follows an S-curve, not a straight line."
+      },
+      {
+      "answer": "The expected odds increase by beta1 for every one-unit increase in X.",
+      "correct": false,
+      "feedback": "Incorrect. The effect on the Odds scale is multiplicative (e^beta1), not additive (beta1). Only the Logit scale is additive."
+    },
+    {
+      "answer": "The logit is multiplied by beta1 for every one-unit increase in X.",
+      "correct": false,
+      "feedback": "Incorrect. The logit transformation is a linear function of X, meaning beta1 is added to the logit, not multiplied by it, for each unit increase."
+    }
+    ]
+  },
+  {
+    "question": "QDA differs from LDA because...",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "QDA is less flexible than LDA.",
+        "correct": false,
+        "feedback": "Incorrect. QDA is more flexible because it estimates more parameters."
+      },
+      {
+        "answer": "QDA assumes each class has its own covariance matrix.",
+        "correct": true,
+        "feedback": "Correct! By allowing class-specific covariance matrices, QDA produces quadratic rather than linear boundaries."
+      },
+      {
+        "answer": "QDA is always more accurate than LDA.",
+        "correct": false,
+        "feedback": "Incorrect. If the shared covariance assumption of LDA is true, QDA may perform worse due to higher variance (overfitting)."
+      },
+      {
+      "answer": "QDA is a discriminative model, while LDA is a generative model.",
+      "correct": false,
+      "feedback": "Incorrect. Both LDA and QDA are generative models; they both model the distribution of the features to calculate the posterior probability."
+      }
+      
+    ]
+  },
+  {
+    "question": "In the special case where it is exactly as likely that an observation is a 'case' as it is a 'non-case', which of the following is true?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "The conditional probability is 0.5, the Odds are 1, and the logit is 0.",
+        "correct": true,
+        "feedback": "Correct! When p=0.5, the Odds are 0.5/0.5 = 1, and the logit (natural log of 1) is 0."
+      },
+      {
+        "answer": "The conditional probability is 0.5, the Odds are 0, and the logit is 1.",
+        "correct": false,
+        "feedback": "Incorrect. If the Odds were 0, the probability would have to be 0."
+      },
+      {
+        "answer": "The conditional probability is 1, the Odds are 0.5, and the logit is 0.",
+        "correct": false,
+        "feedback": "Incorrect. A probability of 1 means the event is certain, which would result in infinite Odds."
+      },
+      {
+        "answer": "The conditional probability is 0, the Odds are 1, and the logit is 0.5.",
+        "correct": false,
+        "feedback": "Incorrect. A probability of 0 means the event never happens, resulting in Odds of 0."
+      }
+    ]
+  },
+  {
+    "question": "Whenever the intercept coefficient (beta0) of a logistic regression is below zero, the expected conditional probability of being a 'case' at X=0 is...",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Below 0.5",
+        "correct": true,
+        "feedback": "Correct! Since the logit is beta0 + beta1(X), if X=0 and beta0 is negative, the logit is negative. A negative logit always corresponds to a probability below 0.5."
+      },
+      {
+        "answer": "Above 0.5",
+        "correct": false,
+        "feedback": "Incorrect. An intercept above zero would result in a probability above 0.5 at X=0."
+      },
+      {
+        "answer": "Exactly 0.5",
+        "correct": false,
+        "feedback": "Incorrect. The probability is only 0.5 when the logit (the linear predictor) is exactly zero."
+      },
+      {
+        "answer": "Exactly 0",
+        "correct": false,
+        "feedback": "Incorrect. A probability of 0 would require the intercept to be negative infinity."
+      }
+    ]
+  },
+  {
+    "question": "How does the Naïve Bayes classifier calculate the joint density function for multiple predictors?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "By calculating the inverse of the shared covariance matrix.",
+        "correct": false,
+        "feedback": "Incorrect. This is part of the discriminant function for LDA when p > 1."
+      },
+      {
+        "answer": "By finding the maximum likelihood of the joint distribution.",
+        "correct": false,
+        "feedback": "Incorrect. Naïve Bayes avoids estimating a full joint distribution to reduce complexity."
+      },
+      {
+        "answer": "By estimating the likelihood for each predictor individually and multiplying them together.",
+        "correct": true,
+        "feedback": "Correct!"
+      },
+      {
+        "answer": "By using an iterative 'trial and error' process until a criterion is met.",
+        "correct": false,
+        "feedback": "Incorrect. Iterative estimation is characteristic of logistic regression."
+      }
+    ]
+  },
+  {
+    "question": "In which scenario is standard simple logistic regression appropriate? (Select all that apply)",
+    "type": "many_choice",
+    "answers": [
+      {
+        "answer": "The predictor (IV) is quantitative and the outcome (DV) is dichotomous.",
+        "correct": true,
+        "feedback": "Correct! Logistic regression is designed for binary/dichotomous outcomes."
+      },
+      {
+        "answer": "The predictor (IV) is quantitative and the outcome (DV) is continuous.",
+        "correct": false,
+        "feedback": "Incorrect. For a continuous outcome, standard Linear Regression (OLS) is typically used."
+      },
+      {
+        "answer": "The predictor (IV) is quantitative and the outcome (DV) is polytomous.",
+        "correct": false,
+        "feedback": "Incorrect. Standard logistic regression is for binary cases. For multiple categories, you would need Multinomial Logistic Regression or LDA."
+      },
+      {
+        "answer": "The predictor (IV) is qualitative and the outcome (DV) is dichotomous.",
+        "correct": false,
+        "feedback": "Incorrect. While logistic regression can theoretically handle qualitative predictors via dummy coding, the standard simple model assumes a quantitative predictor."
+      }
+    ]
+  },
+  [
+  {
+    "question": "Does LDA use a pooled variance estimator?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Yes",
+        "correct": true,
+        "feedback": "Correct! LDA assumes that all classes share a common variance (or covariance matrix in multivariate cases), which is estimated by pooling the data across classes."
+      },
+      {
+        "answer": "No",
+        "correct": false,
+        "feedback": "Incorrect. LDA specifically assumes a shared (common) variance across all classes, unlike QDA which allows for class-specific variances."
+      }
+    ]
+  },
+  {
+    "question": "According to Bayes' Theorem, which equation correctly calculates the probability: P(Cat knocks over glass | Time since last petting)?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "[P(Time since last petting | Cat knocks over glass) * P(Cat knocks over glass)] / P(Time since last petting)",
+        "correct": true,
+        "feedback": "Correct! This follows the standard Bayes' formula."
+      },
+      {
+        "answer": "[P(Time since last petting | Cat knocks over glass) * P(Time since last petting)] / P(Cat knocks over glass)",
+        "correct": false,
+        "feedback": "Incorrect. This formula incorrectly swaps the priors."
+      },
+      {
+        "answer": "[P(Cat knocks over glass) * P(Time since last petting)] / P(Time since last petting | Cat knocks over glass)",
+        "correct": false,
+        "feedback": "Incorrect. This does not follow the correct mathematical relationship for conditional probability."
+      },
+      {
+        "answer": "[P(Time since last petting) * P(Cat knocks over glass)] / P(Time since last petting | Cat knocks over glass)",
+        "correct": false,
+        "feedback": "Incorrect. This is not a valid representation of Bayes' Theorem."
+      }
+    ]
+  },
+  {
+    "question": "What mathematical changes occur in LDA when moving from one feature (p=1) to multiple features (p>1)? (Select all that apply)",
+    "type": "many_choice",
+    "answers": [
+      {
+        "answer": "The class-specific means become class-specific mean vectors.",
+        "correct": true,
+        "feedback": "Correct! With multiple predictors, the mean is represented by a vector μ containing the mean for each feature."
+      },
+      {
+        "answer": "The shared variance estimate becomes a shared covariance matrix.",
+        "correct": true,
+        "feedback": "Correct! In multiple dimensions, we must account for the variance of each feature and the covariance between them using a shared matrix Σ."
+      },
+      {
+        "answer": "The class-specific priors become class-specific vectors.",
+        "correct": false,
+        "feedback": "Incorrect. The prior (π) remains a single scalar value representing the baseline probability of belonging to a class."
+      },
+      {
+        "answer": "The class-specific means become one shared mean for all classes.",
+        "correct": false,
+        "feedback": "Incorrect. Each class must still maintain its own mean vector to allow for discrimination between them."
+      },
+      {
+        "answer": "The shared covariance estimate becomes multiple class-specific covariance estimates.",
+        "correct": false,
+        "feedback": "Incorrect. This describes QDA; LDA must maintain a common covariance matrix."
+      },
+      {
+      "answer": "The univariate Gaussian density is replaced by a Poisson distribution.",
+      "correct": false,
+      "feedback": "Incorrect. LDA for multiple features assumes a multivariate Gaussian (Normal) distribution, not a Poisson distribution."
+      }
+    ]
+  },
+  {
+    "question": "In terms of the bias-variance trade-off, what is the effect of the Naïve Bayes assumption?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "It reduces bias but increases variance.",
+        "correct": false,
+        "feedback": "Incorrect. The assumption actually introduces bias to gain a reduction in variance."
+      },
+      {
+        "answer": "It increases both bias and variance simultaneously.",
+        "correct": false,
+        "feedback": "Incorrect. The goal of the trade-off is to lower one at the expense of the other."
+      },
+      {
+        "answer": "It has no effect on either bias or variance.",
+        "correct": false,
+        "feedback": "Incorrect. Every modeling assumption affects the bias-variance trade-off."
+      },
+      {
+        "answer": "It introduces some bias but reduces variance.",
+        "correct": true,
+        "feedback": "Correct! The assumption of independence is a simplification that adds bias but leads to a classifier with lower variance, which often works well in practice."
+      }
+    ]
+  }
+]
+]

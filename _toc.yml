@@ -11,5 +11,6 @@ parts:
     - file: book/02_lec/02_model_selection_and_assessment
     - file: book/03_lec/03_linear_model_selection
     - file: book/04_lec/04_regularization_and_derived_input_regression
+    - file: book/05_lec05_Linear_methods_for_classification
 
 
