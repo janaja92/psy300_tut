@@ -14,11 +14,6 @@
         "feedback": "Correct. LDA is a generative linear method for classification."
       },
       {
-        "answer": "Support Vector Classifiers",
-        "correct": true,
-        "feedback": "Correct. SVCs use separating hyperplanes to solve classification problems."
-      },
-      {
         "answer": "Quadratic Discriminant Analysis (QDA)",
         "correct": false,
         "feedback": "Incorrect. QDA is a non-linear method because it results in quadratic decision boundaries."
@@ -421,7 +416,6 @@
       }
     ]
   },
-  [
   {
     "question": "Does LDA use a pooled variance estimator?",
     "type": "multiple_choice",
@@ -526,5 +520,4 @@
       }
     ]
   }
-]
 ]
