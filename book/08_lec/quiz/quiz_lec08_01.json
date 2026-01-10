@@ -6,7 +6,7 @@
       {
         "answer": "True",
         "correct": false,
-        "feedback": "Incorrect. The model is strictly additive by default.Interaction effects must be manually added."
+        "feedback": "Incorrect. The model is strictly additive by default. Interaction effects must be added manually."
       },
       {
         "answer": "False",
