@@ -14,6 +14,8 @@ parts:
     - file: book/05_lec/05_Linear_methods_for_classification
     - file: book/06_lec/06_nonlinear_methods_for_classification
     - file: book/07_lec/07_nonlinear_regression_basis_expansion
+    - file: book/08_lec/08_GAMs
+    
 
 
 

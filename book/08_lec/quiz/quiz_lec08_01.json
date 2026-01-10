@@ -1,0 +1,144 @@
+[
+  {
+    "question": "True or False: Generalized Additive Models (GAMs), by default, include interaction effects between predictor variables.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "True",
+        "correct": false,
+        "feedback": "Incorrect. The model is strictly additive by default.Interaction effects must be manually added."
+      },
+      {
+        "answer": "False",
+        "correct": true,
+        "feedback": "Correct! GAMs are additive by default, meaning they assume the effect of each predictor on the response is independent of the other predictors."
+      }
+    ]
+  },
+    {
+    "question": "GAMs are primarily considered an extension of ...",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "The linear model",
+        "correct": true,
+        "feedback": "Correct! GAMs extend the multiple linear regression model by replacing each linear component with a non-linear function."
+      },
+      {
+        "answer": "The Naive Bayes classifier",
+        "correct": false,
+        "feedback": "Incorrect. While both models rely on additivity, GAMs are a direct extension of the regression framework."
+      }
+    ]
+  },
+    {
+    "question": "True or False: GAMs can be combined with regularization approaches like LASSO.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "True",
+        "correct": true,
+        "feedback": "Correct! Regularization methods can be applied to GAMs to perform variable selection or control function smoothness."
+      },
+      {
+        "answer": "False",
+        "correct": false,
+        "feedback": "Incorrect. GAMs are compatible with regularization techniques to improve model generalizability."
+      }
+    ]
+  },
+    {
+    "question": "The basis functions used in polynomial regression are ...",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Power transformations of X",
+        "correct": true,
+        "feedback": "Correct! Polynomial regression uses a set of power transformations as basis functions to model non-linearity."
+      },
+      {
+        "answer": "Indicator functions of X",
+        "correct": false,
+        "feedback": "Incorrect. Indicator functions are used as basis functions for piecewise constant (step) functions, not polynomials."
+      },
+      {
+        "answer": "Logarithmic transformations of X",
+        "correct": false,
+        "feedback": "Incorrect. While logs can be used, they are not the standard basis functions for polynomial regression."
+      },
+      {
+        "answer": "Linear combinations of all predictors",
+        "correct": false,
+        "feedback": "Incorrect. This describes a standard linear model, not the specific basis functions for a polynomial transformation of a single variable."
+      }
+    ]
+  },
+  {
+    "question": "GAMs allow for which of the following? (Select all that apply)",
+    "type": "many_choice",
+    "answers": [
+      {
+        "answer": "Multiple predictor variables and non-linear relationships",
+        "correct": true,
+        "feedback": "Correct! GAMs extend multiple linear regression by allowing for non-linear functions of each predictor."
+      },
+      {
+        "answer": "Using separate types of functions for different predictors (e.g., one cubic spline and one step function)",
+        "correct": true,
+        "feedback": "Correct! You can fit a different non-linear function for each predictor."
+      },
+      {
+        "answer": "Examining the absolute effect of each predictor X on Y individually",
+        "correct": false,
+        "feedback": "Incorrect. Because it is a multiple regression framework, you can only examine the effect of a predictor X on Y while holding all other variables constant."
+      },
+      {
+        "answer": "Both quantitative and qualitative (categorical) response variables",
+        "correct": true,
+        "feedback": "Correct! GAMs can be used for regression (quantitative) and classification (qualitative) tasks."
+      }
+    ]
+  },
+  {
+    "question": "The flexibility of a GAM increases with ...",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "The number of knots in local functions or the degree of polynomials used",
+        "correct": true,
+        "feedback": "Correct! Increasing the number of knots in splines or the degree of polynomials allows the functions to capture more complex patterns."
+      },
+      {
+        "answer": "Increasing the penalty on the roughness of the component functions",
+        "correct": false,
+        "feedback": "Incorrect. Higher penalties (like λ in smoothing splines) decrease flexibility to prevent overfitting."
+      },
+      {
+        "answer": "Decreasing the number of predictor variables in the model",
+        "correct": false,
+        "feedback": "Incorrect. Reducing the number of predictors simplifies the model but does not inherently change the flexibility of the individual component functions."
+      },
+      {
+        "answer": "The use of global linear functions instead of local splines",
+        "correct": false,
+        "feedback": "Incorrect. Linear functions are the least flexible option in a GAM framework."
+      }
+    ]
+  },
+  {
+    "question": "True or False: In the context of spline-based GAMs, the number of knots (K) is considered a hyperparameter.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "True",
+        "correct": true,
+        "feedback": "Correct! The number of knots determines the model's complexity and is typically selected using cross-validation."
+      },
+      {
+        "answer": "False",
+        "correct": false,
+        "feedback": "Incorrect. K must be tuned to find the optimal balance in the bias-variance tradeoff."
+      }
+    ]
+  }
+]
