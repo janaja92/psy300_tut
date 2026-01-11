@@ -1,0 +1,352 @@
+[
+  {
+    "question": "If the training data is perfectly separable by a linear boundary, how many possible separating hyperplanes exist?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Exactly one",
+        "correct": false,
+        "feedback": "Incorrect. While there is only one 'Maximal Margin Hyperplane', there are actually infinite ways to slightly rotate or shift a plane to separate the classes perfectly."
+      },
+      {
+        "answer": "Infinite",
+        "correct": true,
+        "feedback": "Correct! If the data can be separated, any slight adjustment to a separating plane that doesn't cross an observation results in a new, valid separating hyperplane."
+      },
+      {
+        "answer": "Zero",
+        "correct": false,
+        "feedback": "Incorrect. If the data is separable, at least one (and effectively infinite) solutions exist."
+      },
+      {
+        "answer": "Exactly two",
+        "correct": false,
+        "feedback": "Incorrect. There is no reason for there to be exactly two; the range of possible angles and positions is continuous."
+      }
+    ]
+  },
+  {
+    "question": "Accoring to James et al., 2021, a larger tuning parameter C in a Support Vector Classifier leads to...  (Select all that apply)",
+    "type": "many_choice",
+    "answers": [
+      {
+        "answer": "Wider margins",
+        "correct": true,
+        "feedback": "Correct! A larger budget allows for more violations, which effectively widens the margin."
+      },
+      {
+        "answer": "More narrow margins",
+        "correct": false,
+        "feedback": "Incorrect. Narrow margins occur when C is small, making the classifier highly sensitive to individual points."
+      },
+      {
+        "answer": "More violations of the margin",
+        "correct": true,
+        "feedback": "Correct! By definition, C is the budget for how much the observations can violate the margin or hyperplane."
+      },
+      {
+        "answer": "Fewer violations of the margin",
+        "correct": false,
+        "feedback": "Incorrect. A large C is more tolerant of violations."
+      },
+      {
+        "answer": "The classifier being fitted more closely to the training data",
+        "correct": false,
+        "feedback": "Incorrect. A large C results in a model that is less sensitive to individual points, thus not as 'tightly' fitted."
+      },
+      {
+        "answer": "The classifier being fitted less closely to the training data",
+        "correct": true,
+        "feedback": "Correct! It results in a smoother, more stable boundary that ignores some training data noise."
+      },
+      {
+        "answer": "Higher bias and lower variance",
+        "correct": true,
+        "feedback": "Correct! A wider margin is less flexible (higher bias) but more stable across different datasets (lower variance)."
+      },
+      {
+        "answer": "Higher variance and lower bias",
+        "correct": false,
+        "feedback": "Incorrect. This occurs with a small C, where the model is highly flexible and sensitive to training data."
+      }
+    ]
+  },
+  {
+    "question": "In a 6-dimensional space, a hyperplane is a flat affine subspace of ...",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "6 dimensions",
+        "correct": false,
+        "feedback": "Incorrect. A hyperplane always has one dimension less than the space it resides in."
+      },
+      {
+        "answer": "5 dimensions",
+        "correct": true,
+        "feedback": "Correct! For p dimensions, the hyperplane is a subspace of p-1 dimensions."
+      },
+      {
+        "answer": "7 dimensions",
+        "correct": false,
+        "feedback": "Incorrect. A subspace cannot have more dimensions than its parent space."
+      },
+      {
+        "answer": "1 dimension",
+        "correct": false,
+        "feedback": "Incorrect. This is only true if the space is 2-dimensional."
+      }
+    ]
+  },
+  {
+    "question": "The observations that lie directly on the margin and dictate the orientation of the hyperplane are called ...",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "The margin",
+        "correct": false,
+        "feedback": "Incorrect. The margin is the distance itself, not the observations."
+      },
+      {
+        "answer": "Support Vectors",
+        "correct": true,
+        "feedback": "Correct! These points 'support' the hyperplane; if they were moved, the hyperplane would move as well."
+      },
+      {
+        "answer": "The normal vector",
+        "correct": false,
+        "feedback": "Incorrect. The normal vector consists of the coefficients β1, ..., βp and is perpendicular to the hyperplane."
+      },
+      {
+        "answer": "The intercept",
+        "correct": false,
+        "feedback": "Incorrect. The intercept β0 determines the location of the plane relative to the origin."
+      }
+    ]
+  },
+  {
+    "question": "If classes are not clearly separable, support vector approaches may ... to solve the problem.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Use soft margins",
+        "correct": true,
+        "feedback": "Correct! Soft margins allow for a 'budget' of violations where some observations can fall on the wrong side of the margin, which is a viable way to handle data that is not perfectly linearly separable."
+      },
+      {
+        "answer": "Find a non-linear hyperplane",
+        "correct": false,
+        "feedback": "Incorrect. A hyperplane is, by definition, a linear affine subspace. Support Vector Classifiers always maintain a linear boundary."
+      }
+    ]
+  },
+  {
+    "question": "Which statement accurately describes the Maximal Margin Hyperplane?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "It is the hyperplane that is farthest from the training observations in terms of its perpendicular distance.",
+        "correct": true,
+        "feedback": "Correct! It maximizes the 'margin' (the smallest distance between the plane and any training point)."
+      },
+      {
+        "answer": "It is the hyperplane that passes through the mean of both classes.",
+        "correct": false,
+        "feedback": "Incorrect. While it separates classes, its position is defined by the closest points (support vectors), not the class means."
+      },
+      {
+        "answer": "It is used primarily for datasets where classes are inseparable.",
+        "correct": false,
+        "feedback": "Incorrect. The Maximal Margin Hyperplane requires perfect separability. For inseparable data, we use Support Vector Classifiers (soft margins)."
+      },
+      {
+        "answer": "It solves the problem of having infinite possible separating hyperplanes by selecting the most 'central' one.",
+        "correct": true,
+        "feedback": "Correct! It provides a unique, optimal solution among the infinite possible separating planes."
+      }
+    ]
+  },
+  {
+    "question": "The intercept β0 in the hyperplane equation primarily indicates ...",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Whether the hyperplane passes through the origin",
+        "correct": true,
+        "feedback": "Correct! If β0 = 0, the hyperplane passes through the point where all predictors are zero."
+      },
+      {
+        "answer": "The orientation of the hyperplane in the predictor space",
+        "correct": false,
+        "feedback": "Incorrect. The orientation is determined by the slope coefficients (the normal vector)."
+      },
+      {
+        "answer": "The total dimensionality of the feature space",
+        "correct": false,
+        "feedback": "Incorrect. The number of predictors p determines the dimensionality."
+      },
+      {
+        "answer": "The specific class prediction for a new observation",
+        "correct": false,
+        "feedback": "Incorrect. Prediction requires the sign of the entire equation result, not just the intercept."
+      }
+    ]
+  },
+  {
+    "question": "True or False: Support Vector Classifiers fundamentally solve classification problems by estimating the probability that an observation belongs to a certain class.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "True",
+        "correct": false,
+        "feedback": "Incorrect. Unlike Logistic Regression or LDA, SVCs are non-probabilistic. They use a decision rule based on which side of the hyperplane an observation falls."
+      },
+      {
+        "answer": "False",
+        "correct": true,
+        "feedback": "Correct! SVCs are direct classifiers that find a separating hyperplane rather than modeling class probabilities."
+      }
+    ]
+  },
+  {
+    "question": "In the case of a 'Hard Margin' (Maximal Margin Hyperplane), the budget for violations C is effectively ...",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "0",
+        "correct": true,
+        "feedback": "Correct! A hard margin allows zero observations to be on the wrong side of the margin or the hyperplane."
+      },
+      {
+        "answer": "∞",
+        "correct": false,
+        "feedback": "Incorrect. An infinite budget would allow any point to be anywhere, resulting in no meaningful classification boundary."
+      }
+    ]
+  },
+  {
+    "question": "The approach of Soft Margins allows some observations to be on the incorrect side of ... (Select all that apply)",
+    "type": "many_choice",
+    "answers": [
+      {
+        "answer": "The margin for their own class",
+        "correct": true,
+        "feedback": "Correct! Points can be within the margin area."
+      },
+      {
+        "answer": "The hyperplane",
+        "correct": true,
+        "feedback": "Correct! Points can even cross the boundary into the 'wrong' class territory in the training set."
+      },
+      {
+        "answer": "The margin for the opposing class",
+        "correct": true,
+        "feedback": "Correct! Observations can be located deep within the wrong class's feature space, effectively existing beyond the far side of the opposing margin."
+      },
+      {
+        "answer": "The predictor space",
+        "correct": false,
+        "feedback": "Incorrect. All observations must remain within the defined predictor space."
+      }
+    ]
+  },
+  {
+    "question": "The smallest perpendicular distance from any training observation to the separating hyperplane is known as ...",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "The margin",
+        "correct": true,
+        "feedback": "Correct! The margin is the 'buffer' zone around the hyperplane."
+      },
+      {
+        "answer": "The support vector",
+        "correct": false,
+        "feedback": "Incorrect. Support vectors are the points located at the edge of the margin."
+      },
+      {
+        "answer": "The hyperplane",
+        "correct": false,
+        "feedback": "Incorrect. The hyperplane is the decision boundary itself."
+      },
+      {
+        "answer": "The normal vector",
+        "correct": false,
+        "feedback": "Incorrect. The normal vector defines the direction of the plane."
+      }
+    ]
+  },
+  {
+    "question": "In a 2-dimensional predictor space, the separating hyperplane is visualized as ...",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "A line",
+        "correct": true,
+        "feedback": "Correct! In 2D, the hyperplane is 1-dimensional, which is a line."
+      },
+      {
+        "answer": "A point",
+        "correct": false,
+        "feedback": "Incorrect. A 'point' would be the hyperplane for a 1-dimensional space (1 predictor)."
+      }
+    ]
+  },
+  {
+    "question": "Compared to a Hard Margin, the use of a Soft Margin generally leads to ... variance in the resulting model.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Higher",
+        "correct": false,
+        "feedback": "Incorrect. Hard margins are highly sensitive to individual points, which creates high variance."
+      },
+      {
+        "answer": "Lower",
+        "correct": true,
+        "feedback": "Correct! By being more tolerant of individual points (noise), soft margins stabilize the hyperplane."
+      }
+    ]
+  },
+  {
+    "question": "The observations on both sides of the maximal margin hyperplane ... the same distance to the hyperplane.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "necessarily have",
+        "correct": true,
+        "feedback": "Correct! Otherwise, the hyperplane would not maximize its distance to the observations; being farther away from one observation would mean being closer to the observations on the other side."
+      },
+      {
+        "answer": "theoretically could have",
+        "correct": false,
+        "feedback": "Incorrect. This is not a matter of possibility; it is a mathematical requirement of the maximal margin solution."
+      },
+      {
+        "answer": "cannot have",
+        "correct": false,
+        "feedback": "Incorrect. If the distances were not equal, the hyperplane could be shifted to increase the margin further."
+      },
+      {
+        "answer": "in practice often have",
+        "correct": false,
+        "feedback": "Incorrect. The algorithm strictly identifies the unique hyperplane where these minimal distances are exactly equal."
+      }
+    ]
+  },
+  {
+    "question": "A larger 'budget' C for margin violations effectively makes the Support Vector Classifier ... flexible.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "More",
+        "correct": false,
+        "feedback": "Incorrect. A larger budget makes the model less sensitive to specific training points, effectively reducing its 'wiggliness' and flexibility in favor of stability (low variance)."
+      },
+      {
+        "answer": "Less",
+        "correct": true,
+        "feedback": "Correct! Large C values lead to wider margins and lower flexibility (and lower variance)."
+      }
+    ]
+  }
+]
