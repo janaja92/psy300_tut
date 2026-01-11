@@ -95,7 +95,7 @@
       {
         "answer": "Random Forests",
         "correct": true,
-        "feedback": "Correct! Random Forests improve on bagging by decorrelating the trees."
+      "feedback": "Correct! Random Forests reduce variance by averaging an ensemble of trees that are decorrelated by considering only a random subset of predictors at each split."
       },
       {
         "answer": "Boosting",
@@ -126,7 +126,7 @@
     ]
   },
   {
-    "question": "Tree-based methods primarily involve:",
+    "question": "Tree-based methods primarily involve ...",
     "type": "multiple_choice",
     "answers": [
       {
@@ -184,7 +184,7 @@
       {
         "answer": "They are easy to explain and interpret",
         "correct": true,
-        "feedback": "Correct! Trees are easy to explain to non-experts and easily visualized."
+        "feedback": "Correct! Trees possess a high degree of interpretability, allowing them to be visualized and understood even by non-experts."
       },
       {
         "answer": "They can handle qualitative predictors without the need for dummy variables",
@@ -247,7 +247,7 @@
       {
         "answer": "Leaves",
         "correct": true,
-        "feedback": "Correct! 'Leaves' is the common botanical analogy used for terminal nodes."
+        "feedback": "Correct! 'Leaves' is the common botanical analogy used for the regions."
       },
       {
         "answer": "Internal nodes",
@@ -305,7 +305,7 @@
       {
         "answer": "Cross-Validation",
         "correct": false,
-        "feedback": "Incorrect. Cross-validation is used for tuning, not for generating training samples for bagging."
+        "feedback": "Incorrect. Cross-validation is used for tuning α in Pruning, not for generating training samples for bagging."
       }
     ]
   },
@@ -380,7 +380,7 @@
       {
         "answer": "Cost complexity pruning",
         "correct": true,
-        "feedback": "Correct! This penalty controls the tradeoff between the tree's fit to the training data and its complexity (|T| meaning the terminal nodes)."
+        "feedback": "Correct! This penalty controls the tradeoff between the tree's fit to the training data and its complexity (|T| meaning the number of terminal nodes)."
       },
       {
         "answer": "Boosting",
@@ -454,7 +454,7 @@
       {
         "answer": "10",
         "correct": true,
-        "feedback": "Correct! For classification, we typically choose m approx. sqrt{p}. Here, sqrt(100) = 10."
+        "feedback": "Correct! For classification, we typically choose m approx. sqrt{p}. Here, sqrt{100} = 10."
       },
       {
         "answer": "50",
