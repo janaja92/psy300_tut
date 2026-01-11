@@ -1,0 +1,534 @@
+[
+  {
+    "question": "When increasing the tuning parameter α in cost complexity pruning, the resulting trees ...",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Get smaller",
+        "correct": true,
+        "feedback": "Correct! A larger α increases the penalty for tree complexity, leading to smaller subtrees with fewer terminal nodes."
+      },
+      {
+        "answer": "Get larger",
+        "correct": false,
+        "feedback": "Incorrect. Larger α values penalize complexity more heavily, causing the tree to be pruned back further."
+      }
+    ]
+  },
+  {
+    "question": "True or False: Within each terminal node of a regression tree, the predicted value is the mean of the training observations in that region.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "True",
+        "correct": true,
+        "feedback": "Correct! For regression trees, we predict the mean response for all observations falling into a particular terminal node region."
+      },
+      {
+        "answer": "False",
+        "correct": false,
+        "feedback": "Incorrect. Using the mean of the observations in the region is the standard approach for regression trees."
+      }
+    ]
+  },
+  {
+    "question": "In a classification problem with exactly two classes, a Gini index value of 0.5 would indicate ...",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "The node is at its maximum impurity (equal split between classes)",
+        "correct": true,
+        "feedback": "Correct! Using the formula, an equal split (0.5 and 0.5) results in 0.5(1-0.5) + 0.5(1-0.5) = 0.5."
+      },
+      {
+        "answer": "The node is perfectly pure (all observations belong to one class)",
+        "correct": false,
+        "feedback": "Incorrect. A perfectly pure node would have a Gini index of 0."
+      },
+      {
+        "answer": "75% of observations belong to the same class",
+        "correct": false,
+        "feedback": "Incorrect. A 75/25 split would result in a lower Gini index of 0.75(0.25) + 0.25(0.75) = 0.375."
+      },
+      {
+        "answer": "95% of observations belong to the same class",
+        "correct": false,
+        "feedback": "Incorrect. A 95/5 split would result in a very low Gini index of approximately 0.095."
+      }
+    ]
+  },
+  {
+    "question": "Ignoring the pruning step, the primary goal of the initial tree-building process in regression is to ...",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Find regions that minimize the Residual Sum of Squares (RSS)",
+        "correct": true,
+        "feedback": "Correct! The goal of recursive binary splitting is to find the best predictors and cutpoints to minimize the RSS in regression trees."
+      },
+      {
+        "answer": "Find regions that maximize the Residual Sum of Squares (RSS)",
+        "correct": false,
+        "feedback": "Incorrect. We aim to minimize error (RSS), not maximize it."
+      },
+      {
+        "answer": "Minimize the number of terminal nodes",
+        "correct": false,
+        "feedback": "Incorrect. The number of nodes is only reduced later during the pruning phase via a penalty term."
+      },
+      {
+        "answer": "Maximize the number of terminal nodes",
+        "correct": false,
+        "feedback": "Incorrect. While trees can grow large initially, maximizing node count is not the mathematical objective."
+      }
+    ]
+  },
+  {
+    "question": "Which of the following ensemble approaches can be used to enhance the performance of decision trees? (Select all that apply)",
+    "type": "many_choice",
+    "answers": [
+      {
+        "answer": "Bagging",
+        "correct": true,
+        "feedback": "Correct! Bagging (Bootstrap Aggregation) reduces variance by averaging multiple trees."
+      },
+      {
+        "answer": "Random Forests",
+        "correct": true,
+        "feedback": "Correct! Random Forests improve on bagging by decorrelating the trees."
+      },
+      {
+        "answer": "Boosting",
+        "correct": true,
+        "feedback": "Correct! Boosting grows trees sequentially, with each tree learning from the previous ones."
+      },
+      {
+        "answer": "Bashing",
+        "correct": false,
+        "feedback": "Incorrect. 'Bashing' is not a statistical learning method for trees."
+      }
+    ]
+  },
+  {
+    "question": "When calling the tree-building process 'greedy,' we mean that ...",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "The algorithm makes the best choice at each step without looking ahead to future steps",
+        "correct": true,
+        "feedback": "Correct! Recursive binary splitting is greedy because it chooses the best split at the current step rather than picking a split that might lead to a better overall tree later on."
+      },
+      {
+        "answer": "The algorithm always splits the data into exactly two branches",
+        "correct": false,
+        "feedback": "Incorrect. While the process is usually binary, 'greedy' refers specifically to the short-sighted optimization strategy."
+      }
+    ]
+  },
+  {
+    "question": "Tree-based methods primarily involve:",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Segmenting the feature space into a number of simple regions",
+        "correct": true,
+        "feedback": "Correct! These methods partition the predictor space into regions with different predicted outcomes."
+      },
+      {
+        "answer": "Finding a single hyperplane that separates classes in a direct way",
+        "correct": false,
+        "feedback": "Incorrect. This description is more appropriate for Support Vector Machines."
+      }
+    ]
+  },
+  {
+    "question": "Pruning is used to ... (Select all that apply)",
+    "type": "many_choice",
+    "answers": [
+      {
+        "answer": "Reduce overfitting",
+        "correct": true,
+        "feedback": "Correct! Pruning prevents a tree from becoming too complex and fitting noise in the training data."
+      },
+      {
+        "answer": "Reduce variance",
+        "correct": true,
+        "feedback": "Correct! By simplifying the tree, we make it less sensitive to small changes in the training data, thus reducing variance."
+      },
+      {
+        "answer": "Increase bias",
+        "correct": false,
+        "feedback": "Incorrect. While bias increases as a side effect of pruning, the objective is to improve the bias-variance tradeoff, not to increase bias itself."
+      },
+      {
+        "answer": "Increase overfitting",
+        "correct": false,
+        "feedback": "Incorrect. Pruning is the primary strategy used to fight overfitting."
+      },
+    {
+      "answer": "Reduce bias",
+      "correct": false,
+      "feedback": "Incorrect. Pruning actually increases bias because a simpler model with fewer splits cannot capture the training data as accurately as a complex one."
+    },
+    {
+      "answer": "Increase variance",
+      "correct": false,
+      "feedback": "Incorrect. Pruning is specifically designed to decrease variance; a large, unpruned tree is the version that suffers from high variance."
+    }
+    ]
+  },
+  {
+    "question": "Tree-based methods are considered powerful for which of the following reasons? (Select all that apply)",
+    "type": "many_choice",
+    "answers": [
+      {
+        "answer": "They are easy to explain and interpret",
+        "correct": true,
+        "feedback": "Correct! Trees are easy to explain to non-experts and easily visualized."
+      },
+      {
+        "answer": "They can handle qualitative predictors without the need for dummy variables",
+        "correct": true,
+        "feedback": "Correct! Decision trees naturally handle both qualitative and quantitative variables."
+      },
+      {
+        "answer": "They always achieve higher prediction accuracy than linear models",
+        "correct": false,
+        "feedback": "Incorrect. If the relationship between features and response truly is linear, a linear model will likely outperform a tree."
+      },
+      {
+        "answer": "They can be applied to both regression and classification problems",
+        "correct": true,
+        "feedback": "Correct! Decision trees are versatile and applicable to both types of tasks."
+      }
+    ]
+  },
+  {
+    "question": "True or False: When using Bagging, it is necessary to use cross-validation to assess prediction accuracy.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "False",
+        "correct": true,
+        "feedback": "Correct! Out-of-Bag (OOB) error estimation can be used because each observation is excluded from about 1/3 of the bootstrap samples."
+      },
+      {
+        "answer": "True",
+        "correct": false,
+        "feedback": "Incorrect. OOB estimation provides a more straightforward way to estimate test error without separate cross-validation."
+      }
+    ]
+  },
+  {
+    "question": "True or False: It is computationally feasible to consider every possible partition of the feature space into J regions.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "False",
+        "correct": true,
+        "feedback": "Correct! The number of possible partitions is too large, which is why we use a top-down, greedy approach."
+      },
+      {
+        "answer": "True",
+        "correct": false,
+        "feedback": "Incorrect. The computational burden makes an exhaustive search of all possible partitions impossible."
+      }
+    ]
+  },
+  {
+    "question": "The regions created by splitting the feature space in a decision tree are known as ... (Select all that apply)",
+    "type": "many_choice",
+    "answers": [
+      {
+        "answer": "Terminal nodes",
+        "correct": true,
+        "feedback": "Correct! This is a standard term for the final regions at the bottom of a tree."
+      },
+      {
+        "answer": "Leaves",
+        "correct": true,
+        "feedback": "Correct! 'Leaves' is the common botanical analogy used for terminal nodes."
+      },
+      {
+        "answer": "Internal nodes",
+        "correct": false,
+        "feedback": "Incorrect. Internal nodes are the points where the predictor space is split, not the final regions."
+      },
+      {
+        "answer": "Branches",
+        "correct": false,
+        "feedback": "Incorrect. Branches are the segments connecting nodes."
+      }
+    ]
+  },
+  {
+    "question": "Compared to Random Forests, Bagging leads to trees that are ...",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "More correlated",
+        "correct": true,
+        "feedback": "Correct! Because bagging can choose any predictor for any split, strong predictors will appear at the top of most trees, making them similar."
+      },
+      {
+        "answer": "Less correlated",
+        "correct": false,
+        "feedback": "Incorrect. Random Forests specifically reduce correlation between trees by restricting the choice of predictors at each split."
+      }
+    ]
+  },
+  {
+    "question": "Random Forests result in ... variance across individual bootstrap trees.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Higher",
+        "correct": true,
+        "feedback": "Correct! By decorrelating the trees (making them more different from one another), Random Forests increase variance across bootstraps, which ultimately leads to a lower variance for the average prediction."
+      },
+      {
+        "answer": "Lower",
+        "correct": false,
+        "feedback": "Incorrect. Decreasing the similarity between trees actually increases the variance across those individual trees."
+      }
+    ]
+  },
+  {
+    "question": "In Bagging, we generate multiple training sets using ...",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Bootstrapping",
+        "correct": true,
+        "feedback": "Correct! We take repeated samples from the single training data set with replacement."
+      },
+      {
+        "answer": "Cross-Validation",
+        "correct": false,
+        "feedback": "Incorrect. Cross-validation is used for tuning, not for generating training samples for bagging."
+      }
+    ]
+  },
+  {
+    "question": "A larger value of α in cost complexity pruning leads to a ... RSS on the training data.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Larger",
+        "correct": true,
+        "feedback": "Correct! As the tree is pruned and becomes simpler, it fits the training data less perfectly, increasing the RSS."
+      },
+      {
+        "answer": "Smaller",
+        "correct": false,
+        "feedback": "Incorrect. Pruning simplifies the model, which generally increases the training error (RSS) while potentially lowering test error."
+      }
+    ]
+  },
+  {
+    "question": "True or False: The regions created by a decision tree must be non-overlapping.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "True",
+        "correct": true,
+        "feedback": "Correct! The goal of partitioning the feature space is to create distinct, non-overlapping regions."
+      },
+      {
+        "answer": "False",
+        "correct": false,
+        "feedback": "Incorrect. The standard definition of the partitioning process requires that the resulting regions do not overlap."
+      }
+    ]
+  },
+  {
+    "question": "The classification error rate is often NOT the preferred measure for growing classification trees because ...",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "It is not sufficiently sensitive to changes in node probabilities",
+        "correct": true,
+        "feedback": "Correct! There are other measures that are more sensitive to node purity and are preferred for growing the tree."
+      },
+      {
+        "answer": "It is only suitable for regression problems",
+        "correct": false,
+        "feedback": "Incorrect. It is a classification measure, but it lacks the sensitivity required for optimal tree growth."
+      }
+    ]
+  },
+  {
+    "question": "True or False: In classification bagging, we generate B different training samples, train on them, and then average all the individual predictions.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "False",
+        "correct": true,
+        "feedback": "Correct! In classification, we take a majority vote (the most frequent class) rather than an average."
+      },
+      {
+        "answer": "True",
+        "correct": false,
+        "feedback": "Incorrect. Averaging is used for regression trees; classification trees use majority voting."
+      }
+    ]
+  },
+  {
+    "question": "The penalty term α*|T| is a key component of which technique?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Cost complexity pruning",
+        "correct": true,
+        "feedback": "Correct! This penalty controls the tradeoff between the tree's fit to the training data and its complexity (|T| meaning the terminal nodes)."
+      },
+      {
+        "answer": "Boosting",
+        "correct": false,
+        "feedback": "Incorrect. Boosting uses different mechanisms, like sequential learning, rather than this specific penalty term."
+      }
+    ]
+  },
+  {
+    "question": "In a decision tree involving 3 predictors, the resulting regions are ...",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "3-dimensional rectangles (boxes)",
+        "correct": true,
+        "feedback": "Correct! The feature space is segmented into high-dimensional rectangles or boxes."
+      },
+      {
+        "answer": "3-dimensional cubes",
+        "correct": false,
+        "feedback": "Incorrect. The regions are rectangles, meaning the side lengths along different axes are not necessarily equal."
+      }
+    ]
+  },
+  {
+"question": "When using OOB error estimation, if B is ..., the OOB error is approximately equivalent to the LOOCV error.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Large",
+        "correct": true,
+        "feedback": "Correct! As the number of bootstrap samples (B) increases, the OOB error estimate stabilizes and provides a test error estimate very similar to LOOCV."
+      },
+      {
+        "answer": "Small",
+        "correct": false,
+        "feedback": "Incorrect. If B is small, the OOB error will have high variance and won't yet be a reliable or equivalent proxy for LOOCV."
+      },
+      {
+        "answer": "Equal to d",
+        "correct": false,
+        "feedback": "Incorrect. In the context of boosting, d represents the number of splits (interaction depth) in each tree. While it is a crucial tuning parameter for model complexity, it does not relate to the number of bootstrap samples or OOB estimation."
+      },
+      {
+        "answer": "Equal to λ",
+        "correct": false,
+        "feedback": "Incorrect. In boosting, λ represents the shrinkage parameter or learning rate that controls how fast the model learns. It is not related to the mechanism of Out-of-Bag error estimation used in bagging."
+      }
+    ]
+  },
+  {
+    "question": "Two observations that fall into the same terminal node region of a tree ...",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Will always receive the same predicted outcome",
+        "correct": true,
+        "feedback": "Correct! Every observation in a given region is assigned the same prediction (the mean for regression or the majority class for classification)."
+      },
+      {
+        "answer": "May receive different predicted outcomes",
+        "correct": false,
+        "feedback": "Incorrect. A terminal node defines a single prediction for all points within its boundaries."
+      }
+    ]
+  },
+  {
+    "question": "When applying the Random Forest method to a dataset with p=100 predictors for a classification task, how many split candidates (m) are typically considered at each split?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "10",
+        "correct": true,
+        "feedback": "Correct! For classification, we typically choose m approx. sqrt{p}. Here, sqrt(100) = 10."
+      },
+      {
+        "answer": "50",
+        "correct": false,
+        "feedback": "Incorrect. Using half the predictors would not decorrelate the trees as effectively as the sqrt{p} rule."
+      },
+      {
+        "answer": "25",
+        "correct": false,
+        "feedback": "Incorrect. This is larger than the standard sqrt{p} recommendation."
+      },
+      {
+        "answer": "20",
+        "correct": false,
+        "feedback": "Incorrect. This is larger than the standard sqrt{p} recommendation."
+      }
+    ]
+  },
+  {
+    "question": "A small Cross-Entropy value in a classification tree node is a ... sign.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Good",
+        "correct": true,
+        "feedback": "Correct! A small value indicates that the node is 'pure,' meaning it contains mostly observations from a single class."
+      },
+      {
+        "answer": "Bad",
+        "correct": false,
+        "feedback": "Incorrect. Large values indicate impurity (mixed classes), which is generally undesirable in a final node."
+      }
+    ]
+  },
+  {
+    "question": "True or False: In each step of the tree-building process, the algorithm splits the entire predictor space.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "False",
+        "correct": true,
+        "feedback": "Correct! After the first split, subsequent steps only split one of the previously identified regions, not the whole space."
+      },
+      {
+        "answer": "True",
+        "correct": false,
+        "feedback": "Incorrect. The process is recursive, partitioning existing regions into smaller sub-regions."
+      }
+    ]
+  },
+  {
+    "question": "Which of the following are recognized measures of node purity in classification trees? (Select all that apply)",
+    "type": "many_choice",
+    "answers": [
+      {
+        "answer": "Gini index",
+        "correct": true,
+        "feedback": "Correct! This is a standard measure of node purity."
+      },
+      {
+        "answer": "Cross-Entropy",
+        "correct": true,
+        "feedback": "Correct! This is a common measure that tracks node impurity."
+      },
+      {
+        "answer": "Residual Sum of Squares (RSS)",
+        "correct": false,
+        "feedback": "Incorrect. RSS is used for regression trees, not classification."
+      },
+      {
+        "answer": "Classification error rate",
+        "correct": false,
+        "feedback": "Incorrect. It is generally not sensitive enough for growing the tree."
+      }
+    ]
+  }
+]
