@@ -1,6 +1,6 @@
 [
   {
-    "question": "If the training data is perfectly separable by a linear boundary, how many possible separating hyperplanes exist?",
+    "question": "In Support Vector Approaches, if the training data is perfectly separable by a linear boundary, how many possible separating hyperplanes exist?",
     "type": "multiple_choice",
     "answers": [
       {
@@ -60,7 +60,7 @@
         "feedback": "Correct! It results in a smoother, more stable boundary that ignores some training data noise."
       },
       {
-        "answer": "Higher bias and lower variance",
+        "answer": "Lower variance and higher bias",
         "correct": true,
         "feedback": "Correct! A wider margin is less flexible (higher bias) but more stable across different datasets (lower variance)."
       },
@@ -308,7 +308,7 @@
     ]
   },
   {
-    "question": "The observations on both sides of the maximal margin hyperplane ... the same distance to the hyperplane.",
+    "question": "The closest observations on both sides of the maximal margin hyperplane ... the same distance to the hyperplane.",
     "type": "multiple_choice",
     "answers": [
       {
@@ -334,7 +334,7 @@
     ]
   },
   {
-    "question": "A larger 'budget' C for margin violations effectively makes the Support Vector Classifier ... flexible.",
+    "question": "A larger budget C for margin violations effectively makes the Support Vector Classifier ... flexible.",
     "type": "multiple_choice",
     "answers": [
       {
