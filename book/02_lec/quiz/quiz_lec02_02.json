@@ -32,7 +32,7 @@
       {
         "answer": "Minimize the Expected Prediction Error (EPE) pointwise for every value of x",
         "correct": true,
-        "feedback": "Correct! By breaking the expectation into an inner expectation over Y|X=x, we can solve for the optimal prediction at each point individually."
+        "feedback": "Correct! By breaking the expectation into an inner expectation over Y | X=x, we can solve for the optimal prediction at each point individually."
       },
       {
         "answer": "Calculate the joint distribution Pr(X,Y) directly from training data",
