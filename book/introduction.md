@@ -27,7 +27,7 @@ This page is a tool to reinforce your understanding and highlight areas where fu
 
 ❗ Important Note: These questions represent a selection of material for study guidance and do not necessarily cover the entirety of the lecture content. This page should be used for learning and revision purposes alone and not as a substitute for the primary course materials (lecture slides, textbook readings, seminar contents, etc.). Always refer to the full module materials for comprehensive preparation.
 
-🎯 If you notice any mistakes or issues, please don't hesitate to reach out via [my email](jana.bormann@uol.de)
+🎯 If you notice any mistakes or issues, please don't hesitate to reach out via email: [jana.bormann@uol.de]
 
 ## Credits 🌟
 
