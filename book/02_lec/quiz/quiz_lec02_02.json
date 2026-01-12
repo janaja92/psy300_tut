@@ -1,0 +1,112 @@
+[ 
+{
+    "question": "To estimate the prediction error, Cross-Validation and Bootstrapping ...",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "directly estimate the extra-sample error (Err)",
+        "correct": true,
+        "feedback": "Correct! These resampling methods estimate the generalization error directly by holding out a subset of observations from the fitting process."
+      },
+      {
+        "answer": "add the estimated optimism to the training error",
+        "correct": false,
+        "feedback": "Incorrect. This describes analytical methods like Cp, AIC, and BIC, which estimate test error by adjusting the training error for model complexity."
+      },
+      {
+        "answer": "minimize the training error exclusively",
+        "correct": false,
+        "feedback": "Incorrect. Training error is biased toward overfitting; these methods are used for model selection and assessment to estimate test-set performance."
+      },
+      {
+        "answer": "ignore the bias-variance trade-off",
+        "correct": false,
+        "feedback": "Incorrect. Both methods are critical tools used to find the optimal balance in the bias-variance trade-off."
+      }
+    ]
+  },
+  {
+    "question": "Conditioning on X is a powerful statistical technique because it allows us to ...",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Minimize the Expected Prediction Error (EPE) pointwise for every value of x",
+        "correct": true,
+        "feedback": "Correct! By breaking the expectation into an inner expectation over Y|X=x, we can solve for the optimal prediction at each point individually."
+      },
+      {
+        "answer": "Calculate the joint distribution Pr(X,Y) directly from training data",
+        "correct": false,
+        "feedback": "Incorrect. Pr(X,Y) remains unknown; conditioning is a method to find an optimal solution despite this."
+      },
+      {
+        "answer": "Eliminate the irreducible error from the model",
+        "correct": false,
+        "feedback": "Incorrect. Irreducible error remains even for the optimal regression function."
+      },
+      {
+        "answer": "Ignore the role of the loss function in the optimization process",
+        "correct": false,
+        "feedback": "Incorrect. The optimal solution found via conditioning is dependent on the chosen loss function."
+      }
+    ]
+  },
+  {
+    "question": "When using the Squared Error Loss function, the best prediction of Y at any point X=x is ...",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "The conditional mean",
+        "correct": true,
+        "feedback": "Correct! The conditional mean (regression function) is the mathematical solution that minimizes the expected squared difference."
+      },
+      {
+        "answer": "The conditional median",
+        "correct": false,
+        "feedback": "Incorrect. The conditional median is the optimal solution for the Absolute Error loss function, which is more robust to outliers."
+      }
+    ]
+  },
+  {
+    "question": "True or False: The Absolute Error Loss function is the standard choice for categorical (qualitative) outcome variables.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "False",
+        "correct": true,
+        "feedback": "Correct! For categorical variables, we typically use the zero-one loss function."
+      },
+      {
+        "answer": "True",
+        "correct": false,
+        "feedback": "Incorrect. Absolute error loss is used for quantitative responses where we want an estimate of the conditional median."
+      }
+    ]
+  },
+  {
+    "question": "In the context of model assessment, Optimism refers to the phenomenon where ...",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Training error underestimates the true test error",
+        "correct": true,
+        "feedback": "Correct! Optimism is defined as the difference between the expected test error and the training error, as the model adapts too closely to the training data."
+      },
+      {
+        "answer": "Test error is consistently lower than training error",
+        "correct": false,
+        "feedback": "Incorrect. This is rarely the case in supervised learning due to overfitting."
+      },
+      {
+        "answer": "A model with high bias performs better than a model with high variance",
+        "correct": false,
+        "feedback": "Incorrect. This describes a specific state of the bias-variance tradeoff, not optimism itself."
+      },
+      {
+        "answer": "The irreducible error is reduced to zero by a perfect model",
+        "correct": false,
+        "feedback": "Incorrect. Irreducible error cannot be reduced by the model."
+      }
+    ]
+  }
+]
