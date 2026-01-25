@@ -268,7 +268,7 @@
       {
         "answer": "True",
         "correct": true,
-        "feedback": "Correct. A higher number of trees and a higher number of splits (nodes) per tree both increase the model's capacity to fit complex patterns, increasing complexity."
+        "feedback": "Correct. A higher number of trees and a higher number of splits (internal nodes) per tree both increase the model's capacity to fit complex patterns, increasing complexity."
       },
       {
         "answer": "False",
