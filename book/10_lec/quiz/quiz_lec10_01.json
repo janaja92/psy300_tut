@@ -1,27 +1,279 @@
 [
   {
-    "question": "Question",
+    "question": "In Gradient Boosting for regression, the algorithm begins by initializing the model with a constant value. What is this value typically?",
     "type": "multiple_choice",
     "answers": [
       {
-        "answer": "a",
+        "answer": "Zero",
         "correct": false,
-        "feedback": "feedback"
+        "feedback": "Incorrect. While possible, the standard initialization is the mean, which minimizes the sum of squared errors initially."
       },
       {
-        "answer": "b",
+        "answer": "The average of the target variable Y",
         "correct": true,
-        "feedback": "feedback"
+        "feedback": "Correct. Start with a simple model: Usually just a single value (the average of all outcomes)."
       },
       {
-        "answer": "c",
+        "answer": "A random number between 0 and 1",
         "correct": false,
-        "feedback": "feedback"
+        "feedback": "Incorrect. Random initialization is not standard for Gradient Boosting regression."
       },
       {
-        "answer": "d",
+        "answer": "The standard deviation of Y",
         "correct": false,
-        "feedback": "feedback"
+        "feedback": "Incorrect. The standard deviation measures spread, not central tendency, and is not a suitable initial prediction."
+      }
+    ]
+  },
+  {
+    "question": "True or False: In AdaBoost, all stumps have the same 'amount of say' in the final classification.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "True",
+        "correct": false,
+        "feedback": "Incorrect. Unlike Random Forests where trees typically have equal weight, AdaBoost weights each stump differently."
+      },
+      {
+        "answer": "False",
+        "correct": true,
+        "feedback": "Correct. Single stumps are differently weighted based on their performance."
+      }
+    ]
+  },
+  {
+    "question": "In XGBoost, how do we determine if a branch should be pruned?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "We prune if the tree is deeper than 3 levels.",
+        "correct": false,
+        "feedback": "Incorrect. Pruning is based on gain and complexity cost, not a fixed depth limit."
+      },
+      {
+        "answer": "We prune if the Gain is smaller than the complexity parameter Gamma (γ).",
+        "correct": true,
+        "feedback": "Correct. If the improvement (Gain) is not larger than the cost of adding a new leaf (Gamma), the branch is removed."
+      },
+      {
+        "answer": "We prune if the Similarity Score is positive.",
+        "correct": false,
+        "feedback": "Incorrect. A positive Similarity Score is normal; pruning depends on the comparison between Gain and Gamma."
+      },
+      {
+        "answer": "We prune randomly to prevent overfitting.",
+        "correct": false,
+        "feedback": "Incorrect. XGBoost pruning is deterministic based on calculated gain values, not random."
+      }
+    ]
+  },
+  {
+    "question": "Using AdaBoost, the trees combined usually have how many leaves?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "1",
+        "correct": false,
+        "feedback": "Incorrect. A tree with only one leaf would be a single root node with no splits, which cannot make any classification decisions."
+      },
+      {
+        "answer": "2",
+        "correct": true,
+        "feedback": "Correct. AdaBoost combines stumps, which are trees with only one node and two leaves."
+      },
+      {
+        "answer": "3",
+        "correct": false,
+        "feedback": "Incorrect. AdaBoost specifically combines stumps, which consist of a single split resulting in two leaves."
+      },
+      {
+        "answer": "4",
+        "correct": false,
+        "feedback": "Incorrect. Four leaves would imply a deeper tree (depth 2). AdaBoost is defined by using simple stumps."
+      }
+    ]
+  },
+  {
+    "question": "Why is the Loss Function for regression in Gradient Boosting often defined as 0.5 * (Observed - Predicted)^2?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Because the derivative (gradient) is easier to calculate.",
+        "correct": true,
+        "feedback": "Correct. When taking the derivative of the squared residual, the exponent 2 cancels out with the 0.5."
+      },
+      {
+        "answer": "Because it prevents the values from becoming negative.",
+        "correct": false,
+        "feedback": "Incorrect. Squaring ensures positivity regardless of the 0.5 coefficient."
+      }
+    ]
+  },
+  {
+    "question": "What is the effect of increasing the regularization parameter Lambda (λ) in XGBoost? (Select all that apply)",
+    "type": "many_choice",
+    "answers": [
+      {
+        "answer": "It results in smaller Similarity Scores.",
+        "correct": true,
+        "feedback": "Correct. A higher Lambda increases the denominator in the similarity score calculation, thus lowering the score."
+      },
+      {
+        "answer": "It results in larger Similarity Scores.",
+        "correct": false,
+        "feedback": "Incorrect. Lambda is in the denominator of the similarity score formula, so increasing it reduces the score."
+      },
+      {
+        "answer": "It makes it easier to prune leaves.",
+        "correct": true,
+        "feedback": "Correct. Increasing Lambda generally leads to lower Gain values. Since pruning happens when Gain < Gamma, lower Gain makes pruning more likely (easier)."
+      },
+      {
+        "answer": "It makes it harder to prune leaves.",
+        "correct": false,
+        "feedback": "Incorrect. Increasing Lambda typically reduces Gain, making it more likely that the Gain will be smaller than the pruning threshold Gamma."
+      }
+    ]
+  },
+  {
+    "question": "True or False: Gradient Boost for classification models the probability of an observation directly in the leaves.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "True",
+        "correct": false,
+        "feedback": "Incorrect. The leaves do not contain probabilities directly; they contain log-odds values. These are later converted into probabilities."
+      },
+      {
+        "answer": "False",
+        "correct": true,
+        "feedback": "Correct. Gradient Boosting for classification sums the continuous outputs of regression trees to model the log-odds of the target classes."
+      }
+    ]
+  },
+  {
+    "question": "True or False: Following the AdaBoost algorithm, a weak learner with a total error close to 1 is useless and gets a value close to zero in terms of say.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "True",
+        "correct": false,
+        "feedback": "Incorrect. A total error close to 1 is actually valuable because it consistently predicts the wrong answer. We can simply invert its prediction to get a highly accurate classifier."
+      },
+      {
+        "answer": "False",
+        "correct": true,
+        "feedback": "Correct. A learner with an error close to 1 will get a large 'amount of say' (weight), just with a negative sign."
+      }
+    ]
+  },
+  {
+    "question": "In the Gradient Boost algorithm for regression, what are the new trees trained to predict?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "The original outcome variable Y",
+        "correct": false,
+        "feedback": "Incorrect. The first model predicts Y, but subsequent trees do not predict Y directly."
+      },
+      {
+        "answer": "The pseudo residuals (errors) of the previous prediction",
+        "correct": true,
+        "feedback": "Correct. A new tree is trained to predict the previous errors (residuals)."
+      },
+      {
+        "answer": "The log-odds of the target class",
+        "correct": false,
+        "feedback": "Incorrect. Log-odds are used in classification, not regression."
+      },
+      {
+        "answer": "The weights of the misclassified samples",
+        "correct": false,
+        "feedback": "Incorrect. Predicting weights is not the objective; the trees predict the magnitude of the error (residual)."
+      }
+    ]
+  },
+  {
+    "question": "True or False: In XGBoost, the parameter 'eta' serves the same purpose as the 'Learning Rate' in standard Gradient Boosting.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "True",
+        "correct": true,
+        "feedback": "Correct. 'eta' is the term used in XGBoost for the learning rate, which scales the contribution of each new tree to the final prediction."
+      },
+      {
+        "answer": "False",
+        "correct": false,
+        "feedback": "Incorrect. They serve the exact same purpose of scaling the contribution of new trees."
+      }
+    ]
+  },
+  {
+    "question": "The final prediction of a Gradient Boosted regression tree is the sum of the single predictions where...",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "each tree's prediction is multiplied by the learning rate first.",
+        "correct": false,
+        "feedback": "Incorrect. This is generally true for the trees, but the initial prediction (base value) is usually not multiplied by the learning rate."
+      },
+      {
+        "answer": "each tree's prediction (except for the first prediction/initialization) is multiplied by the learning rate.",
+        "correct": true,
+        "feedback": "Correct. We add the new tree's prediction to the previous total (scaled by a small number called the learning rate)."
+      },
+      {
+        "answer": "each tree's prediction (except for the last prediction) is multiplied by the learning rate.",
+        "correct": false,
+        "feedback": "Incorrect. The last tree is treated the same as all other trees in the sequence; its contribution is also scaled."
+      },
+      {
+        "answer": "each tree's prediction is subtracted from the learning rate first.",
+        "correct": false,
+        "feedback": "Incorrect. We multiply by a small learning rate (e.g., 0.1) to shrink the contribution, not subtract."
+      }
+    ]
+  },
+  {
+    "question": "When calculating the Gini Index for a stump in AdaBoost, we use weighted samples. If a sample was misclassified by the previous stump, how does its weight change for the next stump?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "The weight decreases, making it less likely to be picked.",
+        "correct": false,
+        "feedback": "Incorrect. Decreasing the weight would make the algorithm ignore the error, whereas AdaBoost aims to fix it."
+      },
+      {
+        "answer": "The weight remains the same.",
+        "correct": false,
+        "feedback": "Incorrect. If weights remained the same, the next stump would likely make the same errors as the previous one."
+      },
+      {
+        "answer": "The weight increases, making it more likely to be picked.",
+        "correct": true,
+        "feedback": "Correct. The sample weight is increased so the next stump puts more emphasis on classifying it correctly."
+      },
+      {
+        "answer": "The weight is set to zero.",
+        "correct": false,
+        "feedback": "Incorrect. Setting the weight to zero would remove the observation from consideration entirely, which is the opposite of what is needed for a hard-to-classify sample."
+      }
+    ]
+  },
+  {
+    "question": "True or False: Both the number of trees and the number of internal nodes in each tree control the complexity of a Boosted regression tree model.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "True",
+        "correct": true,
+        "feedback": "Correct. A higher number of trees and a higher number of splits (nodes) per tree both increase the model's capacity to fit complex patterns, increasing complexity."
+      },
+      {
+        "answer": "False",
+        "correct": false,
+        "feedback": "Incorrect. Both parameters are crucial for defining the flexibility and complexity of the ensemble."
       }
     ]
   }
