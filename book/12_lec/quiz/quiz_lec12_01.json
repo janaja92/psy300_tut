@@ -1,0 +1,86 @@
+[
+  {
+    "question": "The difference between Support Vector Classifiers (SVCs) and Support Vector Machines (SVMs) is that...",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "SVCs do not use a kernel.",
+        "correct": true,
+        "feedback": "Correct! SVCs create a linear boundary, while SVMs use kernels to handle non-linear relationships."
+      },
+      {
+        "answer": "SVCs always use a radial kernel.",
+        "correct": false,
+        "feedback": "Incorrect. SVMs use kernels like the radial kernel; SVCs are fundamentally linear."
+      },
+      {
+        "answer": "SVCs always use a polynomial kernel.",
+        "correct": false,
+        "feedback": "Incorrect. Polynomial kernels are used by SVMs, not SVCs."
+      },
+      {
+        "answer": "SVCs cannot use soft margins.",
+        "correct": false,
+        "feedback": "Incorrect. The concept of a soft margin (allowing violations of the hyperplane) is a core part of the SVC."
+      }
+    ]
+  },
+  {
+    "question": "Support Vector Machines (SVMs) enable classification by ... the feature space.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Enlarging",
+        "correct": true,
+        "feedback": "Correct! SVMs lift data into higher dimensions (e.g., using squared features) to find separation."
+      },
+      {
+        "answer": "Reducing",
+        "correct": false,
+        "feedback": "Incorrect. Reducing the feature space would lose information; SVMs add dimensions to find boundaries."
+      }
+    ]
+  },
+  {
+    "question": "Which of the following are true regarding the parameter of the radial kernel? (Select all that apply)",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "The parameter is called d.",
+        "correct": false,
+        "feedback": "Incorrect. The degree d is associated with the polynomial kernel."
+      },
+      {
+        "answer": "The parameter is called gamma.",
+        "correct": true,
+        "feedback": "Correct! Gamma is the primary tuning parameter for the radial kernel."
+      },
+      {
+        "answer": "The parameter value is determined by cross-validation.",
+        "correct": true,
+        "feedback": "Correct! Tuning parameters for kernels are typically found using CV."
+      },
+      {
+        "answer": "The parameter is determined by the number of support vectors.",
+        "correct": false,
+        "feedback": "Incorrect. While support vectors define the boundary, gamma is a hyperparameter set by the user."
+      }
+    ]
+  },
+  {
+    "question": "True or False: The 'kernel trick' refers to the ability of SVMs to calculate high-dimensional relationships by transforming the data into higher dimensions.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "True",
+        "correct": false,
+        "feedback": "False. The 'trick' is that it calculates these similarities without actually performing the transformation."
+      },
+      {
+        "answer": "False",
+        "correct": true,
+        "feedback": "Correct! It allows for complex similarity calculations without the math becoming impossible to solve."
+      }
+    ]
+  }
+]

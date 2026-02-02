@@ -17,6 +17,8 @@ parts:
     - file: book/08_lec/08_GAMs
     - file: book/09_lec/09_tree-based_methods
     - file: book/10_lec/10_boosting
+    - file: book/12_lec/12_SVMs
+
    
 
 
