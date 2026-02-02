@@ -6,7 +6,7 @@
       {
         "answer": "SVCs do not use a kernel.",
         "correct": true,
-        "feedback": "Correct! SVCs create a linear boundary, while SVMs use kernels to handle non-linear relationships."
+        "feedback": "Correct! SVCs create a linear boundary, while SVMs use kernels to handle more complex relationships."
       },
       {
         "answer": "SVCs always use a radial kernel.",
@@ -26,7 +26,7 @@
     ]
   },
   {
-    "question": "Support Vector Machines (SVMs) enable classification by ... the feature space.",
+    "question": "SVMs enable classification by ... the feature space.",
     "type": "multiple_choice",
     "answers": [
       {
